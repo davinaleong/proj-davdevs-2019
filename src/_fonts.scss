@@ -1,10 +1,10 @@
-// A. Fonts
+/// F. Fonts
 $oswald: 'Oswald';
 $montserrat: 'Montserrat';
 $sourceCodePro: 'Source Code Pro';
 
 
-// A.1. Oswald -- Headings
+/// F.1. Oswald -- Headings
 @font-face {
   font-family: $oswald;
   font-weight: 200;
@@ -47,7 +47,7 @@ $sourceCodePro: 'Source Code Pro';
   src: url('./fonts/oswald/oswald-bold.ttf'), format('truetype');
 }
 
-// A.2. Monsterrat -- Body
+/// F.2. Monsterrat -- Body
 @font-face {
   font-family: $montserrat;
   font-weight: 100;
@@ -175,7 +175,7 @@ $sourceCodePro: 'Source Code Pro';
 }
 
 
-// A.3. Source Code Pro -- Code, Monospace
+/// F.3. Source Code Pro -- Code, Monospace
 @font-face {
   font-family: $sourceCodePro;
   font-weight: 200;
@@ -225,6 +225,7 @@ $sourceCodePro: 'Source Code Pro';
   src: url('./fonts/sourcecodepro/sourcecodepro-black.ttf'), format('truetype');
 }
 
+/// F.4. Utilities
 $fonts: (
   'oswald': $oswald,
   'montserrat': $montserrat,

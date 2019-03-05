@@ -1,4 +1,5 @@
-// Colors
+/// Colors
+/// C.1. Color Definition
 $black:     #000;
 $white:     #fff;
 $gray:      #9e9e9e;
@@ -10,7 +11,6 @@ $blue:    #2196f3;
 $red:   #f44336;
 $green:   #4caf50;
 
-// TODO: include tints
 $colors: (
   'black':     $black,
   'white':     $white,
@@ -30,5 +30,251 @@ $colors: (
     @return $color;
   } @else {
     @warn 'Color not found';
+  }
+}
+
+
+/// C.2. Tints
+/// C.2.a Gray tints
+$gray-50:   lighten($gray, 50%);
+$gray-100:  lighten($gray, 40%);
+$gray-200:  lighten($gray, 30%);
+$gray-300:  lighten($gray, 20%);
+$gray-400:  lighten($gray, 10%);
+$gray-500:  $gray;
+$gray-600:  lighten($gray, 10%);
+$gray-700:  lighten($gray, 20%);
+$gray-800:  lighten($gray, 30%);
+$gray-900:  lighten($gray, 40%);
+
+$grays: (
+  '50':   $gray-50,
+  '100':  $gray-100,
+  '200':  $gray-200,
+  '300':  $gray-300,
+  '400':  $gray-400,
+  '500':  $gray-500,
+  '600':  $gray-600,
+  '700':  $gray-700,
+  '800':  $gray-800,
+  '900':  $gray-900,
+);
+
+@function grays($tint) {
+  $gray: map-get($grays, $tint);
+  @if ($gray) {
+    @return $gray;
+  } @else {
+    @warn 'Gray tint not found.';
+  }
+}
+
+
+/// C.2.b Blue-gray tints
+$blue-gray-50:   lighten($blue-gray, 50%);
+$blue-gray-100:  lighten($blue-gray, 40%);
+$blue-gray-200:  lighten($blue-gray, 30%);
+$blue-gray-300:  lighten($blue-gray, 20%);
+$blue-gray-400:  lighten($blue-gray, 10%);
+$blue-gray-500:  $blue-gray;
+$blue-gray-600:  lighten($blue-gray, 10%);
+$blue-gray-700:  lighten($blue-gray, 20%);
+$blue-gray-800:  lighten($blue-gray, 30%);
+$blue-gray-900:  lighten($blue-gray, 40%);
+
+$blue-grays: (
+  '50':   $blue-gray-50,
+  '100':  $blue-gray-100,
+  '200':  $blue-gray-200,
+  '300':  $blue-gray-300,
+  '400':  $blue-gray-400,
+  '500':  $blue-gray-500,
+  '600':  $blue-gray-600,
+  '700':  $blue-gray-700,
+  '800':  $blue-gray-800,
+  '900':  $blue-gray-900,
+);
+
+@function blue-grays($tint) {
+  $gray: map-get($blue-grays, $tint);
+  @if ($gray) {
+    @return $gray;
+  } @else {
+    @warn 'Blue-gray tint not found.';
+  }
+}
+
+
+/// C.2.c Deep-purple tints
+$deep-purple-50:   lighten($deep-purple, 50%);
+$deep-purple-100:  lighten($deep-purple, 40%);
+$deep-purple-200:  lighten($deep-purple, 30%);
+$deep-purple-300:  lighten($deep-purple, 20%);
+$deep-purple-400:  lighten($deep-purple, 10%);
+$deep-purple-500:  $deep-purple;
+$deep-purple-600:  lighten($deep-purple, 10%);
+$deep-purple-700:  lighten($deep-purple, 20%);
+$deep-purple-800:  lighten($deep-purple, 30%);
+$deep-purple-900:  lighten($deep-purple, 40%);
+
+$deep-purples: (
+  '50':   $deep-purple-50,
+  '100':  $deep-purple-100,
+  '200':  $deep-purple-200,
+  '300':  $deep-purple-300,
+  '400':  $deep-purple-400,
+  '500':  $deep-purple-500,
+  '600':  $deep-purple-600,
+  '700':  $deep-purple-700,
+  '800':  $deep-purple-800,
+  '900':  $deep-purple-900,
+);
+
+@function deep-purples($tint) {
+  $gray: map-get($deep-purples, $tint);
+  @if ($gray) {
+    @return $gray;
+  } @else {
+    @warn 'Deep-purple tint not found.';
+  }
+}
+
+
+/// C.2.d Orange tints
+$orange-50:   lighten($orange, 50%);
+$orange-100:  lighten($orange, 40%);
+$orange-200:  lighten($orange, 30%);
+$orange-300:  lighten($orange, 20%);
+$orange-400:  lighten($orange, 10%);
+$orange-500:  $orange;
+$orange-600:  lighten($orange, 10%);
+$orange-700:  lighten($orange, 20%);
+$orange-800:  lighten($orange, 30%);
+$orange-900:  lighten($orange, 40%);
+
+$oranges: (
+  '50':   $orange-50,
+  '100':  $orange-100,
+  '200':  $orange-200,
+  '300':  $orange-300,
+  '400':  $orange-400,
+  '500':  $orange-500,
+  '600':  $orange-600,
+  '700':  $orange-700,
+  '800':  $orange-800,
+  '900':  $orange-900,
+);
+
+@function oranges($tint) {
+  $gray: map-get($oranges, $tint);
+  @if ($gray) {
+    @return $gray;
+  } @else {
+    @warn 'Orange tint not found.';
+  }
+}
+
+
+/// C.2.e Blue tints
+$blue-50:   lighten($blue, 50%);
+$blue-100:  lighten($blue, 40%);
+$blue-200:  lighten($blue, 30%);
+$blue-300:  lighten($blue, 20%);
+$blue-400:  lighten($blue, 10%);
+$blue-500:  $blue;
+$blue-600:  lighten($blue, 10%);
+$blue-700:  lighten($blue, 20%);
+$blue-800:  lighten($blue, 30%);
+$blue-900:  lighten($blue, 40%);
+
+$blues: (
+  '50':   $blue-50,
+  '100':  $blue-100,
+  '200':  $blue-200,
+  '300':  $blue-300,
+  '400':  $blue-400,
+  '500':  $blue-500,
+  '600':  $blue-600,
+  '700':  $blue-700,
+  '800':  $blue-800,
+  '900':  $blue-900,
+);
+
+@function blues($tint) {
+  $gray: map-get($blues, $tint);
+  @if ($gray) {
+    @return $gray;
+  } @else {
+    @warn 'Blue tint not found.';
+  }
+}
+
+
+/// C.2.f Red tints
+$red-50:   lighten($red, 50%);
+$red-100:  lighten($red, 40%);
+$red-200:  lighten($red, 30%);
+$red-300:  lighten($red, 20%);
+$red-400:  lighten($red, 10%);
+$red-500:  $red;
+$red-600:  lighten($red, 10%);
+$red-700:  lighten($red, 20%);
+$red-800:  lighten($red, 30%);
+$red-900:  lighten($red, 40%);
+
+$reds: (
+  '50':   $red-50,
+  '100':  $red-100,
+  '200':  $red-200,
+  '300':  $red-300,
+  '400':  $red-400,
+  '500':  $red-500,
+  '600':  $red-600,
+  '700':  $red-700,
+  '800':  $red-800,
+  '900':  $red-900,
+);
+
+@function reds($tint) {
+  $gray: map-get($reds, $tint);
+  @if ($gray) {
+    @return $gray;
+  } @else {
+    @warn 'Red tint not found.';
+  }
+}
+
+
+/// C.2.g Green tints
+$green-50:   lighten($green, 50%);
+$green-100:  lighten($green, 40%);
+$green-200:  lighten($green, 30%);
+$green-300:  lighten($green, 20%);
+$green-400:  lighten($green, 10%);
+$green-500:  $green;
+$green-600:  lighten($green, 10%);
+$green-700:  lighten($green, 20%);
+$green-800:  lighten($green, 30%);
+$green-900:  lighten($green, 40%);
+
+$greens: (
+  '50':   $green-50,
+  '100':  $green-100,
+  '200':  $green-200,
+  '300':  $green-300,
+  '400':  $green-400,
+  '500':  $green-500,
+  '600':  $green-600,
+  '700':  $green-700,
+  '800':  $green-800,
+  '900':  $green-900,
+);
+
+@function greens($tint) {
+  $gray: map-get($greens, $tint);
+  @if ($gray) {
+    @return $gray;
+  } @else {
+    @warn 'Green tint not found.';
   }
 }
