@@ -278,3 +278,13 @@ $greens: (
     @warn 'Green tint not found.';
   }
 }
+
+
+/// D.1. Consolidate all colours
+$colors-tints: $colors;
+// TODO: map-merge all colours
+// TODO: function to get a colour/tint
+$colors-tints: map-merge(
+  (),
+  $colors-tints
+);
