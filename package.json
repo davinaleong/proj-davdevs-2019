@@ -4,7 +4,7 @@
   "description": "Template of personal website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node-sass --include-path src src/styles.scss   dist/styles.css"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/davinaleong/proj-personalwebsite-template/issues"
   },
-  "homepage": "https://github.com/davinaleong/proj-personalwebsite-template#readme"
+  "homepage": "https://github.com/davinaleong/proj-personalwebsite-template#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.10"
+  }
 }

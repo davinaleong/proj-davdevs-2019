@@ -18,6 +18,8 @@ Taken from the [Material Colour](https://www.materialpalette.com/colors) palette
 | Success | Green | `#4caf50` |
 | Action | Success | `#2196f3` |
 
+![colours](./dist/images/colours.png)
+
 ## Typography
 
 ### Fonts
