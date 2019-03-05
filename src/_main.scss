@@ -1,3 +1,11 @@
-html, body {
-  background: color('deep-purple');
+section, .section {
+  min-height: 80vh;
+}
+
+section:nth-child(odd), .section:nth-child(odd) {
+  background-color: color('white');
+}
+
+section:nth-child(even), .section:nth-child(even) {
+  background-color: grays('100');
 }

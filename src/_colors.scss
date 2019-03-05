@@ -36,16 +36,16 @@ $colors: (
 
 /// C.2. Tints
 /// C.2.a Gray tints
-$gray-50:   lighten($gray, 50%);
-$gray-100:  lighten($gray, 40%);
-$gray-200:  lighten($gray, 30%);
-$gray-300:  lighten($gray, 20%);
-$gray-400:  lighten($gray, 10%);
-$gray-500:  $gray;
-$gray-600:  lighten($gray, 10%);
-$gray-700:  lighten($gray, 20%);
-$gray-800:  lighten($gray, 30%);
-$gray-900:  lighten($gray, 40%);
+$gray-50:   #fafafa;
+$gray-100:  #f5f5f5;
+$gray-200:  #eeeeee;
+$gray-300:  #e0e0e0;
+$gray-400:  #bdbdbd;
+$gray-500:  #9e9e9e;
+$gray-600:  #757575;
+$gray-700:  #616161;
+$gray-800:  #424242;
+$gray-900:  #212121;
 
 $grays: (
   '50':   $gray-50,
@@ -71,16 +71,16 @@ $grays: (
 
 
 /// C.2.b Blue-gray tints
-$blue-gray-50:   lighten($blue-gray, 50%);
-$blue-gray-100:  lighten($blue-gray, 40%);
-$blue-gray-200:  lighten($blue-gray, 30%);
-$blue-gray-300:  lighten($blue-gray, 20%);
-$blue-gray-400:  lighten($blue-gray, 10%);
-$blue-gray-500:  $blue-gray;
-$blue-gray-600:  lighten($blue-gray, 10%);
-$blue-gray-700:  lighten($blue-gray, 20%);
-$blue-gray-800:  lighten($blue-gray, 30%);
-$blue-gray-900:  lighten($blue-gray, 40%);
+$blue-gray-50:  #eceff1;
+$blue-gray-100: #cfd8dc;
+$blue-gray-200: #b0bec5;
+$blue-gray-300: #90a4ae;
+$blue-gray-400: #78909c;
+$blue-gray-500: #607d8b;
+$blue-gray-600: #546e7a;
+$blue-gray-700: #455a64;
+$blue-gray-800: #37474f;
+$blue-gray-900: #263238;
 
 $blue-grays: (
   '50':   $blue-gray-50,
@@ -106,16 +106,16 @@ $blue-grays: (
 
 
 /// C.2.c Deep-purple tints
-$deep-purple-50:   lighten($deep-purple, 50%);
-$deep-purple-100:  lighten($deep-purple, 40%);
-$deep-purple-200:  lighten($deep-purple, 30%);
-$deep-purple-300:  lighten($deep-purple, 20%);
-$deep-purple-400:  lighten($deep-purple, 10%);
-$deep-purple-500:  $deep-purple;
-$deep-purple-600:  lighten($deep-purple, 10%);
-$deep-purple-700:  lighten($deep-purple, 20%);
-$deep-purple-800:  lighten($deep-purple, 30%);
-$deep-purple-900:  lighten($deep-purple, 40%);
+$deep-purple-50:  #ede7f6;
+$deep-purple-100: #d1c4e9;
+$deep-purple-200: #b39ddb;
+$deep-purple-300: #9575cd;
+$deep-purple-400: #7e57c2;
+$deep-purple-500: #673ab7;
+$deep-purple-600: #5e35b1;
+$deep-purple-700: #512da8;
+$deep-purple-800: #4527a0;
+$deep-purple-900: #311b92;
 
 $deep-purples: (
   '50':   $deep-purple-50,
@@ -141,16 +141,16 @@ $deep-purples: (
 
 
 /// C.2.d Orange tints
-$orange-50:   lighten($orange, 50%);
-$orange-100:  lighten($orange, 40%);
-$orange-200:  lighten($orange, 30%);
-$orange-300:  lighten($orange, 20%);
-$orange-400:  lighten($orange, 10%);
-$orange-500:  $orange;
-$orange-600:  lighten($orange, 10%);
-$orange-700:  lighten($orange, 20%);
-$orange-800:  lighten($orange, 30%);
-$orange-900:  lighten($orange, 40%);
+$orange-50:   #fff3e0;
+$orange-100:  #ffe0b2;
+$orange-200:  #ffcc80;
+$orange-300:  #ffb74d;
+$orange-400:  #ffa726;
+$orange-500:  #ff9800;
+$orange-600:  #fb8c00;
+$orange-700:  #f57c00;
+$orange-800:  #ef6c00;
+$orange-900:  #e65100;
 
 $oranges: (
   '50':   $orange-50,
@@ -176,16 +176,16 @@ $oranges: (
 
 
 /// C.2.e Blue tints
-$blue-50:   lighten($blue, 50%);
-$blue-100:  lighten($blue, 40%);
-$blue-200:  lighten($blue, 30%);
-$blue-300:  lighten($blue, 20%);
-$blue-400:  lighten($blue, 10%);
-$blue-500:  $blue;
-$blue-600:  lighten($blue, 10%);
-$blue-700:  lighten($blue, 20%);
-$blue-800:  lighten($blue, 30%);
-$blue-900:  lighten($blue, 40%);
+$blue-50:   #e3f2fd;
+$blue-100:  #bbdefb;
+$blue-200:  #90caf9;
+$blue-300:  #64b5f6;
+$blue-400:  #42a5f5;
+$blue-500:  #2196f3;
+$blue-600:  #1e88e5;
+$blue-700:  #1976d2;
+$blue-800:  #1565c0;
+$blue-900:  #0d47a1;
 
 $blues: (
   '50':   $blue-50,
@@ -211,16 +211,16 @@ $blues: (
 
 
 /// C.2.f Red tints
-$red-50:   lighten($red, 50%);
-$red-100:  lighten($red, 40%);
-$red-200:  lighten($red, 30%);
-$red-300:  lighten($red, 20%);
-$red-400:  lighten($red, 10%);
-$red-500:  $red;
-$red-600:  lighten($red, 10%);
-$red-700:  lighten($red, 20%);
-$red-800:  lighten($red, 30%);
-$red-900:  lighten($red, 40%);
+$red-50:  #ffebee;
+$red-100: #ffcdd2;
+$red-200: #ef9a9a;
+$red-300: #e57373;
+$red-400: #ef5350;
+$red-500: #f44336;
+$red-600: #e53935;
+$red-700: #d32f2f;
+$red-800: #c62828;
+$red-900: #b71c1c;
 
 $reds: (
   '50':   $red-50,
@@ -246,16 +246,16 @@ $reds: (
 
 
 /// C.2.g Green tints
-$green-50:   lighten($green, 50%);
-$green-100:  lighten($green, 40%);
-$green-200:  lighten($green, 30%);
-$green-300:  lighten($green, 20%);
-$green-400:  lighten($green, 10%);
-$green-500:  $green;
-$green-600:  lighten($green, 10%);
-$green-700:  lighten($green, 20%);
-$green-800:  lighten($green, 30%);
-$green-900:  lighten($green, 40%);
+$green-50:  #e8f5e9;
+$green-100:  #c8e6c9;
+$green-200:  #a5d6a7;
+$green-300:  #81c784;
+$green-400:  #66bb6a;
+$green-500:  #4caf50;
+$green-600:  #43a047;
+$green-700:  #388e3c;
+$green-800:  #2e7d32;
+$green-900:  #1b5e20;
 
 $greens: (
   '50':   $green-50,
