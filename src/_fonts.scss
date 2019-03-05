@@ -1,0 +1,67 @@
+// Fonts
+$oswald: 'Oswald';
+$montserrat: 'Montserrat';
+$sourceCodePro: 'Source Code Pro';
+
+// Oswald -- Headings
+/*
+extra light - 200
+light - 300
+regular - 400
+medium - 500
+semi-bold - 600
+bold - 700
+*/
+@font-face {
+  font-family: $oswald;
+  font-weight: 200;
+  font-style: normal;
+  src: url('./fonts/oswald/oswald-extralight.tff'), format('truetype');
+}
+
+@font-face {
+  font-family: $oswald;
+  font-weight: 300;
+  font-style: normal;
+  src: url('./fonts/oswald/oswald-light.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $oswald;
+  font-weight: 400;
+  font-style: normal;
+  src: url('./fonts/oswald/oswald-regular.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $oswald;
+  font-weight: 500;
+  font-style: normal;
+  src: url('./fonts/oswald/oswald-medium.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $oswald;
+  font-weight: 600;
+  font-style: normal;
+  src: url('./fonts/oswald/oswald-semibold.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $oswald;
+  font-weight: 700;
+  font-style: normal;
+  src: url('./fonts/oswald/oswald-bold.ttf'), format('truetype');
+}
+
+/*
+Thin - 100
+Extra-Light - 200
+Light - 300
+Regular - 400
+Medium - 500
+Semi-Bold - 600
+Bold - 700
+Extra-Bold - 800
+Black - 900
+*/
