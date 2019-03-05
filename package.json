@@ -1,0 +1,23 @@
+{
+  "name": "proj-personalwebsite-template",
+  "version": "0.1.0",
+  "description": "Template of personal website",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass --include-path src src/styles.scss   dist/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davinaleong/proj-personalwebsite-template.git"
+  },
+  "author": "Davina Leong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davinaleong/proj-personalwebsite-template/issues"
+  },
+  "homepage": "https://github.com/davinaleong/proj-personalwebsite-template#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.10"
+  }
+}
