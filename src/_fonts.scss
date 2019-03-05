@@ -1,17 +1,10 @@
-// Fonts
+// A. Fonts
 $oswald: 'Oswald';
 $montserrat: 'Montserrat';
 $sourceCodePro: 'Source Code Pro';
 
-// Oswald -- Headings
-/*
-extra light - 200
-light - 300
-regular - 400
-medium - 500
-semi-bold - 600
-bold - 700
-*/
+
+// A.1. Oswald -- Headings
 @font-face {
   font-family: $oswald;
   font-weight: 200;
@@ -54,14 +47,195 @@ bold - 700
   src: url('./fonts/oswald/oswald-bold.ttf'), format('truetype');
 }
 
-/*
-Thin - 100
-Extra-Light - 200
-Light - 300
-Regular - 400
-Medium - 500
-Semi-Bold - 600
-Bold - 700
-Extra-Bold - 800
-Black - 900
-*/
+// A.2. Monsterrat -- Body
+@font-face {
+  font-family: $montserrat;
+  font-weight: 100;
+  font-style: normal;
+  src: url('./fonts/montserrat/montserrat-thin.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 100;
+  font-style: italic;
+  src: url('./fonts/montserrat/montserrat-thinitalic.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 200;
+  font-style: normal;
+  src: url('./fonts/montserrat/montserrat-extralight.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 200;
+  font-style: italic;
+  src: url('./fonts/montserrat/montserrat-extralightitalic.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 300;
+  font-style: normal;
+  src: url('./fonts/montserrat/montserrat-light.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 300;
+  font-style: italic;
+  src: url('./fonts/montserrat/montserrat-lightitalic.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 400;
+  font-style: normal;
+  src: url('./fonts/montserrat/montserrat-regular.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 400;
+  font-style: italic;
+  src: url('./fonts/montserrat/montserrat-italic.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 500;
+  font-style: normal;
+  src: url('./fonts/montserrat/montserrat-medium.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 500;
+  font-style: italic;
+  src: url('./fonts/montserrat/montserrat-mediumitalic.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 600;
+  font-style: normal;
+  src: url('./fonts/montserrat/montserrat-semibold.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 600;
+  font-style: italic;
+  src: url('./fonts/montserrat/montserrat-semibolditalic.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 700;
+  font-style: normal;
+  src: url('./fonts/montserrat/montserrat-bold.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 700;
+  font-style: italic;
+  src: url('./fonts/montserrat/montserrat-bolditalic.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 800;
+  font-style: normal;
+  src: url('./fonts/montserrat/montserrat-extrabold.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 800;
+  font-style: italic;
+  src: url('./fonts/montserrat/montserrat-extrabolditalic.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 900;
+  font-style: normal;
+  src: url('./fonts/montserrat/montserrat-black.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $montserrat;
+  font-weight: 900;
+  font-style: italic;
+  src: url('./fonts/montserrat/montserrat-blackitalic.ttf'), format('truetype');
+}
+
+
+// A.3. Source Code Pro -- Code, Monospace
+@font-face {
+  font-family: $sourceCodePro;
+  font-weight: 200;
+  font-style: normal;
+  src: url('./fonts/sourcecodepro/sourcecodepro-extralight.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $sourceCodePro;
+  font-weight: 300;
+  font-style: normal;
+  src: url('./fonts/sourcecodepro/sourcecodepro-light.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $sourceCodePro;
+  font-weight: 400;
+  font-style: normal;
+  src: url('./fonts/sourcecodepro/sourcecodepro-regular.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $sourceCodePro;
+  font-weight: 500;
+  font-style: normal;
+  src: url('./fonts/sourcecodepro/sourcecodepro-medium.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $sourceCodePro;
+  font-weight: 600;
+  font-style: normal;
+  src: url('./fonts/sourcecodepro/sourcecodepro-semibold.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $sourceCodePro;
+  font-weight: 700;
+  font-style: normal;
+  src: url('./fonts/sourcecodepro/sourcecodepro-bold.ttf'), format('truetype');
+}
+
+@font-face {
+  font-family: $sourceCodePro;
+  font-weight: 900;
+  font-style: normal;
+  src: url('./fonts/sourcecodepro/sourcecodepro-black.ttf'), format('truetype');
+}
+
+$fonts: (
+  'oswald': $oswald,
+  'montserrat': $montserrat,
+  'source-code-pro': $sourceCodePro,
+);
+
+@function font($font-name) {
+  $font: map-get($fonts, $font-name);
+  @if ($font) {
+    @return $font;
+  } @else {
+    @warn 'Font not found.';
+  }
+}
