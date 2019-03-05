@@ -32,29 +32,3 @@ $colors: (
     @warn 'Color not found';
   }
 }
-
-
-$primary:       color('blue-gray');
-$secondary:     color('deep-purple');
-$interactable:  color('orange');
-$action:        color('blue');
-$danger:        color('red');
-$success:       color('green');
-
-$theme-colours: (
-  'primary':       $primary,
-  'secondary':     $secondary,
-  'interactable':  $interactable,
-  'action':        $action,
-  'danger':        $danger,
-  'success':       $success,
-);
-
-@function theme-color($color-name) {
-  $color: map-get($theme-colours, $color-name);
-  @if ($color) {
-    @return $color;
-  } @else {
-    @warn 'Theme color not found';
-  }
-}

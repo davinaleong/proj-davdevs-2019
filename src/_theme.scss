@@ -1,0 +1,43 @@
+$primary:       color('blue-gray');
+$secondary:     color('deep-purple');
+$interactable:  color('orange');
+$action:        color('blue');
+$danger:        color('red');
+$success:       color('green');
+
+$theme-colours: (
+  'primary':       $primary,
+  'secondary':     $secondary,
+  'interactable':  $interactable,
+  'action':        $action,
+  'danger':        $danger,
+  'success':       $success,
+);
+
+@function theme-color($color-name) {
+  $color: map-get($theme-colours, $color-name);
+  @if ($color) {
+    @return $color;
+  } @else {
+    @warn 'Theme color not found';
+  }
+}
+
+$heading-family: $oswald, 'Verdana', 'Arial', 'Helvetica', sans-serif;
+$body-family: $montserrat, 'Arial', 'Helvetica', sans-serif;
+$monospace-family: $sourceCodePro, 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace;
+
+$theme-families: (
+  'heading-family': $heading-family,
+  'body-family': $body-family,
+  'monospace-family': $monospace-family
+);
+
+@function font-family($family-name) {
+  $family: map-get($theme-families, $family-name);
+  @if ($family) {
+    @return $family;
+  } @else {
+    @warn 'Font family not found.';
+  }
+}
