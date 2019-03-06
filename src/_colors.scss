@@ -227,13 +227,3 @@ $greens: (
   }
   @warn 'Tints map not found.';
 }
-
-
-/// E.1. Consolidate all colours
-$colors-tints: $colors;
-// TODO: map-merge all colours
-// TODO: function to get a colour/tint
-$colors-tints: map-merge(
-  (),
-  $colors-tints
-);

@@ -233,10 +233,20 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  list-style-type: none;
+}
+
+.side-link-item:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+.side-link-item:nth-child(even) {
+  background-color: #e0e0e0;
 }
 
 .side-link-item {
   text-align: center;
+  padding: 0.5rem;
 }
 
 section, .section {
@@ -248,6 +258,6 @@ section:nth-child(odd), .section:nth-child(odd) {
 }
 
 section:nth-child(even), .section:nth-child(even) {
-  background-color: grays("100");
+  background-color: #f5f5f5;
 }
 /*# sourceMappingURL=styles.css.map */

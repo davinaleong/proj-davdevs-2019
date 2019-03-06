@@ -6,11 +6,20 @@
 .side-link {
   display: flex;
   flex-direction: column;
+  list-style-type: none;
+}
+
+.side-link-item:nth-child(odd) {
+  background-color: tint($grays, '200');
+}
+
+.side-link-item:nth-child(even) {
+  background-color: tint($grays, '300');
 }
 
 .side-link-item {
   text-align: center;
-  // padding: 
+  padding: spacer('2');
 }
 
 section, .section {
@@ -22,5 +31,5 @@ section:nth-child(odd), .section:nth-child(odd) {
 }
 
 section:nth-child(even), .section:nth-child(even) {
-  background-color: grays('100');
+  background-color: tint($grays, '100');
 }
