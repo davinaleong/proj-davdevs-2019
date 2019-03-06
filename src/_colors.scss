@@ -24,15 +24,6 @@ $colors: (
   'green':      $green,
 );
 
-@function color($color-name) {
-  $color: map-get($colors, $color-name);
-  @if ($color) {
-    @return $color;
-  } @else {
-    @warn 'Color not found';
-  }
-}
-
 
 /// C.2. Tints
 /// C.2.a Gray tints
@@ -60,15 +51,6 @@ $grays: (
   '900':  $gray-900,
 );
 
-@function grays($tint) {
-  $gray: map-get($grays, $tint);
-  @if ($gray) {
-    @return $gray;
-  } @else {
-    @warn 'Gray tint not found.';
-  }
-}
-
 
 /// C.2.b Blue-gray tints
 $blue-gray-50:  #eceff1;
@@ -94,15 +76,6 @@ $blue-grays: (
   '800':  $blue-gray-800,
   '900':  $blue-gray-900,
 );
-
-@function blue-grays($tint) {
-  $gray: map-get($blue-grays, $tint);
-  @if ($gray) {
-    @return $gray;
-  } @else {
-    @warn 'Blue-gray tint not found.';
-  }
-}
 
 
 /// C.2.c Deep-purple tints
@@ -130,15 +103,6 @@ $deep-purples: (
   '900':  $deep-purple-900,
 );
 
-@function deep-purples($tint) {
-  $gray: map-get($deep-purples, $tint);
-  @if ($gray) {
-    @return $gray;
-  } @else {
-    @warn 'Deep-purple tint not found.';
-  }
-}
-
 
 /// C.2.d Orange tints
 $orange-50:   #fff3e0;
@@ -164,15 +128,6 @@ $oranges: (
   '800':  $orange-800,
   '900':  $orange-900,
 );
-
-@function oranges($tint) {
-  $gray: map-get($oranges, $tint);
-  @if ($gray) {
-    @return $gray;
-  } @else {
-    @warn 'Orange tint not found.';
-  }
-}
 
 
 /// C.2.e Blue tints
@@ -200,15 +155,6 @@ $blues: (
   '900':  $blue-900,
 );
 
-@function blues($tint) {
-  $gray: map-get($blues, $tint);
-  @if ($gray) {
-    @return $gray;
-  } @else {
-    @warn 'Blue tint not found.';
-  }
-}
-
 
 /// C.2.f Red tints
 $red-50:  #ffebee;
@@ -234,15 +180,6 @@ $reds: (
   '800':  $red-800,
   '900':  $red-900,
 );
-
-@function reds($tint) {
-  $gray: map-get($reds, $tint);
-  @if ($gray) {
-    @return $gray;
-  } @else {
-    @warn 'Red tint not found.';
-  }
-}
 
 
 /// C.2.g Green tints
@@ -270,17 +207,29 @@ $greens: (
   '900':  $green-900,
 );
 
-@function greens($tint) {
-  $gray: map-get($greens, $tint);
-  @if ($gray) {
-    @return $gray;
-  } @else {
-    @warn 'Green tint not found.';
+
+/// D.1. Utilities
+@function color($color-name) {
+  $color: map-get($colors, $color-name);
+  @if ($color) {
+    @return $color;
   }
+  @warn 'Color not found in $colors.';
+}
+
+@function tint($tint-map, $tint) {
+  @if ($tint-map) {
+    $color: map-get($tint-map, $tint);
+    @if ($color) {
+      @return $color;
+    }
+    @warn 'Tint not found in $tint-map.';
+  }
+  @warn 'Tints map not found.';
 }
 
 
-/// D.1. Consolidate all colours
+/// E.1. Consolidate all colours
 $colors-tints: $colors;
 // TODO: map-merge all colours
 // TODO: function to get a colour/tint

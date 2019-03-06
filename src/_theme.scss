@@ -1,3 +1,7 @@
+/// T. Theme
+
+
+/// T.1. Colors
 $primary:       color('blue-gray');
 $secondary:     color('deep-purple');
 $interactable:  color('orange');
@@ -19,10 +23,12 @@ $theme-colours: (
   @if ($color) {
     @return $color;
   } @else {
-    @warn 'Theme color not found';
+    @warn 'Theme color not found in $theme-colors.';
   }
 }
 
+
+/// T.2. Fonts
 $heading-family: $oswald, 'Verdana', 'Arial', 'Helvetica', sans-serif;
 $body-family: $montserrat, 'Arial', 'Helvetica', sans-serif;
 $monospace-family: $sourceCodePro, 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace;
@@ -38,6 +44,26 @@ $theme-families: (
   @if ($family) {
     @return $family;
   } @else {
-    @warn 'Font family not found.';
+    @warn 'Font family not found in $theme-families.';
+  }
+}
+
+
+/// T.3. Spacing
+$spacer-unit: 1rem;
+$spacers: (
+  '1': $spacer-unit * 0.25,
+  '2': $spacer-unit * 0.5,
+  '3': $spacer-unit * 1,
+  '4': $spacer-unit * 1.25,
+  '5': $spacer-unit * 2
+);
+
+@function spacer($spacer-index) {
+  $spacer: map-get($spacers, $spacer-index);
+  @if ($spacer) {
+    @return $spacer;
+  } @else {
+    @warn 'Spacer-index not found in $spacers';
   }
 }

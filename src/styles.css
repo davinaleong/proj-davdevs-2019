@@ -220,27 +220,9 @@
   src: url("./fonts/sourcecodepro/sourcecodepro-black.ttf"), format("truetype");
 }
 
-.nav-side {
-  position: fixed;
-  background-color: grays("300");
-}
-
-.side-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.side-link-item {
-  text-align: center;
-}
-
 section, .section {
   min-height: 80vh;
+  color: #607d8b;
 }
 
 section:nth-child(odd), .section:nth-child(odd) {
@@ -248,6 +230,6 @@ section:nth-child(odd), .section:nth-child(odd) {
 }
 
 section:nth-child(even), .section:nth-child(even) {
-  background-color: grays("100");
+  background-color: #f5f5f5;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,18 @@
+.nav-side {
+  position: fixed;
+  background-color: grays('300');
+}
+
+.side-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-link-item {
+  text-align: center;
+  // padding: 
+}
+
 section, .section {
   min-height: 80vh;
 }
