@@ -49,6 +49,28 @@ $theme-families: (
 }
 
 
+$font-size: 16px;
+$theme-sizes: (
+  'small': 0.8rem,
+  'regular': 1rem,
+  'regular-l': 1.25rem,
+  'large': 1.5rem,
+  'x-large': 2rem,
+  'xx-large': 2.5rem,
+  'heading': 3rem,
+  'heading-l': 3.8rem,
+  'display': 6rem
+);
+@function font-size($size) {
+  $font-size: map-get($theme-sizes, $size);
+  @if ($font-size) {
+    @return $font-size;
+  } @else {
+    @warn 'Font size not found in $theme-sizes';
+  }
+}
+
+
 /// T.3. Spacing
 $spacer-unit: 1rem;
 $spacers: (
