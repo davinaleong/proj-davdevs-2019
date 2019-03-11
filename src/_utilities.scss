@@ -1,0 +1,20 @@
+$font-weights: (
+  'thin': 100,
+  'extra-light': 200,
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semi-bold': 600,
+  'bold': 700,
+  'extra-bold': 800,
+  'black': 900
+);
+
+@function font-weight($weight) {
+  $font-weight: map-get($font-weights, $weight);
+  @if ($font-weight) {
+    @return $font-weight;
+  } @else {
+    @warn 'Font weight not found in $font-weights.';
+  }
+}
