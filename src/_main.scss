@@ -1,45 +1,102 @@
-html, body {
-  font-family: font-family('body-family');
+:root {
+  font-family: theme-family('body-family');
   font-weight: font-weight('regular');
 }
 
-h1, .h1, h2, .h2, h3, .h3,
-h4, .h4, h5, .h5, h6, .h6 {
-  font-family: font-family('heading-family');
+html, body {
+  font-family: theme-family('body-family');
+  font-weight: font-weight('regular');
 }
 
+// h1, .h1, h2, .h2, h3, .h3,
+// h4, .h4, h5, .h5, h6, .h6 {
+//   font-family: theme-family('heading-family');
+// }
+
+// h1, .h1 {
+//   font-size: theme-size('heading-l');
+//   font-weight: font-weight('extra-light');
+// }
+
+// h2, .h2 {
+//   font-size: theme-size('heading');
+//   font-weight: font-weight('extra-light');
+// }
+
+// h3, .h3 {
+//   font-size: theme-size('xx-large');
+//   font-weight: font-weight('extra-light');
+// }
+
+// h4, .h4 {
+//   font-size: theme-size('x-large');
+//   font-weight: font-weight('regular');
+// }
+
+// h5, .h5 {
+//   font-size: theme-size('large');
+//   font-weight: font-weight('regular');
+// }
+
+// h6, .h6 {
+//   font-size: theme-size('regular-l');
+//   font-weight: font-weight('bold');
+// }
+
 h1, .h1 {
-  font-size: font-size('heading-l');
-  font-weight: font-weight('extra-light');
+  $heading: theme-heading('h1');
+  font-family: map-get($heading, 'font-family');
+  font-weight: map-get($heading, 'font-weight');
+  font-size: map-get($heading, 'font-size');
+  font-style: map-get($heading, 'font-style');
 }
 
 h2, .h2 {
-  font-size: font-size('heading');
-  font-weight: font-weight('extra-light');
+  $heading: theme-heading('h2');
+  font-family: map-get($heading, 'font-family');
+  font-weight: map-get($heading, 'font-weight');
+  font-size: map-get($heading, 'font-size');
+  font-style: map-get($heading, 'font-style');
 }
 
 h3, .h3 {
-  font-size: font-size('xx-large');
-  font-weight: font-weight('extra-light');
+  $heading: theme-heading('h3');
+  font-family: map-get($heading, 'font-family');
+  font-weight: map-get($heading, 'font-weight');
+  font-size: map-get($heading, 'font-size');
+  font-style: map-get($heading, 'font-style');
 }
 
 h4, .h4 {
-  font-size: font-size('x-large');
-  font-weight: font-weight('regular');
+  $heading: theme-heading('h4');
+  font-family: map-get($heading, 'font-family');
+  font-weight: map-get($heading, 'font-weight');
+  font-size: map-get($heading, 'font-size');
+  font-style: map-get($heading, 'font-style');
 }
 
 h5, .h5 {
-  font-size: font-size('large');
-  font-weight: font-weight('regular');
+  $heading: theme-heading('h5');
+  font-family: map-get($heading, 'font-family');
+  font-weight: map-get($heading, 'font-weight');
+  font-size: map-get($heading, 'font-size');
+  font-style: map-get($heading, 'font-style');
 }
 
 h6, .h6 {
-  font-size: font-size('regular-l');
-  font-weight: font-weight('bold');
+  $heading: theme-heading('h6');
+  font-family: map-get($heading, 'font-family');
+  font-weight: map-get($heading, 'font-weight');
+  font-size: map-get($heading, 'font-size');
+  font-style: map-get($heading, 'font-style');
 }
 
 .display {
-  font-size: font-size('display');
+  $heading: theme-heading('display');
+  font-family: map-get($heading, 'font-family');
+  font-weight: map-get($heading, 'font-weight');
+  font-size: map-get($heading, 'font-size');
+  font-style: map-get($heading, 'font-style');
 }
 
 .nav-side {
