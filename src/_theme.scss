@@ -39,12 +39,66 @@ $theme-families: (
   'monospace-family': $monospace-family
 );
 
-@function font-family($family-name) {
+@function theme-family($family-name) {
   $family: map-get($theme-families, $family-name);
   @if ($family) {
     @return $family;
   } @else {
     @warn 'Font family not found in $theme-families.';
+  }
+}
+
+
+$theme-headings: (
+  'display': (
+    'font-family': font-family('heading-family'),
+    'font-weight': font-weight('extra-light'),
+    'font-size': font-size('display'),
+    'font-style': normal
+  ),
+  'h1': (
+    'font-family': font-family('heading-family'),
+    'font-weight': font-weight('extra-light'),
+    'font-size': font-size('heading-l'),
+    'font-style': normal
+  ),
+  'h2': (
+    'font-family': font-family('heading-family'),
+    'font-weight': font-weight('extra-light'),
+    'font-size': font-size('heading'),
+    'font-style': normal
+  ),
+  'h3': (
+    'font-family': font-family('heading-family'),
+    'font-weight': font-weight('extra-light'),
+    'font-size': font-size('xx-large'),
+    'font-style': normal
+  ),
+  'h4': (
+    'font-family': font-family('heading-family'),
+    'font-weight': font-weight('regular'),
+    'font-size': font-size('x-large'),
+    'font-style': normal
+  ),
+  'h5': (
+    'font-family': font-family('heading-family'),
+    'font-weight': font-weight('regular'),
+    'font-size': font-size('large'),
+    'font-style': normal
+  ),
+  'h6': (
+    'font-family': font-family('heading-family'),
+    'font-weight': font-weight('bold'),
+    'font-size': font-size('regular-l'),
+    'font-style': normal
+  )
+);
+@function theme-heading($heading) {
+  $theme-heading: map-ger($theme-headings, $heading);
+  @if ($theme-heading) {
+    @return $theme-heading;
+  } @else {
+    @warn 'Heading styles not found in $theme-headings';
   }
 }
 
@@ -59,9 +113,9 @@ $theme-sizes: (
   'xx-large': 2.5rem,
   'heading': 3rem,
   'heading-l': 3.8rem,
-  'display': 6rem
+  'display': 7rem
 );
-@function font-size($size) {
+@function theme-size($size) {
   $font-size: map-get($theme-sizes, $size);
   @if ($font-size) {
     @return $font-size;
