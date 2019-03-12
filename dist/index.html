@@ -10,29 +10,161 @@
 <body>
   <nav class="nav-side">
     <!-- <ul class="side-link">
+      <li class="side-link-item">Dd</li>
       <li class="side-link-item">C</li>
       <li class="side-link-item">Li</li>
       <li class="side-link-item">GH</li>
       <li class="side-link-item">dR</li>
       <li class="side-link-item">DEV</li>
+      <li class="side-link-item">^</li>
     </ul> -->
   </nav>
   <main>
-    <section>
-      <h1 class="display">Display</h1>
-      <h1>Heading 1</h1>
-      <h2>Heading 2</h2>
-      <h3>Heading 3</h3>
-      <h4>Heading 4</h4>
-      <h5>Heading 5</h5>
-      <h6>Heading 6</h6>
+    <section id="landing">
+      <h1 class="display">Dav.devs</h1>
+      <p>the food- & game- loving<br>web developer</p>
     </section>
-    <section>
-      <h1>Section 1</h1>
+
+    <section id="skills">
+      <h2><i class="fas fa-pencil-ruler"></i> I do...</h2>
+      <div class="container-grid">
+        <div>
+          <h3><i class="fas fa-browser"></i> Frontend</h3>
+          <ul>
+            <li>Javascript</li>
+            <li>Bootstrap</li>
+            <li>jQuery</li>
+            <li>SASS</li>
+            <li>Gulp</li>
+            <li>Webpack</li>
+            <li>ReactJS</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3><i class="fas fa-cogs"></i> Backend</h3>
+          <ul>
+            <li>PHP</li>
+            <li>Laravel</li>
+            <li>MySQL</li>
+            <li>NodeJS</li>
+            <li>CraftCMS</li>
+            <li>GraphQL</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3><i class="fas fa-server"></i> DevOps</h3>
+          <ul>
+            <li>AWS</li>
+            <li>Serverless</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3><i class="fas fa-gavel"></i> Tools</h3>
+          <ul>
+            <li>GIT</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2><i class="fas fa-user"></i> I am...</h2>
+      <div class="container-grid">
+        <div>
+          <button type="button"><i class="fas fa-question"></i> About</button>
+          <p>Brief history, background and education</p>
+        </div>
+
+        <div class="container-grid">
+          <button type="button"><i class="fas fa-download"></i> Resume</button>
+          <p>Resumes in word and pdf formats</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests">
+      <h2><i class="fas fa-heart"></i> I like...</h2>
+      <div class="container-grid">
+        <div>
+          <h3><i class="fas fa-dice-d12"></i> Games</h3>
+          <ul>
+            <li><i class="fas fa-dice"></i> Tabletop</li>
+            <li><i class="fas fa-gamepad"></i> Video</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3><i class="fas fa-apple-alt"></i> Food</h3>
+          <ul>
+            <li><i class="fas fa-pizza"></i> Italian</li>
+            <li><i class="fas fa-pepper-hot"></i> Peranakan</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2><i class="fas fa-phone"></i> Contact</h2>
+      <form class="container-grid">
+        <div>
+          <label for="name" class="form-label"><i class="fal fa-user"></i></label>
+          <input type="text" class="form-control" name="name" placeholder="Name" required>
+        </div>
+
+        <div class="half">
+          <label for="email" class="form-label"><i class="fal fa-envelope"></i></label>
+          <input type="text" class="form-control" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="half">
+          <label for="mobile" class="form-label"><i class="fal fa-mobile"></i></label>
+          <input type="text" class="form-control" name="mobile" placeholder="Mobile (optional)">
+        </div>
+
+        <div>
+          <label for="subject" class="form-label"><i class="fal fa-hashtag"></i></label>
+          <select class="form-control" name="subject" required>
+            <option>Subject</option>
+            <option value="project">Have a project?</option>
+            <option value="hire">Hire me?</option>
+            <option value="coffee">Hangout?</option>
+            <option value="others">Others</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message" class="form-label"><i class="fal fa-pen"></i></label>
+          <textarea class="form-control" name="message" required
+            rows="6" placeholder="Message"></textarea>
+        </div>
+      </form>
     </section>
   </main>
   <footer>
-    Footer
+    <h2><i class="fas fa-sad-tear"></i> End...</header>
+    <div class="container-grid">
+      <div>
+        <h3><i class="fas fa-users"></i> Social</h3>
+        <ul>
+          <li><i class="fab fa-github"></i> GitHub</li>
+          <li><i class="fab fa-linkedin"></i> LinkedIn</li>
+          <li><i class="fab fa-dev"></i> DEV</li>
+          <li><h6>DR</h6> DevRant</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3><i class="fas fa-map-marker-alt"></i> Locate</h3>
+        <ul>
+          <li><i class="fal fa-envelope"></i> davina.leong@outlook.com</li>
+          <li><i class="fal fa-globe-asia"></i> West, Singapore</li>
+        </ul>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
