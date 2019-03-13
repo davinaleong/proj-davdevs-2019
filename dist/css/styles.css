@@ -313,4 +313,20 @@ section:nth-child(odd), .section:nth-child(odd) {
 section:nth-child(even), .section:nth-child(even) {
   background-color: #f5f5f5;
 }
+
+.grid-skills {
+  grid-area: skills;
+}
+
+.grid-about {
+  grid-area: about;
+}
+
+.grid-interests {
+  grid-area: interests;
+}
+
+.grid-contact {
+  grid-area: contact;
+}
 /*# sourceMappingURL=styles.css.map */
