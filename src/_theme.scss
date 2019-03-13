@@ -61,7 +61,7 @@ $theme-fsizes: (
   'xx-large': 2.5rem,
   'heading': 3rem,
   'heading-l': 3.8rem,
-  'display': 7rem
+  'display': 8rem
 );
 @function theme-fsize($size) {
   $font-size: map-get($theme-fsizes, $size);
