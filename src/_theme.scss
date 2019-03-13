@@ -29,6 +29,7 @@ $theme-colours: (
 
 
 /// T.2. Fonts
+/// T.2.a Font Families
 $heading-family: $oswald, 'Verdana', 'Arial', 'Helvetica', sans-serif;
 $body-family: $montserrat, 'Arial', 'Helvetica', sans-serif;
 $monospace-family: $sourceCodePro, 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace;
@@ -49,62 +50,9 @@ $theme-families: (
 }
 
 
-$theme-headings: (
-  'display': (
-    'font-family': font-family('heading-family'),
-    'font-weight': font-weight('extra-light'),
-    'font-size': font-size('display'),
-    'font-style': normal
-  ),
-  'h1': (
-    'font-family': font-family('heading-family'),
-    'font-weight': font-weight('extra-light'),
-    'font-size': font-size('heading-l'),
-    'font-style': normal
-  ),
-  'h2': (
-    'font-family': font-family('heading-family'),
-    'font-weight': font-weight('extra-light'),
-    'font-size': font-size('heading'),
-    'font-style': normal
-  ),
-  'h3': (
-    'font-family': font-family('heading-family'),
-    'font-weight': font-weight('extra-light'),
-    'font-size': font-size('xx-large'),
-    'font-style': normal
-  ),
-  'h4': (
-    'font-family': font-family('heading-family'),
-    'font-weight': font-weight('regular'),
-    'font-size': font-size('x-large'),
-    'font-style': normal
-  ),
-  'h5': (
-    'font-family': font-family('heading-family'),
-    'font-weight': font-weight('regular'),
-    'font-size': font-size('large'),
-    'font-style': normal
-  ),
-  'h6': (
-    'font-family': font-family('heading-family'),
-    'font-weight': font-weight('bold'),
-    'font-size': font-size('regular-l'),
-    'font-style': normal
-  )
-);
-@function theme-heading($heading) {
-  $theme-heading: map-ger($theme-headings, $heading);
-  @if ($theme-heading) {
-    @return $theme-heading;
-  } @else {
-    @warn 'Heading styles not found in $theme-headings';
-  }
-}
-
-
+/// T.2.b Font Sizes
 $font-size: 16px;
-$theme-sizes: (
+$theme-fsizes: (
   'small': 0.8rem,
   'regular': 1rem,
   'regular-l': 1.25rem,
@@ -115,12 +63,75 @@ $theme-sizes: (
   'heading-l': 3.8rem,
   'display': 7rem
 );
-@function theme-size($size) {
-  $font-size: map-get($theme-sizes, $size);
+@function theme-fsize($size) {
+  $font-size: map-get($theme-fsizes, $size);
   @if ($font-size) {
     @return $font-size;
   } @else {
     @warn 'Font size not found in $theme-sizes';
+  }
+}
+
+
+/// T.2.c Headings
+$heading-display: (
+  'font-family': theme-family('heading-family'),
+  'font-weight': font-weight('extra-light'),
+  'font-size': theme-fsize('display'),
+  'font-style': normal
+);
+$heading-h1: (
+  'font-family': theme-family('heading-family'),
+  'font-weight': font-weight('extra-light'),
+  'font-size': theme-fsize('heading-l'),
+  'font-style': normal
+);
+$heading-h2: (
+  'font-family': theme-family('heading-family'),
+  'font-weight': font-weight('extra-light'),
+  'font-size': theme-fsize('heading'),
+  'font-style': normal
+);
+$heading-h3: (
+  'font-family': theme-family('heading-family'),
+  'font-weight': font-weight('extra-light'),
+  'font-size': theme-fsize('xx-large'),
+  'font-style': normal
+);
+$heading-h4: (
+  'font-family': theme-family('heading-family'),
+  'font-weight': font-weight('regular'),
+  'font-size': theme-fsize('x-large'),
+  'font-style': normal
+);
+$heading-h5: (
+  'font-family': theme-family('heading-family'),
+  'font-weight': font-weight('regular'),
+  'font-size': theme-fsize('large'),
+  'font-style': normal
+);
+$heading-h6: (
+  'font-family': theme-family('heading-family'),
+  'font-weight': font-weight('bold'),
+  'font-size': theme-fsize('regular-l'),
+  'font-style': normal
+);
+
+$theme-headings: (
+  'display': $heading-display,
+  'h1': $heading-h1,
+  'h2': $heading-h2,
+  'h3': $heading-h3,
+  'h4': $heading-h4,
+  'h5': $heading-h5,
+  'h6': $heading-h6
+);
+@function theme-heading($heading) {
+  $theme-heading: map-get($theme-headings, $heading);
+  @if ($theme-heading) {
+    @return $theme-heading;
+  } @else {
+    @warn 'Heading styles not found in $theme-headings';
   }
 }
 
