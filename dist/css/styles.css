@@ -220,6 +220,90 @@
   src: url("./fonts/sourcecodepro/sourcecodepro-black.ttf"), format("truetype");
 }
 
+.text-weight-thin {
+  font-weight: 100;
+}
+
+.text-weight-extra-light {
+  font-weight: 200;
+}
+
+.text-weight-light {
+  font-weight: 300;
+}
+
+.text-weight-regular {
+  font-weight: 400;
+}
+
+.text-weight-medium {
+  font-weight: 500;
+}
+
+.text-weight-semi-bold {
+  font-weight: 600;
+}
+
+.text-weight-bold {
+  font-weight: 700;
+}
+
+.text-weight-extra-bold {
+  font-weight: 800;
+}
+
+.text-weight-black {
+  font-weight: 900;
+}
+
+.text-style-normal {
+  font-style: normal;
+}
+
+.text-style-italic {
+  font-style: italic;
+}
+
+.text-style-oblique {
+  font-style: oblique;
+}
+
+.text-size-small {
+  font-size: 0.8rem;
+}
+
+.text-size-regular {
+  font-size: 1rem;
+}
+
+.text-size-regular-l {
+  font-size: 1.25rem;
+}
+
+.text-size-large {
+  font-size: 1.5rem;
+}
+
+.text-size-x-large {
+  font-size: 2rem;
+}
+
+.text-size-xx-large {
+  font-size: 2.5rem;
+}
+
+.text-size-heading {
+  font-size: 3rem;
+}
+
+.text-size-heading-l {
+  font-size: 3.8rem;
+}
+
+.text-size-display {
+  font-size: 8rem;
+}
+
 :root {
   font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
   font-weight: 400;
@@ -328,5 +412,13 @@ section:nth-child(even), .section:nth-child(even) {
 
 .grid-contact {
   grid-area: contact;
+}
+
+small, .small, sub, .sub, sup, .sup {
+  font-size: 0.8em;
+}
+
+code, .code, pre, .pre {
+  font-family: "Source Code Pro", "Consolas", "Menlo", "Monaco", "Courier New", monospace;
 }
 /*# sourceMappingURL=styles.css.map */
