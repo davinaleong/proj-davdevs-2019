@@ -3,6 +3,18 @@
   margin: 0;
 }
 
+.text-style-normal {
+  font-style: normal;
+}
+
+.text-style-italic {
+  font-style: italic;
+}
+
+.text-style-oblique {
+  font-style: oblique;
+}
+
 @font-face {
   font-family: "Oswald";
   font-weight: 200;
@@ -220,6 +232,124 @@
   src: url("./fonts/sourcecodepro/sourcecodepro-black.ttf"), format("truetype");
 }
 
+:root {
+  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+  font-weight: 400;
+}
+
+html, body {
+  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+  font-weight: 400;
+}
+
+.nav-side {
+  position: fixed;
+  background-color: grays("300");
+  top: 30vh;
+}
+
+.side-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style-type: none;
+}
+
+.side-link-item:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+.side-link-item:nth-child(even) {
+  background-color: #e0e0e0;
+}
+
+.side-link-item {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+section, .section {
+  min-height: 80vh;
+}
+
+section:nth-child(odd), .section:nth-child(odd) {
+  background-color: #fff;
+}
+
+section:nth-child(even), .section:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.grid-skills {
+  grid-area: skills;
+}
+
+.grid-about {
+  grid-area: about;
+}
+
+.grid-interests {
+  grid-area: interests;
+}
+
+.grid-contact {
+  grid-area: contact;
+}
+
+h1, .h1 {
+  font-family: "Oswald", "Verdana", "Arial", "Helvetica", sans-serif;
+  font-weight: 200;
+  font-size: 3.8rem;
+  font-style: normal;
+}
+
+h2, .h2 {
+  font-family: "Oswald", "Verdana", "Arial", "Helvetica", sans-serif;
+  font-weight: 200;
+  font-size: 3rem;
+  font-style: normal;
+}
+
+h3, .h3 {
+  font-family: "Oswald", "Verdana", "Arial", "Helvetica", sans-serif;
+  font-weight: 200;
+  font-size: 2.5rem;
+  font-style: normal;
+}
+
+h4, .h4 {
+  font-family: "Oswald", "Verdana", "Arial", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  font-style: normal;
+}
+
+h5, .h5 {
+  font-family: "Oswald", "Verdana", "Arial", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+}
+
+.display {
+  font-family: "Oswald", "Verdana", "Arial", "Helvetica", sans-serif;
+  font-weight: 200;
+  font-size: 8rem;
+  font-style: normal;
+}
+
+small, .small, sub, .sub, sup, .sup {
+  font-size: 0.8em;
+}
+
+code, .code, pre, .pre {
+  font-family: "Source Code Pro", "Consolas", "Menlo", "Monaco", "Courier New", monospace;
+}
+
 .text-weight-thin {
   font-weight: 100;
 }
@@ -302,123 +432,5 @@
 
 .text-size-display {
   font-size: 8rem;
-}
-
-:root {
-  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
-  font-weight: 400;
-}
-
-html, body {
-  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
-  font-weight: 400;
-}
-
-h1, .h1 {
-  font-family: "Oswald", "Verdana", "Arial", "Helvetica", sans-serif;
-  font-weight: 200;
-  font-size: 3.8rem;
-  font-style: normal;
-}
-
-h2, .h2 {
-  font-family: "Oswald", "Verdana", "Arial", "Helvetica", sans-serif;
-  font-weight: 200;
-  font-size: 3rem;
-  font-style: normal;
-}
-
-h3, .h3 {
-  font-family: "Oswald", "Verdana", "Arial", "Helvetica", sans-serif;
-  font-weight: 200;
-  font-size: 2.5rem;
-  font-style: normal;
-}
-
-h4, .h4 {
-  font-family: "Oswald", "Verdana", "Arial", "Helvetica", sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  font-style: normal;
-}
-
-h5, .h5 {
-  font-family: "Oswald", "Verdana", "Arial", "Helvetica", sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  font-style: normal;
-}
-
-.display {
-  font-family: "Oswald", "Verdana", "Arial", "Helvetica", sans-serif;
-  font-weight: 200;
-  font-size: 8rem;
-  font-style: normal;
-}
-
-.nav-side {
-  position: fixed;
-  background-color: grays("300");
-  top: 30vh;
-}
-
-.side-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  list-style-type: none;
-}
-
-.side-link-item:nth-child(odd) {
-  background-color: #eeeeee;
-}
-
-.side-link-item:nth-child(even) {
-  background-color: #e0e0e0;
-}
-
-.side-link-item {
-  text-align: center;
-  padding: 0.5rem;
-}
-
-section, .section {
-  min-height: 80vh;
-}
-
-section:nth-child(odd), .section:nth-child(odd) {
-  background-color: #fff;
-}
-
-section:nth-child(even), .section:nth-child(even) {
-  background-color: #f5f5f5;
-}
-
-.grid-skills {
-  grid-area: skills;
-}
-
-.grid-about {
-  grid-area: about;
-}
-
-.grid-interests {
-  grid-area: interests;
-}
-
-.grid-contact {
-  grid-area: contact;
-}
-
-small, .small, sub, .sub, sup, .sup {
-  font-size: 0.8em;
-}
-
-code, .code, pre, .pre {
-  font-family: "Source Code Pro", "Consolas", "Menlo", "Monaco", "Courier New", monospace;
 }
 /*# sourceMappingURL=styles.css.map */
