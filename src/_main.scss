@@ -50,6 +50,13 @@ section:nth-child(even), .section:nth-child(even) {
   background-color: tint($grays, '100');
 }
 
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+};
+
 
 /// M.3. Grid
 .grid-skills {
