@@ -113,3 +113,19 @@ code, .code, pre, .pre {
     font-size: $fsize;
   }
 }
+
+
+/// M.5. Color
+@each $name, $color in $theme-colors {
+  .text-#{$name} {
+    color: $color;
+  }
+
+  .bg-#{$name} {
+    background-color: $color;
+  }
+
+  .border-#{$name} {
+    border-color: $color;
+  }
+}

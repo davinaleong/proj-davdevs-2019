@@ -433,4 +433,76 @@ code, .code, pre, .pre {
 .text-size-display {
   font-size: 8rem;
 }
+
+.text-primary {
+  color: #607d8b;
+}
+
+.bg-primary {
+  background-color: #607d8b;
+}
+
+.border-primary {
+  border-color: #607d8b;
+}
+
+.text-secondary {
+  color: #673ab7;
+}
+
+.bg-secondary {
+  background-color: #673ab7;
+}
+
+.border-secondary {
+  border-color: #673ab7;
+}
+
+.text-interactable {
+  color: #ff9800;
+}
+
+.bg-interactable {
+  background-color: #ff9800;
+}
+
+.border-interactable {
+  border-color: #ff9800;
+}
+
+.text-action {
+  color: #2196f3;
+}
+
+.bg-action {
+  background-color: #2196f3;
+}
+
+.border-action {
+  border-color: #2196f3;
+}
+
+.text-danger {
+  color: #f44336;
+}
+
+.bg-danger {
+  background-color: #f44336;
+}
+
+.border-danger {
+  border-color: #f44336;
+}
+
+.text-success {
+  color: #4caf50;
+}
+
+.bg-success {
+  background-color: #4caf50;
+}
+
+.border-success {
+  border-color: #4caf50;
+}
 /*# sourceMappingURL=styles.css.map */
