@@ -1,3 +1,6 @@
+/// U. Utilities
+
+/// U.1. Font Weight
 $font-weights: (
   'thin': 100,
   'extra-light': 200,
@@ -16,5 +19,45 @@ $font-weights: (
     @return $font-weight;
   } @else {
     @warn 'Font weight not found in $font-weights.';
+  }
+}
+
+
+/// U.2. Font Styles
+$font-styles: (
+  'normal': normal,
+  'italic': italic,
+  'oblique': oblique
+);
+
+@function font-style($style) {
+  $font-style: map-get($font-styles, $style);
+  @if ($font-style) {
+    @return $font-style;
+  } @else {
+    @warn 'Font style not found in $font-styles.';
+  }
+}
+
+@each $name, $style in $font-styles {
+  .style-#{$name} {
+    font-style: $style;
+  }
+}
+
+
+/// U.3. Alignment
+$text-aligns: (
+  'left': left,
+  'center': center,
+  'right': right
+);
+
+@function text-align($align) {
+  $text-align: map-get($text-aligns, $align);
+  @if ($text-align) {
+    @return $text-align;
+  } @else {
+    @warn 'Text align not found in $text-aligns.';
   }
 }

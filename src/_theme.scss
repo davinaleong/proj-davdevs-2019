@@ -9,7 +9,7 @@ $action:        color('blue');
 $danger:        color('red');
 $success:       color('green');
 
-$theme-colours: (
+$theme-colors: (
   'primary':       $primary,
   'secondary':     $secondary,
   'interactable':  $interactable,
@@ -19,7 +19,7 @@ $theme-colours: (
 );
 
 @function theme-color($color-name) {
-  $color: map-get($theme-colours, $color-name);
+  $color: map-get($theme-colors, $color-name);
   @if ($color) {
     @return $color;
   } @else {

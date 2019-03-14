@@ -1,3 +1,6 @@
+/// M. Main
+
+/// M.1. Root
 :root {
   font-family: theme-family('body-family');
   font-weight: font-weight('regular');
@@ -8,23 +11,8 @@ html, body {
   font-weight: font-weight('regular');
 }
 
-@for $h from 1 through 5 {
-  h#{$h}, .h#{$h} {
-    $heading: theme-heading('h#{$h}');
-    font-family: map-get($heading, 'font-family');
-    font-weight: map-get($heading, 'font-weight');
-    font-size: map-get($heading, 'font-size');
-    font-style: map-get($heading, 'font-style');
-  }
-}
 
-.display {
-  $heading: theme-heading('display');
-  font-family: map-get($heading, 'font-family');
-  font-weight: map-get($heading, 'font-weight');
-  font-size: map-get($heading, 'font-size');
-  font-style: map-get($heading, 'font-style');
-}
+/// M.2. Blocks
 .nav-side {
   position: fixed;
   background-color: grays('300');
@@ -62,6 +50,15 @@ section:nth-child(even), .section:nth-child(even) {
   background-color: tint($grays, '100');
 }
 
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+};
+
+
+/// M.3. Grid
 .grid-skills {
   grid-area: skills;
 }
@@ -76,4 +73,72 @@ section:nth-child(even), .section:nth-child(even) {
 
 .grid-contact {
   grid-area: contact;
+}
+
+
+/// M.4. Type
+@for $h from 1 through 5 {
+  h#{$h}, .h#{$h} {
+    $heading: theme-heading('h#{$h}');
+    font-family: map-get($heading, 'font-family');
+    font-weight: map-get($heading, 'font-weight');
+    font-size: map-get($heading, 'font-size');
+    font-style: map-get($heading, 'font-style');
+  }
+}
+
+.display {
+  $heading: theme-heading('display');
+  font-family: map-get($heading, 'font-family');
+  font-weight: map-get($heading, 'font-weight');
+  font-size: map-get($heading, 'font-size');
+  font-style: map-get($heading, 'font-style');
+}
+
+small, .small, sub, .sub, sup, .sup {
+  font-size: 0.8em;
+}
+
+code, .code, pre, .pre {
+  font-family: theme-family('monospace-family');
+}
+
+@each $name, $weight in $font-weights {
+  .text-weight-#{$name} {
+    font-weight: $weight;
+  }
+}
+
+@each $name, $style in $font-styles {
+  .text-style-#{$name} {
+    font-style: $style;
+  }
+}
+
+@each $name, $fsize in $theme-fsizes {
+  .text-size-#{$name} {
+    font-size: $fsize;
+  }
+}
+
+@each $name, $align in $text-aligns {
+  .text-align-#{$name} {
+    text-align: $align;
+  }
+}
+
+
+/// M.5. Color
+@each $name, $color in $theme-colors {
+  .text-#{$name} {
+    color: $color;
+  }
+
+  .bg-#{$name} {
+    background-color: $color;
+  }
+
+  .border-#{$name} {
+    border-color: $color;
+  }
 }
