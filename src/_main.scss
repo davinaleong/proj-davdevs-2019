@@ -114,6 +114,12 @@ code, .code, pre, .pre {
   }
 }
 
+@each $name, $align in $text-aligns {
+  .text-align-#{$name} {
+    text-align: $align;
+  }
+}
+
 
 /// M.5. Color
 @each $name, $color in $theme-colors {

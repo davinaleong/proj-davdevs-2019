@@ -3,15 +3,15 @@
   margin: 0;
 }
 
-.text-style-normal {
+.style-normal {
   font-style: normal;
 }
 
-.text-style-italic {
+.style-italic {
   font-style: italic;
 }
 
-.text-style-oblique {
+.style-oblique {
   font-style: oblique;
 }
 
@@ -432,6 +432,18 @@ code, .code, pre, .pre {
 
 .text-size-display {
   font-size: 8rem;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
 }
 
 .text-primary {
