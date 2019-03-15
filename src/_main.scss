@@ -48,18 +48,20 @@ section, .section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: theme-color('primary', '900');
+  background-color: theme-color('primary', '800');
 };
 
 .landing-heading {
   font-size: theme-fsize('display');
   font-weight: font-weight('extra-bold');
-  color: tint($oranges, '500');
-  text-shadow: 2px 2px tint($grays, '900');
+  color: theme-color('interactable', '500');
+  text-shadow: 2px 2px theme-color('gray', '900');
 }
 
 .landing-tagline {
-  color: $blue-500;
+  color: theme-color('secondary', 'a400');
+  font-size: theme-fsize('x-large');
+  font-style: font-style('italic');
 }
 
 

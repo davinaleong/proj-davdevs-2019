@@ -61,3 +61,73 @@ $text-aligns: (
     @warn 'Text align not found in $text-aligns.';
   }
 }
+
+
+/// U.99. Strings names
+$str-oswald:          'Oswald';
+$str-anton:           'Anton';
+$str-montserrat:      'Montserrat';
+$str-source-code-pro: 'Source Code Pro';
+
+
+$str-white:       'white';
+$str-black:       'black';
+$str-gra:         'gray';
+$str-blue-gray:   'blue-gray';
+$str-deep-purple: 'deep-purple';
+$str-teal:        'teal';
+$str-orange:      'orange';
+$str-blue:        'blue';
+$str-red:         'red';
+$str-green:       'green';
+
+
+$str-50:     '50';
+$str-100:    '100';
+$str-200:    '200';
+$str-300:    '300';
+$str-400:    '400';
+$str-500:    '500';
+$str-600:    '600';
+$str-700:    '700';
+$str-800:    '800';
+$str-900:    '900';
+$str-a100:   'a100';
+$str-a200:   'a200';
+$str-a400:   'a400';
+$str-a700:   'a700';
+
+
+$str-primary:       'primary';
+$str-secondary:     'secondary';
+$str-interactable:  'interactable';
+$str-action:        'action';
+$str-danger:        'danger';
+$str-success:       'success';
+
+
+$str-small:     'small';
+$str-regular:   'regular';
+$str-regular-l: 'regular-l';
+$str-large:     'large';
+$str-x-large:   'x-large';
+$str-xx-large:  'xx-large';
+$str-heading:   'heading';
+$str-heading-l: 'heading-l';
+$str-display:   'display';
+
+
+$str-display: 'display';
+$str-h1:      'h1';
+$str-h2:      'h2';
+$str-h3:      'h3';
+$str-h4:      'h4';
+$str-h5:      'h5';
+$str-h6:      'h6';
+
+
+$str-spacer-1:  '1';
+$str-spacer-2:  '2';
+$str-spacer-3:  '3';
+$str-spacer-4:  '4';
+$str-spacer-5:  '5';

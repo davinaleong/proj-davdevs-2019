@@ -12,6 +12,7 @@ $blue:        #2196f3;
 $red:         #f44336;
 $green:       #4caf50;
 
+
 /// C.2. Tints
 /// C.2.a Gray tints
 $gray-50:   #fafafa;
@@ -26,18 +27,18 @@ $gray-800:  #424242;
 $gray-900:  #212121;
 
 $grays: (
-  'white': $white,
-  '50':   $gray-50,
-  '100':  $gray-100,
-  '200':  $gray-200,
-  '300':  $gray-300,
-  '400':  $gray-400,
-  '500':  $gray-500,
-  '600':  $gray-600,
-  '700':  $gray-700,
-  '800':  $gray-800,
-  '900':  $gray-900,
-  'black': $black,
+  'white':  $white,
+  '50':     $gray-50,
+  '100':    $gray-100,
+  '200':    $gray-200,
+  '300':    $gray-300,
+  '400':    $gray-400,
+  '500':    $gray-500,
+  '600':    $gray-600,
+  '700':    $gray-700,
+  '800':    $gray-800,
+  '900':    $gray-900,
+  'black':  $black,
 );
 
 

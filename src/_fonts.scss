@@ -1,15 +1,11 @@
 /// F. Fonts
 $path: './../fonts/';
-$oswald: 'Oswald';
-$anton: 'Anton';
-$montserrat: 'Montserrat';
-$sourceCodePro: 'Source Code Pro';
 
 /// F.4. Utilities
 $fonts: (
-  'oswald': $oswald,
-  'montserrat': $montserrat,
-  'source-code-pro': $sourceCodePro,
+  'oswald': $str-oswald,
+  'montserrat': $str-montserrat,
+  'source-code-pro': $str-source-code-pro,
 );
 
 @function font($font-name) {
