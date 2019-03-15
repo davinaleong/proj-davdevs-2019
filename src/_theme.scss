@@ -40,9 +40,9 @@ $body-family: $str-montserrat, sans-serif;
 $monospace-family: $str-source-code-pro, monospace;
 
 $theme-families: (
-  'heading-family': $heading-family,
-  'body-family': $body-family,
-  'monospace-family': $monospace-family
+  'heading': $heading-family,
+  'body': $body-family,
+  'monospace': $monospace-family
 );
 
 @function theme-family($family-name) {
@@ -80,45 +80,45 @@ $theme-fsizes: (
 
 /// T.2.c Headings
 $heading-display: (
-  'font-family': theme-family('heading-family'),
-  'font-weight': font-weight('extra-light'),
-  'font-size': theme-fsize('display'),
+  'font-family': theme-family($key-family-heading),
+  'font-weight': font-weight($key-weight-extra-light),
+  'font-size': theme-fsize($key-fsize-display),
   'font-style': normal
 );
 $heading-h1: (
-  'font-family': theme-family('heading-family'),
-  'font-weight': font-weight('extra-light'),
-  'font-size': theme-fsize('heading-l'),
+  'font-family': theme-family($key-family-heading),
+  'font-weight': font-weight($key-weight-extra-light),
+  'font-size': theme-fsize($key-fsize-heading-l),
   'font-style': normal
 );
 $heading-h2: (
-  'font-family': theme-family('heading-family'),
-  'font-weight': font-weight('extra-light'),
-  'font-size': theme-fsize('heading'),
+  'font-family': theme-family($key-family-heading),
+  'font-weight': font-weight($key-weight-extra-light),
+  'font-size': theme-fsize($key-fsize-heading),
   'font-style': normal
 );
 $heading-h3: (
-  'font-family': theme-family('heading-family'),
-  'font-weight': font-weight('extra-light'),
-  'font-size': theme-fsize('xx-large'),
+  'font-family': theme-family($key-family-heading),
+  'font-weight': font-weight($key-weight-extra-light),
+  'font-size': theme-fsize($key-fsize-xx-large),
   'font-style': normal
 );
 $heading-h4: (
-  'font-family': theme-family('heading-family'),
-  'font-weight': font-weight('regular'),
-  'font-size': theme-fsize('x-large'),
+  'font-family': theme-family($key-family-heading),
+  'font-weight': font-weight($key-weight-regular),
+  'font-size': theme-fsize($key-fsize-x-large),
   'font-style': normal
 );
 $heading-h5: (
-  'font-family': theme-family('heading-family'),
-  'font-weight': font-weight('regular'),
-  'font-size': theme-fsize('large'),
+  'font-family': theme-family($key-family-heading),
+  'font-weight': font-weight($key-weight-regular),
+  'font-size': theme-fsize($key-fsize-large),
   'font-style': normal
 );
 $heading-h6: (
-  'font-family': theme-family('heading-family'),
-  'font-weight': font-weight('bold'),
-  'font-size': theme-fsize('regular-l'),
+  'font-family': theme-family($key-family-heading),
+  'font-weight': font-weight($key-weight-bold),
+  'font-size': theme-fsize($key-fsize-regular-l),
   'font-style': normal
 );
 

@@ -1,21 +1,16 @@
 /// M. Main
 
 /// M.1. Root
-:root {
-  font-family: theme-family('body-family');
-  font-weight: font-weight('regular');
-}
-
 html, body {
-  font-family: theme-family('body-family');
-  font-weight: font-weight('regular');
+  font-family: theme-family($key-family-body);
+  font-weight: font-weight($key-weight-regular);
 }
 
 
 /// M.2. Blocks
 .nav-side {
   position: fixed;
-  background-color: theme-color('gray', '300');
+  background-color: theme-color($key-col-gray, $key-tint-300);
   top: 30vh;
 }
 
@@ -26,16 +21,16 @@ html, body {
 }
 
 .side-link-item:nth-child(odd) {
-  background-color: tint($grays, '200');
+  background-color: theme-color($key-col-gray, $key-tint-200);
 }
 
 .side-link-item:nth-child(even) {
-  background-color: tint($grays, '300');
+  background-color: theme-color($key-col-gray, $key-tint-300);
 }
 
 .side-link-item {
   text-align: center;
-  padding: spacer('2');
+  padding: spacer($key-spacer-2);
 }
 
 section, .section {
@@ -48,20 +43,20 @@ section, .section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: theme-color('primary', '800');
+  background-color: theme-color($key-primary, $key-tint-800);
 };
 
 .landing-heading {
-  font-size: theme-fsize('display');
-  font-weight: font-weight('extra-bold');
-  color: theme-color('interactable', '500');
-  text-shadow: 2px 2px theme-color('gray', '900');
+  font-size: theme-fsize($key-fsize-display);
+  font-weight: font-weight($key-weight-extra-bold);
+  color: theme-color($key-interactable, $key-tint-500);
+  text-shadow: 2px 2px theme-color($key-col-gray, $key-tint-900);
 }
 
 .landing-tagline {
-  color: theme-color('secondary', 'a400');
-  font-size: theme-fsize('x-large');
-  font-style: font-style('italic');
+  color: theme-color($key-secondary, $key-tint-a400);
+  font-size: theme-fsize($key-fsize-x-large);
+  font-style: font-style($key-style-italic);
 }
 
 
@@ -95,7 +90,7 @@ section, .section {
 }
 
 .display {
-  $heading: theme-heading('display');
+  $heading: theme-heading($key-fsize-display);
   font-family: map-get($heading, 'font-family');
   font-weight: map-get($heading, 'font-weight');
   font-size: map-get($heading, 'font-size');
@@ -107,7 +102,7 @@ small, .small, sub, .sub, sup, .sup {
 }
 
 code, .code, pre, .pre {
-  font-family: theme-family('monospace-family');
+  font-family: theme-family($key-family-monospace);
 }
 
 @each $name, $weight in $font-weights {
@@ -137,7 +132,7 @@ code, .code, pre, .pre {
 
 /// M.5. Color
 @each $name, $color in $theme-colors {
-  $tint: '500';
+  $tint: $key-tint-500;
 
   .text-#{$name} {
     color: map-get($color, $tint);
