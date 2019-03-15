@@ -2,28 +2,34 @@
 
 
 /// T.1. Colors
-$primary:       color('blue-gray');
-$secondary:     color('deep-purple');
-$interactable:  color('orange');
-$action:        color('blue');
-$danger:        color('red');
-$success:       color('green');
+$primary:       $blue-grays;
+$secondary:     $teals;
+$interactable:  $oranges;
+$action:        $blues;
+$danger:        $reds;
+$success:       $greens;
 
 $theme-colors: (
-  'primary':       $primary,
-  'secondary':     $secondary,
-  'interactable':  $interactable,
-  'action':        $action,
-  'danger':        $danger,
-  'success':       $success,
+  'primary':      $primary,
+  'secondary':    $secondary,
+  'interactable': $interactable,
+  'action':       $action,
+  'danger':       $danger,
+  'success':      $success,
+  'gray':         $grays,
 );
 
-@function theme-color($color-name) {
-  $color: map-get($theme-colors, $color-name);
-  @if ($color) {
-    @return $color;
+@function theme-color($name, $tint) {
+  $color-map: map-get($theme-colors, $name);
+  @if ($color-map) {
+    $color: map-get($color-map, $tint);
+    @if ($color) {
+      @return $color;
+    } @else {
+      @warn 'Color not found in $theme-colors';
+    }
   } @else {
-    @warn 'Theme color not found in $theme-colors.';
+    @warn 'Color Map not found in $theme-colors';
   }
 }
 

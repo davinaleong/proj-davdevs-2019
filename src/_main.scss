@@ -15,7 +15,7 @@ html, body {
 /// M.2. Blocks
 .nav-side {
   position: fixed;
-  background-color: grays('300');
+  background-color: theme-color('gray', '300');
   top: 30vh;
 }
 
@@ -48,14 +48,17 @@ section, .section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $blue-gray-800;
+  background-color: theme-color('primary', '900');
 };
 
-.landing > h1 {
-  color: $orange-500;
+.landing-heading {
+  font-size: theme-fsize('display');
+  font-weight: font-weight('extra-bold');
+  color: tint($oranges, '500');
+  text-shadow: 2px 2px tint($grays, '900');
 }
 
-.landing > p {
+.landing-tagline {
   color: $blue-500;
 }
 
@@ -132,15 +135,17 @@ code, .code, pre, .pre {
 
 /// M.5. Color
 @each $name, $color in $theme-colors {
+  $tint: '500';
+
   .text-#{$name} {
-    color: $color;
+    color: map-get($color, $tint);
   }
 
   .bg-#{$name} {
-    background-color: $color;
+    background-color: map-get($color, $tint);
   }
 
   .border-#{$name} {
-    border-color: $color;
+    border-color: map-get($color, $tint);
   }
 }

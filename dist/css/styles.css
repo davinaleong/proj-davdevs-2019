@@ -27,7 +27,7 @@ html, body {
 
 .nav-side {
   position: fixed;
-  background-color: grays("300");
+  background-color: #e0e0e0;
   top: 30vh;
 }
 
@@ -74,14 +74,17 @@ section, .section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #37474f;
+  background-color: #263238;
 }
 
-.landing > h1 {
+.landing-heading {
+  font-size: 8rem;
+  font-weight: 800;
   color: #ff9800;
+  text-shadow: 2px 2px #212121;
 }
 
-.landing > p {
+.landing-tagline {
   color: #2196f3;
 }
 
@@ -260,15 +263,15 @@ code, .code, pre, .pre {
 }
 
 .text-secondary {
-  color: #673ab7;
+  color: #009688;
 }
 
 .bg-secondary {
-  background-color: #673ab7;
+  background-color: #009688;
 }
 
 .border-secondary {
-  border-color: #673ab7;
+  border-color: #009688;
 }
 
 .text-interactable {
@@ -317,5 +320,17 @@ code, .code, pre, .pre {
 
 .border-success {
   border-color: #4caf50;
+}
+
+.text-gray {
+  color: #9e9e9e;
+}
+
+.bg-gray {
+  background-color: #9e9e9e;
+}
+
+.border-gray {
+  border-color: #9e9e9e;
 }
 /*# sourceMappingURL=styles.css.map */
