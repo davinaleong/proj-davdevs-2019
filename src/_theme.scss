@@ -30,9 +30,9 @@ $theme-colors: (
 
 /// T.2. Fonts
 /// T.2.a Font Families
-$heading-family: $oswald, 'Verdana', 'Arial', 'Helvetica', sans-serif;
-$body-family: $montserrat, 'Arial', 'Helvetica', sans-serif;
-$monospace-family: $sourceCodePro, 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace;
+$heading-family: $anton, sans-serif;
+$body-family: $montserrat, sans-serif;
+$monospace-family: $sourceCodePro, monospace;
 
 $theme-families: (
   'heading-family': $heading-family,
