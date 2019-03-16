@@ -109,7 +109,7 @@ html, body {
 .subheading-skills {
   color: #000;
   background-color: #212121;
-  margin-bottom: -15px;
+  margin-bottom: -14px;
 }
 
 .content-skills {
@@ -138,27 +138,19 @@ html, body {
 }
 
 .cell-frontend {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: frontend;
+  grid-area: 'frontend';
 }
 
 .cell-backend {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: backend;
+  grid-area: 'backend';
 }
 
 .cell-devops {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: devops;
+  grid-area: 'devops';
 }
 
 .cell-tools {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: tools;
+  grid-area: 'tools';
 }
 
 .section-skills > .container-grid {
@@ -399,6 +391,74 @@ code, .code, pre, .pre {
 
 .border-gray {
   border-color: #9e9e9e;
+}
+
+.skill-js {
+  color: #F7DF1E;
+}
+
+.skill-bs {
+  color: #563D7C;
+}
+
+.skill-jq {
+  color: #0865A6;
+}
+
+.skill-sass {
+  color: #CD6799;
+}
+
+.skill-gulp {
+  color: #DA4648;
+}
+
+.skill-wp {
+  color: #5299C8;
+}
+
+.skill-rjs {
+  color: #5ED3F3;
+}
+
+.skill-php {
+  color: #4F5B93;
+}
+
+.skill-laravel {
+  color: #F55247;
+}
+
+.skill-mysql {
+  color: #00758F;
+}
+
+.skill-njs {
+  color: #6CC24A;
+}
+
+.skill-craft {
+  color: #E5422B;
+}
+
+.skill-gql {
+  color: #E535AB;
+}
+
+.skill-aws {
+  color: #EF921E;
+}
+
+.skill-sls {
+  color: #F15953;
+}
+
+.skill-dock {
+  color: #3888AE;
+}
+
+.skill-git {
+  color: #F05033;
 }
 
 .nve-margin {

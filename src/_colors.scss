@@ -244,6 +244,28 @@ $color-maps: (
 );
 
 
+/// C.3. Brand Colors
+$color-skills: (
+  'js': #F7DF1E,
+  'bs': #563D7C,
+  'jq': #0865A6,
+  'sass': #CD6799,
+  'gulp': #DA4648,
+  'wp': #5299C8,
+  'rjs': #5ED3F3,
+  'php': #4F5B93,
+  'laravel': #F55247,
+  'mysql': #00758F,
+  'njs': #6CC24A,
+  'craft': #E5422B,
+  'gql': #E535AB,
+  'aws': #EF921E,
+  'sls': #F15953,
+  'dock': #3888AE,
+  'git': #F05033
+);
+
+
 /// C.4. Utilities
 @function color-map($map) {
   $color-map: map-get($colors, $map);

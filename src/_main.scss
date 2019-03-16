@@ -82,7 +82,7 @@ html, body {
 .subheading-skills {
   color: theme-color($key-col-gray, $key-col-black);
   background-color: theme-color($key-col-gray, $key-tint-900);
-  margin-bottom: -15px;
+  margin-bottom: -14px;
 }
 
 .content-skills {
@@ -109,19 +109,19 @@ html, body {
 }
 
 .cell-frontend {
-  grid-area: frontend;
+  grid-area: 'frontend';
 }
 
 .cell-backend {
-  grid-area: backend;
+  grid-area: 'backend';
 }
 
 .cell-devops {
-  grid-area: devops;
+  grid-area: 'devops';
 }
 
 .cell-tools {
-  grid-area: tools;
+  grid-area: 'tools';
 }
 
 .section-skills > .container-grid {
@@ -207,6 +207,12 @@ code, .code, pre, .pre {
 
   .border-#{$name} {
     border-color: map-get($color, $tint);
+  }
+}
+
+@each $name, $color in $color-skills {
+  .skill-#{$name} {
+    color: $color;
   }
 }
 
