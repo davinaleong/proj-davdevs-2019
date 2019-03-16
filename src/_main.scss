@@ -86,7 +86,18 @@ code, .code, pre, .pre {
 }
 
 
-/// M.5. Color
+/// M.5. Form Elements
+.btn {
+  display: inline-block;
+  font-weight: font-weight($key-weight-regular);
+  text-align: center;
+  font-size: theme-fsize($key-fsize-regular-l);
+  font-family: theme-family($key-family-heading);
+  padding: theme-fsize($key-fsize-regular-l) * 0.25 theme-fsize($key-fsize-regular-l) * 0.5;
+  border: none;
+}
+
+/// M.6. Color
 @each $name, $color in $theme-colors {
   $tint: $key-tint-500;
 
@@ -100,5 +111,17 @@ code, .code, pre, .pre {
 
   .border-#{$name} {
     border-color: map-get($color, $tint);
+  }
+
+
+  .btn-#{$name} {
+    color: map-get($color, $key-tint-200);
+    background-color: map-get($color, $tint);
+    cursor: pointer;
+
+    &:hover {
+      color: map-get($color, $key-tint-300);
+      background-color: map-get($color, $key-tint-700);
+    }
   }
 }

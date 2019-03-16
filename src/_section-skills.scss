@@ -42,6 +42,22 @@
 
 
 /// K.4. Content Grid
+.cell-skills-frontend {
+  grid-area: frontend;
+}
+
+.cell-skills-backend {
+  grid-area: backend;
+}
+
+.cell-skills-devops {
+  grid-area: devops;
+}
+
+.cell-skills-tools {
+  grid-area: tools;
+}
+
 .grid-skills {
   display: grid;
   grid-template-areas:
@@ -57,22 +73,6 @@
       'devops'
       'tools';
   }
-}
-
-.cell-skills-frontend {
-  grid-area: 'frontend';
-}
-
-.cell-skills-backend {
-  grid-area: 'backend';
-}
-
-.cell-skills-devops {
-  grid-area: 'devops';
-}
-
-.cell-skills-tools {
-  grid-area: 'tools';
 }
 
 

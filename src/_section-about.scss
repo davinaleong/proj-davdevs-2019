@@ -2,7 +2,7 @@
 
 /// A.1. Type
 .section-about {
-  color: theme-color($key-primary, $key-tint-500);
+  color: $white;
   background-color: theme-color($key-primary, $key-tint-900);
 };
 
@@ -10,4 +10,50 @@
   color: theme-color($key-primary, $key-tint-900);
   background-color: $black;
   margin-bottom: theme-margin($key-margin-heading);
+}
+
+.content-about-desc {
+  margin-top: spacer($key-spacer-2);
+}
+
+
+/// A.2. Content
+.content-about {
+  padding: spacer($key-spacer-2);
+  min-height: theme-fsize($key-fsize-x-large) * 8;
+  color: theme-color($key-primary, $key-tint-500);
+  background-color: theme-color($key-primary, $key-tint-900);
+  font-size: theme-fsize($key-fsize-regular-l);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-about {
+  font-size: theme-fsize($key-fsize-x-large);
+}
+
+
+/// A.0. Content Grid
+.cell-about-me {
+  grid-area: me;
+}
+
+.cell-about-download {
+  grid-area: download;
+}
+
+.grid-about {
+  display: grid;
+  grid-template-areas:
+    'me download';
+}
+
+@media only screen and (max-width: breakpoint($key-bp-phone)) {
+  .grid-about {
+    grid-template-areas:
+      'me'
+      'download';
+  }
 }

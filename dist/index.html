@@ -79,14 +79,14 @@
     <section id="about" class="section-about">
       <h2 class="heading-about"><i class="fas fa-user"></i> I am...</h2>
       <div class="grid-about">
-        <div class="cell-about-me">
-          <button type="button"><i class="fas fa-question"></i> About</button>
-          <p>Brief history, background and education</p>
+        <div class="content-about cell-about-me">
+          <button class="btn btn-secondary btn-about" type="button"><i class="fas fa-question"></i> About</button>
+          <p class="content-about-desc text-align-center">Brief history, background and education</p>
         </div>
 
-        <div class="cell-about-download">
-          <button type="button"><i class="fas fa-download"></i> Resume</button>
-          <p>Resumes in word and pdf formats</p>
+        <div class="content-about cell-about-download">
+          <button class="btn btn-secondary btn-about" type="button"><i class="fas fa-download"></i> Resume</button>
+          <p class="content-about-desc text-align-center">Resumes in word and pdf formats</p>
         </div>
       </div>
     </section>
@@ -145,6 +145,10 @@
           <label for="message" class="form-label"><i class="fal fa-pen"></i> Message</label>
           <textarea class="form-control" name="message" required
             rows="6" placeholder="Message"></textarea>
+        </div>
+
+        <div>
+          <button class="btn btn-action" type="submit"><i class="fal fa-paper-plane"></i> Send</button>
         </div>
       </form>
     </section>
