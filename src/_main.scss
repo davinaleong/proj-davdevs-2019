@@ -70,6 +70,7 @@ section, .section {
 .section-skills .heading-skills {
   color: theme-color($key-col-gray, $key-col-black);
   background-color: theme-color($key-col-gray, $key-tint-900);
+  margin-bottom: -20px;
 }
 
 
@@ -158,4 +159,10 @@ code, .code, pre, .pre {
   .border-#{$name} {
     border-color: map-get($color, $tint);
   }
+}
+
+
+/// M.5.99 Misc
+.nve-margin {
+  margin-bottom: -17px;
 }

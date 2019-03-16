@@ -96,6 +96,7 @@ section, .section {
 .section-skills .heading-skills {
   color: #000;
   background-color: #212121;
+  margin-bottom: -20px;
 }
 
 .grid-skills {
@@ -342,5 +343,9 @@ code, .code, pre, .pre {
 
 .border-gray {
   border-color: #9e9e9e;
+}
+
+.nve-margin {
+  margin-bottom: -17px;
 }
 /*# sourceMappingURL=styles.css.map */
