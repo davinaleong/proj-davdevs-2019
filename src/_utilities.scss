@@ -63,6 +63,30 @@ $text-aligns: (
 }
 
 
+/// U.4. Media Types
+$media-types: (
+  'all':        all,
+  'braille':    braille,
+  'embossed':   embossed,
+  'handheld':   handheld,
+  'print':      print,
+  'projection': projection,
+  'screen':     screen,
+  'speech':     speech,
+  'tty':        tty,
+  'tv':         tv
+);
+
+@function media-type($type) {
+  $media-type: map-get($media-types, $type);
+  @if ($media-type) {
+    @return $media-type;
+  } @else {
+    @warn 'Media Type not found in $media-types.';
+  }
+}
+
+
 /// U.99. Map Keys as strings
 $str-oswald:          'Oswald';
 $str-anton:           'Anton';
@@ -152,8 +176,26 @@ $key-heading-h5:      'h5';
 $key-heading-h6:      'h6';
 
 
+$key-bp-phone:      'phone';
+$key-bp-tablet:     'tablet';
+$key-bp-desktop:    'desktop';
+$key-bp-l-desktop:  'l-desktop';
+
+
 $key-spacer-1:  '1';
 $key-spacer-2:  '2';
 $key-spacer-3:  '3';
 $key-spacer-4:  '4';
 $key-spacer-5:  '5';
+
+
+$key-media-all:         'all';
+$key-media-braille:     'braille';
+$key-media-embossed:    'embossed';
+$key-media-handheld:    'handheld';
+$key-media-print:       'print';
+$key-media-projection:  'projection';
+$key-media-screen:      'screen';
+$key-media-speech:      'speech';
+$key-media-tty:         'tty';
+$key-media-tv:          'tv';

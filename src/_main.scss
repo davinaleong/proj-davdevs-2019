@@ -75,20 +75,40 @@ section, .section {
 
 
 /// M.3. Grid
-.grid-skills {
-  grid-area: skills;
+.container-grid {
+  display: grid;
 }
 
-.grid-about {
-  grid-area: about;
+.cell-frontend {
+  grid-area: frontend;
 }
 
-.grid-interests {
-  grid-area: interests;
+.cell-backend {
+  grid-area: backend;
 }
 
-.grid-contact {
-  grid-area: contact;
+.cell-devops {
+  grid-area: devops;
+}
+
+.cell-tools {
+  grid-area: tools;
+}
+
+.section-skills > .container-grid {
+  grid-template-areas:
+    'frontend backend'
+    'devops tools';
+}
+
+@media only screen and (max-width: breakpoint($key-bp-phone)) {
+  .section-skills > .container-grid {
+    grid-template-areas:
+      'frontend'
+      'backend'
+      'devops'
+      'tools';
+  }
 }
 
 

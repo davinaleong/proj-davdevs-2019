@@ -99,20 +99,43 @@ section, .section {
   margin-bottom: -20px;
 }
 
-.grid-skills {
-  grid-area: skills;
+.container-grid {
+  display: -ms-grid;
+  display: grid;
 }
 
-.grid-about {
-  grid-area: about;
+.cell-frontend {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: frontend;
 }
 
-.grid-interests {
-  grid-area: interests;
+.cell-backend {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: backend;
 }
 
-.grid-contact {
-  grid-area: contact;
+.cell-devops {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: devops;
+}
+
+.cell-tools {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: tools;
+}
+
+.section-skills > .container-grid {
+      grid-template-areas: 'frontend backend' 'devops tools';
+}
+
+@media only screen and (max-width: 600px) {
+  .section-skills > .container-grid {
+        grid-template-areas: 'frontend' 'backend' 'devops' 'tools';
+  }
 }
 
 h1, .h1 {
