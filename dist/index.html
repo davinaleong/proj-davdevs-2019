@@ -6,6 +6,7 @@
 
   <!-- <link rel="stylesheet" href="./css/fonts.css"> -->
   <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat:400,400i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/styles.css">
   <title>Dav Devs</title>
 </head>
@@ -22,13 +23,13 @@
     </ul> -->
   </nav>
   <main>
-    <section id="landing" class="landing">
-      <h1 class="landing-heading text-align-center">Dav.devs</h1>
-      <p class="landing-tagline text-align-center">the food- & game- loving<br>web developer</p>
+    <section id="landing" class="section-landing">
+      <h1 class="heading-landing text-align-center">Dav.devs</h1>
+      <p class="tagline-landing text-align-center">the food- & game- loving<br>web developer</p>
     </section>
 
-    <section id="skills">
-      <h2><i class="fas fa-pencil-ruler"></i> I do...</h2>
+    <section id="section-skills">
+      <h2 class="heading-section text-align-right"><i class="fas fa-pencil-ruler"></i> I do...</h2>
       <div class="container-grid grid-skills">
         <div>
           <h3><i class="fas fa-browser"></i> Frontend</h3>
@@ -89,7 +90,7 @@
     </section>
 
     <section id="interests">
-      <h2><i class="fas fa-heart"></i> I like...</h2>
+      <h2 class="text-align-right"><i class="fas fa-heart"></i> I like...</h2>
       <div class="container-grid grid-interests">
         <div>
           <h3><i class="fas fa-dice-d12"></i> Games</h3>
@@ -113,22 +114,22 @@
       <h2><i class="fas fa-phone"></i> Contact</h2>
       <form class="container-grid grid-contact">
         <div>
-          <label for="name" class="form-label"><i class="fal fa-user"></i></label>
+          <label for="name" class="form-label"><i class="fal fa-user"></i> Name</label>
           <input type="text" class="form-control" name="name" placeholder="Name" required>
         </div>
 
         <div class="half">
-          <label for="email" class="form-label"><i class="fal fa-envelope"></i></label>
+          <label for="email" class="form-label"><i class="fal fa-envelope"></i> Email</label>
           <input type="text" class="form-control" name="email" placeholder="Email" required>
         </div>
 
         <div class="half">
-          <label for="mobile" class="form-label"><i class="fal fa-mobile"></i></label>
+          <label for="mobile" class="form-label"><i class="fal fa-mobile"></i> Mobile</label>
           <input type="text" class="form-control" name="mobile" placeholder="Mobile (optional)">
         </div>
 
         <div>
-          <label for="subject" class="form-label"><i class="fal fa-hashtag"></i></label>
+          <label for="subject" class="form-label"><i class="fal fa-hashtag"></i> Subject</label>
           <select class="form-control" name="subject" required>
             <option>Subject</option>
             <option value="project">Have a project?</option>
@@ -139,7 +140,7 @@
         </div>
 
         <div>
-          <label for="message" class="form-label"><i class="fal fa-pen"></i></label>
+          <label for="message" class="form-label"><i class="fal fa-pen"></i> Message</label>
           <textarea class="form-control" name="message" required
             rows="6" placeholder="Message"></textarea>
         </div>
