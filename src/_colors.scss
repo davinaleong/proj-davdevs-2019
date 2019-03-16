@@ -244,7 +244,7 @@ $color-maps: (
 );
 
 
-/// D.1. Utilities
+/// C.4. Utilities
 @function color-map($map) {
   $color-map: map-get($colors, $map);
   @if ($color-map) {
