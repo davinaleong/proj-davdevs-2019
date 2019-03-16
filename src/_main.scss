@@ -51,7 +51,6 @@ section, .section {
 
 .landing-heading {
   font-size: theme-fsize($key-fsize-display);
-  font-weight: font-weight($key-weight-extra-bold);
   color: theme-color($key-interactable, $key-tint-500);
   text-shadow: 2px 2px theme-color($key-col-gray, $key-tint-900);
 }
