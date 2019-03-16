@@ -104,8 +104,21 @@ html, body {
 
 
 /// M.3. Grid
-.container-grid {
+.grid-skills {
   display: grid;
+  grid-template-areas:
+    'frontend backend'
+    'devops tools';
+}
+
+@media only screen and (max-width: breakpoint($key-bp-phone)) {
+  .grid-skills {
+    grid-template-areas:
+      'frontend'
+      'backend'
+      'devops'
+      'tools';
+  }
 }
 
 .cell-frontend {
@@ -122,22 +135,6 @@ html, body {
 
 .cell-tools {
   grid-area: 'tools';
-}
-
-.section-skills > .container-grid {
-  grid-template-areas:
-    'frontend backend'
-    'devops tools';
-}
-
-@media only screen and (max-width: breakpoint($key-bp-phone)) {
-  .section-skills > .container-grid {
-    grid-template-areas:
-      'frontend'
-      'backend'
-      'devops'
-      'tools';
-  }
 }
 
 

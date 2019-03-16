@@ -132,9 +132,16 @@ html, body {
   padding: 1rem;
 }
 
-.container-grid {
+.grid-skills {
   display: -ms-grid;
   display: grid;
+      grid-template-areas: 'frontend backend' 'devops tools';
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-skills {
+        grid-template-areas: 'frontend' 'backend' 'devops' 'tools';
+  }
 }
 
 .cell-frontend {
@@ -151,16 +158,6 @@ html, body {
 
 .cell-tools {
   grid-area: 'tools';
-}
-
-.section-skills > .container-grid {
-      grid-template-areas: 'frontend backend' 'devops tools';
-}
-
-@media only screen and (max-width: 600px) {
-  .section-skills > .container-grid {
-        grid-template-areas: 'frontend' 'backend' 'devops' 'tools';
-  }
 }
 
 h1, .h1 {
