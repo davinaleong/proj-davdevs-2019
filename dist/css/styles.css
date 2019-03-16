@@ -52,7 +52,7 @@ html, body {
 }
 
 section, .section {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .heading-section {
@@ -60,7 +60,6 @@ section, .section {
 }
 
 .section-landing {
-  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,12 +81,20 @@ section, .section {
   font-size: 8rem;
   color: #ff9800;
   text-shadow: 2px 2px #212121;
+  margin-top: auto;
 }
 
 .tagline-landing {
   color: #1de9b6;
   font-size: 2rem;
   font-style: italic;
+}
+
+.seemore-landing {
+  font-size: 3.8rem;
+  color: #607d8b;
+  text-shadow: 2px 2px #212121;
+  margin-top: auto;
 }
 
 .heading-skills {
