@@ -178,6 +178,24 @@ $spacers: (
   @if ($spacer) {
     @return $spacer;
   } @else {
-    @warn 'Spacer-index not found in $spacers';
+    @warn 'Spacer-index not found in $spacers.';
+  }
+}
+
+
+/// T.5. Negative Margins
+$theme-margin-heading: -17px;
+$theme-margin-subheading: -14px;
+$theme-margins: (
+  'heading': $theme-margin-heading,
+  'subheading': $theme-margin-subheading
+);
+
+@function theme-margin($element) {
+  $margin: map-get($theme-margins, $element);
+  @if ($margin) {
+    @return $margin;
+  } @else {
+    @warn 'Element not found in $margins.';
   }
 }

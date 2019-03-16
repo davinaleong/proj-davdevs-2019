@@ -33,10 +33,6 @@ html, body {
   padding: spacer($key-spacer-2);
 }
 
-.heading-section {
-  margin-bottom: -17px;
-}
-
 
 /// M.4. Type
 @for $h from 1 through 5 {
@@ -105,10 +101,4 @@ code, .code, pre, .pre {
   .border-#{$name} {
     border-color: map-get($color, $tint);
   }
-}
-
-
-/// M.5.99 Misc
-.nve-margin {
-  margin-bottom: -17px;
 }

@@ -51,10 +51,6 @@ html, body {
   padding: 0.5rem;
 }
 
-.heading-section {
-  margin-bottom: -17px;
-}
-
 h1, .h1 {
   font-family: "Anton", sans-serif;
   font-weight: 200;
@@ -285,10 +281,6 @@ code, .code, pre, .pre {
   border-color: #9e9e9e;
 }
 
-.nve-margin {
-  margin-bottom: -17px;
-}
-
 .section-landing {
   height: 100vh;
   display: -webkit-box;
@@ -378,19 +370,19 @@ code, .code, pre, .pre {
   }
 }
 
-.cell-frontend {
+.cell-skills-frontend {
   grid-area: 'frontend';
 }
 
-.cell-backend {
+.cell-skills-backend {
   grid-area: 'backend';
 }
 
-.cell-devops {
+.cell-skills-devops {
   grid-area: 'devops';
 }
 
-.cell-tools {
+.cell-skills-tools {
   grid-area: 'tools';
 }
 
@@ -460,5 +452,16 @@ code, .code, pre, .pre {
 
 .skill-git {
   color: #F05033;
+}
+
+.section-about {
+  color: #607d8b;
+  background-color: #263238;
+}
+
+.heading-about {
+  color: #263238;
+  background-color: #000;
+  margin-bottom: -17px;
 }
 /*# sourceMappingURL=styles.css.map */

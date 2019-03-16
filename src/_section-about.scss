@@ -1,0 +1,13 @@
+/// A. About
+
+/// A.1. Type
+.section-about {
+  color: theme-color($key-primary, $key-tint-500);
+  background-color: theme-color($key-primary, $key-tint-900);
+};
+
+.heading-about {
+  color: theme-color($key-primary, $key-tint-900);
+  background-color: $black;
+  margin-bottom: theme-margin($key-margin-heading);
+}
