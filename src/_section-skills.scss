@@ -1,6 +1,6 @@
 /// K. Skills Section
 
-/// K.1. Blocks
+/// K.1. Containers & Blocks
 .section-skills {
   color: $white;
   background-color: $black;
@@ -24,12 +24,12 @@
 
 /// K.3. Content
 .content-skills {
-  padding: spacer($key-spacer-2);
-  min-height: theme-fsize($key-fsize-x-large) * 3;
+  color: $white;
   background-color: $black;
+  min-height: theme-fsize($key-fsize-large) * 3;
+  padding: spacer($key-spacer-2);
   list-style: none;
-  font-size: theme-fsize($key-fsize-x-large);
-  text-transform: uppercase;
+  font-size: theme-fsize($key-fsize-large);
   display: flex;
   flex-wrap: wrap;
 }
@@ -60,6 +60,7 @@
 
 .grid-skills {
   display: grid;
+  justify-content: stretch;
   grid-template-areas:
     'frontend backend'
     'devops tools';

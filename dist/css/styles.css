@@ -441,12 +441,12 @@ code, .code, pre, .pre {
 }
 
 .content-skills {
-  padding: 0.5rem;
-  min-height: 6rem;
+  color: #fff;
   background-color: #000;
+  min-height: 4.5rem;
+  padding: 0.5rem;
   list-style: none;
-  font-size: 2rem;
-  text-transform: uppercase;
+  font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -487,6 +487,9 @@ code, .code, pre, .pre {
 .grid-skills {
   display: -ms-grid;
   display: grid;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
       grid-template-areas: 'frontend backend' 'devops tools';
 }
 
@@ -634,8 +637,61 @@ code, .code, pre, .pre {
 }
 
 .heading-interest {
-  color: #607d8b;
+  color: #37474f;
   background-color: #263238;
   margin-bottom: -17px;
+}
+
+.subheading-interest {
+  color: #607d8b;
+  background-color: #37474f;
+  margin-bottom: -14px;
+}
+
+.content-interest {
+  color: #37474f;
+  background-color: #607d8b;
+  padding: 0.5rem;
+  min-height: 4.5rem;
+  list-style: none;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.content-interest-item {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+}
+
+.cell-interest-games {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: interest-games;
+}
+
+.cell-interest-food {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: interest-food;
+}
+
+.grid-interest {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+      grid-template-areas: 'interest-games interest-food';
+}
+
+@media only screen and (max-width: 900px) {
+  .grid-interest {
+        grid-template-areas: 'interest-games' 'interest-food';
+  }
 }
 /*# sourceMappingURL=styles.css.map */
