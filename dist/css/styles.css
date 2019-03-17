@@ -694,4 +694,14 @@ code, .code, pre, .pre {
         grid-template-areas: 'interest-games' 'interest-food';
   }
 }
+
+.dd {
+  font-style: normal;
+  display: inline-block;
+  cursor: default;
+}
+
+.dd-dr {
+  font-family: "Anton", sans-serif;
+}
 /*# sourceMappingURL=styles.css.map */
