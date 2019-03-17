@@ -223,6 +223,8 @@ code, .code, pre, .pre {
   color: #b0bec5;
   background-color: #607d8b;
   cursor: pointer;
+  -webkit-box-shadow: 2px 2px #212121;
+          box-shadow: 2px 2px #212121;
 }
 
 .btn-primary:hover {
@@ -246,6 +248,8 @@ code, .code, pre, .pre {
   color: #80cbc4;
   background-color: #009688;
   cursor: pointer;
+  -webkit-box-shadow: 2px 2px #212121;
+          box-shadow: 2px 2px #212121;
 }
 
 .btn-secondary:hover {
@@ -269,6 +273,8 @@ code, .code, pre, .pre {
   color: #ffcc80;
   background-color: #ff9800;
   cursor: pointer;
+  -webkit-box-shadow: 2px 2px #212121;
+          box-shadow: 2px 2px #212121;
 }
 
 .btn-interactable:hover {
@@ -292,6 +298,8 @@ code, .code, pre, .pre {
   color: #90caf9;
   background-color: #2196f3;
   cursor: pointer;
+  -webkit-box-shadow: 2px 2px #212121;
+          box-shadow: 2px 2px #212121;
 }
 
 .btn-action:hover {
@@ -315,6 +323,8 @@ code, .code, pre, .pre {
   color: #ef9a9a;
   background-color: #f44336;
   cursor: pointer;
+  -webkit-box-shadow: 2px 2px #212121;
+          box-shadow: 2px 2px #212121;
 }
 
 .btn-danger:hover {
@@ -338,6 +348,8 @@ code, .code, pre, .pre {
   color: #a5d6a7;
   background-color: #4caf50;
   cursor: pointer;
+  -webkit-box-shadow: 2px 2px #212121;
+          box-shadow: 2px 2px #212121;
 }
 
 .btn-success:hover {
@@ -361,6 +373,8 @@ code, .code, pre, .pre {
   color: #eeeeee;
   background-color: #9e9e9e;
   cursor: pointer;
+  -webkit-box-shadow: 2px 2px #212121;
+          box-shadow: 2px 2px #212121;
 }
 
 .btn-gray:hover {
@@ -369,7 +383,7 @@ code, .code, pre, .pre {
 }
 
 .section-landing {
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,6 +411,7 @@ code, .code, pre, .pre {
 .tagline-landing {
   color: #1de9b6;
   font-size: 2rem;
+  text-shadow: 2px 2px #263238;
   font-style: italic;
 }
 

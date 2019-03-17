@@ -118,6 +118,7 @@ code, .code, pre, .pre {
     color: map-get($color, $key-tint-200);
     background-color: map-get($color, $tint);
     cursor: pointer;
+    box-shadow: 2px 2px theme-color($key-col-gray, $key-tint-900);
 
     &:hover {
       color: map-get($color, $key-tint-300);

@@ -2,7 +2,7 @@
 
 /// L.1. Blocks
 .section-landing {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,6 +23,7 @@
 .tagline-landing {
   color: theme-color($key-secondary, $key-tint-a400);
   font-size: theme-fsize($key-fsize-x-large);
+  text-shadow: 2px 2px theme-color($key-primary, $key-tint-900);
   font-style: font-style($key-style-italic);
 }
 
