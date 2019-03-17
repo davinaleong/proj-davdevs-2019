@@ -1,0 +1,65 @@
+/// I. Interests Section
+
+/// I.1. Containers & Blocks
+.section-interest {
+  color: $black;
+  background-color: theme-color($key-primary, $key-tint-500);
+}
+
+
+/// I.2. Headings
+.heading-interest {
+  color: theme-color($key-primary, $key-tint-800);
+  background-color: theme-color($key-primary, $key-tint-900);
+  margin-bottom: theme-margin($key-margin-heading);
+}
+
+.subheading-interest {
+  color: theme-color($key-primary, $key-tint-500);
+  background-color: theme-color($key-primary, $key-tint-800);
+  margin-bottom: theme-margin($key-margin-subheading);
+}
+
+
+/// I.3. Content
+.content-interest {
+  color: theme-color($key-primary, $key-tint-800);
+  background-color: theme-color($key-primary, $key-tint-500);
+  padding: spacer($key-spacer-2);
+  min-height: theme-fsize($key-fsize-large) * 3;
+  list-style: none;
+  font-size: theme-fsize($key-fsize-large);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-interest-item {
+  display: block;
+  text-align: center;
+  padding: spacer($key-spacer-3);
+}
+
+
+/// I.4. Grid
+.cell-interest-games {
+  grid-area: interest-games;
+}
+
+.cell-interest-food {
+  grid-area: interest-food;
+}
+
+.grid-interest {
+  display: grid;
+  justify-content: stretch;
+  grid-template-areas:
+    'interest-games interest-food';
+}
+
+@media only screen and (max-width: breakpoint($key-bp-tablet)) {
+  .grid-interest {
+    grid-template-areas:
+      'interest-games'
+      'interest-food';
+  }
+}

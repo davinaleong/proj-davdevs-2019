@@ -1,21 +1,16 @@
 /// M. Main
 
 /// M.1. Root
-:root {
-  font-family: theme-family('body-family');
-  font-weight: font-weight('regular');
-}
-
 html, body {
-  font-family: theme-family('body-family');
-  font-weight: font-weight('regular');
+  font-family: theme-family($key-family-body);
+  font-weight: font-weight($key-weight-regular);
 }
 
 
 /// M.2. Blocks
 .nav-side {
   position: fixed;
-  background-color: grays('300');
+  background-color: theme-color($key-col-gray, $key-tint-300);
   top: 30vh;
 }
 
@@ -26,55 +21,16 @@ html, body {
 }
 
 .side-link-item:nth-child(odd) {
-  background-color: tint($grays, '200');
+  background-color: theme-color($key-col-gray, $key-tint-200);
 }
 
 .side-link-item:nth-child(even) {
-  background-color: tint($grays, '300');
+  background-color: theme-color($key-col-gray, $key-tint-300);
 }
 
 .side-link-item {
   text-align: center;
-  padding: spacer('2');
-}
-
-section, .section {
-  height: 100vh;
-}
-
-.landing {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: $blue-gray-800;
-};
-
-.landing > h1 {
-  color: $orange-500;
-}
-
-.landing > p {
-  color: $blue-500;
-}
-
-
-/// M.3. Grid
-.grid-skills {
-  grid-area: skills;
-}
-
-.grid-about {
-  grid-area: about;
-}
-
-.grid-interests {
-  grid-area: interests;
-}
-
-.grid-contact {
-  grid-area: contact;
+  padding: spacer($key-spacer-2);
 }
 
 
@@ -90,7 +46,7 @@ section, .section {
 }
 
 .display {
-  $heading: theme-heading('display');
+  $heading: theme-heading($key-fsize-display);
   font-family: map-get($heading, 'font-family');
   font-weight: map-get($heading, 'font-weight');
   font-size: map-get($heading, 'font-size');
@@ -102,7 +58,7 @@ small, .small, sub, .sub, sup, .sup {
 }
 
 code, .code, pre, .pre {
-  font-family: theme-family('monospace-family');
+  font-family: theme-family($key-family-monospace);
 }
 
 @each $name, $weight in $font-weights {
@@ -130,17 +86,43 @@ code, .code, pre, .pre {
 }
 
 
-/// M.5. Color
+/// M.5. Form Elements
+.btn {
+  display: inline-block;
+  font-weight: font-weight($key-weight-regular);
+  text-align: center;
+  font-size: theme-fsize($key-fsize-regular-l);
+  font-family: theme-family($key-family-heading);
+  padding: theme-fsize($key-fsize-regular-l) * 0.25 theme-fsize($key-fsize-regular-l) * 0.5;
+  border: none;
+}
+
+/// M.6. Color
 @each $name, $color in $theme-colors {
+  $tint: $key-tint-500;
+
   .text-#{$name} {
-    color: $color;
+    color: map-get($color, $tint);
   }
 
   .bg-#{$name} {
-    background-color: $color;
+    background-color: map-get($color, $tint);
   }
 
   .border-#{$name} {
-    border-color: $color;
+    border-color: map-get($color, $tint);
+  }
+
+
+  .btn-#{$name} {
+    color: map-get($color, $key-tint-200);
+    background-color: map-get($color, $tint);
+    cursor: pointer;
+    box-shadow: 2px 2px theme-color($key-col-gray, $key-tint-900);
+
+    &:hover {
+      color: map-get($color, $key-tint-300);
+      background-color: map-get($color, $key-tint-700);
+    }
   }
 }

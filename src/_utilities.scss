@@ -61,3 +61,145 @@ $text-aligns: (
     @warn 'Text align not found in $text-aligns.';
   }
 }
+
+
+/// U.4. Media Types
+$media-types: (
+  'all':        all,
+  'braille':    braille,
+  'embossed':   embossed,
+  'handheld':   handheld,
+  'print':      print,
+  'projection': projection,
+  'screen':     screen,
+  'speech':     speech,
+  'tty':        tty,
+  'tv':         tv
+);
+
+@function media-type($type) {
+  $media-type: map-get($media-types, $type);
+  @if ($media-type) {
+    @return $media-type;
+  } @else {
+    @warn 'Media Type not found in $media-types.';
+  }
+}
+
+
+/// U.99. Map Keys as strings
+$str-oswald:          'Oswald';
+$str-anton:           'Anton';
+$str-montserrat:      'Montserrat';
+$str-source-code-pro: 'Source Code Pro';
+
+
+$key-weight-thin:         'thin';
+$key-weight-extra-light:  'extra-light';
+$key-weight-light:        'light';
+$key-weight-regular:      'regular';
+$key-weight-medium:       'medium';
+$key-weight-semi-bold:    'semi-bold';
+$key-weight-bold:         'bold';
+$key-weight-extra-bold:   'extra-bold';
+$key-weight-black:        'black';
+
+
+$key-style-normal:  'normal';
+$key-style-italic:  'italic';
+$key-style-oblique: 'oblique';
+
+
+$key-align-left:    'left';
+$key-align-center:  'center';
+$key-align-right:   'right';
+
+
+$key-col-white:       'white';
+$key-col-black:       'black';
+$key-col-gray:        'gray';
+$key-col-blue-gray:   'blue-gray';
+$key-col-deep-purple: 'deep-purple';
+$key-col-teal:        'teal';
+$key-col-orange:      'orange';
+$key-col-blue:        'blue';
+$key-col-red:         'red';
+$key-col-green:       'green';
+
+
+$key-tint-50:     '50';
+$key-tint-100:    '100';
+$key-tint-200:    '200';
+$key-tint-300:    '300';
+$key-tint-400:    '400';
+$key-tint-500:    '500';
+$key-tint-600:    '600';
+$key-tint-700:    '700';
+$key-tint-800:    '800';
+$key-tint-900:    '900';
+$key-tint-a100:   'a100';
+$key-tint-a200:   'a200';
+$key-tint-a400:   'a400';
+$key-tint-a700:   'a700';
+
+
+$key-primary:       'primary';
+$key-secondary:     'secondary';
+$key-interactable:  'interactable';
+$key-action:        'action';
+$key-danger:        'danger';
+$key-success:       'success';
+
+
+$key-family-heading:    'heading';
+$key-family-body:       'body';
+$key-family-monospace:  'monospace';
+
+
+$key-fsize-small:     'small';
+$key-fsize-regular:   'regular';
+$key-fsize-regular-l: 'regular-l';
+$key-fsize-large:     'large';
+$key-fsize-x-large:   'x-large';
+$key-fsize-xx-large:  'xx-large';
+$key-fsize-heading:   'heading';
+$key-fsize-heading-l: 'heading-l';
+$key-fsize-display:   'display';
+
+
+$key-heading-display: 'display';
+$key-heading-h1:      'h1';
+$key-heading-h2:      'h2';
+$key-heading-h3:      'h3';
+$key-heading-h4:      'h4';
+$key-heading-h5:      'h5';
+$key-heading-h6:      'h6';
+
+
+$key-bp-phone:      'phone';
+$key-bp-tablet:     'tablet';
+$key-bp-desktop:    'desktop';
+$key-bp-l-desktop:  'l-desktop';
+
+
+$key-spacer-1:  '1';
+$key-spacer-2:  '2';
+$key-spacer-3:  '3';
+$key-spacer-4:  '4';
+$key-spacer-5:  '5';
+
+
+$key-media-all:         'all';
+$key-media-braille:     'braille';
+$key-media-embossed:    'embossed';
+$key-media-handheld:    'handheld';
+$key-media-print:       'print';
+$key-media-projection:  'projection';
+$key-media-screen:      'screen';
+$key-media-speech:      'speech';
+$key-media-tty:         'tty';
+$key-media-tv:          'tv';
+
+
+$key-margin-heading:    'heading';
+$key-margin-subheading: 'subheading';

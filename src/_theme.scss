@@ -1,43 +1,48 @@
 /// T. Theme
 
-
 /// T.1. Colors
-$primary:       color('blue-gray');
-$secondary:     color('deep-purple');
-$interactable:  color('orange');
-$action:        color('blue');
-$danger:        color('red');
-$success:       color('green');
+$primary:       $blue-grays;
+$secondary:     $teals;
+$interactable:  $oranges;
+$action:        $blues;
+$danger:        $reds;
+$success:       $greens;
 
 $theme-colors: (
-  'primary':       $primary,
-  'secondary':     $secondary,
-  'interactable':  $interactable,
-  'action':        $action,
-  'danger':        $danger,
-  'success':       $success,
+  'primary':      $primary,
+  'secondary':    $secondary,
+  'interactable': $interactable,
+  'action':       $action,
+  'danger':       $danger,
+  'success':      $success,
+  'gray':         $grays,
 );
 
-@function theme-color($color-name) {
-  $color: map-get($theme-colors, $color-name);
-  @if ($color) {
-    @return $color;
+@function theme-color($name, $tint) {
+  $color-map: map-get($theme-colors, $name);
+  @if ($color-map) {
+    $color: map-get($color-map, $tint);
+    @if ($color) {
+      @return $color;
+    } @else {
+      @warn 'Color not found in $theme-colors';
+    }
   } @else {
-    @warn 'Theme color not found in $theme-colors.';
+    @warn 'Color Map not found in $theme-colors';
   }
 }
 
 
 /// T.2. Fonts
 /// T.2.a Font Families
-$heading-family: $anton, sans-serif;
-$body-family: $montserrat, sans-serif;
-$monospace-family: $sourceCodePro, monospace;
+$heading-family: $str-anton, sans-serif;
+$body-family: $str-montserrat, sans-serif;
+$monospace-family: $str-source-code-pro, monospace;
 
 $theme-families: (
-  'heading-family': $heading-family,
-  'body-family': $body-family,
-  'monospace-family': $monospace-family
+  'heading': $heading-family,
+  'body': $body-family,
+  'monospace': $monospace-family
 );
 
 @function theme-family($family-name) {
@@ -75,45 +80,45 @@ $theme-fsizes: (
 
 /// T.2.c Headings
 $heading-display: (
-  'font-family': theme-family('heading-family'),
-  'font-weight': font-weight('extra-light'),
-  'font-size': theme-fsize('display'),
+  'font-family': theme-family($key-family-heading),
+  'font-weight': font-weight($key-weight-extra-light),
+  'font-size': theme-fsize($key-fsize-display),
   'font-style': normal
 );
 $heading-h1: (
-  'font-family': theme-family('heading-family'),
-  'font-weight': font-weight('extra-light'),
-  'font-size': theme-fsize('heading-l'),
+  'font-family': theme-family($key-family-heading),
+  'font-weight': font-weight($key-weight-extra-light),
+  'font-size': theme-fsize($key-fsize-heading-l),
   'font-style': normal
 );
 $heading-h2: (
-  'font-family': theme-family('heading-family'),
-  'font-weight': font-weight('extra-light'),
-  'font-size': theme-fsize('heading'),
+  'font-family': theme-family($key-family-heading),
+  'font-weight': font-weight($key-weight-extra-light),
+  'font-size': theme-fsize($key-fsize-heading),
   'font-style': normal
 );
 $heading-h3: (
-  'font-family': theme-family('heading-family'),
-  'font-weight': font-weight('extra-light'),
-  'font-size': theme-fsize('xx-large'),
+  'font-family': theme-family($key-family-heading),
+  'font-weight': font-weight($key-weight-extra-light),
+  'font-size': theme-fsize($key-fsize-xx-large),
   'font-style': normal
 );
 $heading-h4: (
-  'font-family': theme-family('heading-family'),
-  'font-weight': font-weight('regular'),
-  'font-size': theme-fsize('x-large'),
+  'font-family': theme-family($key-family-heading),
+  'font-weight': font-weight($key-weight-regular),
+  'font-size': theme-fsize($key-fsize-x-large),
   'font-style': normal
 );
 $heading-h5: (
-  'font-family': theme-family('heading-family'),
-  'font-weight': font-weight('regular'),
-  'font-size': theme-fsize('large'),
+  'font-family': theme-family($key-family-heading),
+  'font-weight': font-weight($key-weight-regular),
+  'font-size': theme-fsize($key-fsize-large),
   'font-style': normal
 );
 $heading-h6: (
-  'font-family': theme-family('heading-family'),
-  'font-weight': font-weight('bold'),
-  'font-size': theme-fsize('regular-l'),
+  'font-family': theme-family($key-family-heading),
+  'font-weight': font-weight($key-weight-bold),
+  'font-size': theme-fsize($key-fsize-regular-l),
   'font-style': normal
 );
 
@@ -136,7 +141,29 @@ $theme-headings: (
 }
 
 
-/// T.3. Spacing
+/// T.3. Breakpoints
+$breakpoint-sm: 600px;
+$breakpoint-md: 900px;
+$breakpoint-lg: 1200px;
+$breakpoint-xl: 1600px;
+$breakpoints: (
+  'phone':      $breakpoint-sm,
+  'tablet':     $breakpoint-md,
+  'desktop':    $breakpoint-lg,
+  'l-desktop':  $breakpoint-xl
+);
+
+@function breakpoint($bp) {
+  $breakpoint: map-get($breakpoints, $bp);
+  @if ($breakpoint) {
+    @return $breakpoint;
+  } @else {
+    @warn 'Breakpoint not found in $breakpoints.';
+  }
+}
+
+
+/// T.4. Spacing
 $spacer-unit: 1rem;
 $spacers: (
   '1': $spacer-unit * 0.25,
@@ -151,6 +178,24 @@ $spacers: (
   @if ($spacer) {
     @return $spacer;
   } @else {
-    @warn 'Spacer-index not found in $spacers';
+    @warn 'Spacer-index not found in $spacers.';
+  }
+}
+
+
+/// T.5. Negative Margins
+$theme-margin-heading: -17px;
+$theme-margin-subheading: -14px;
+$theme-margins: (
+  'heading': $theme-margin-heading,
+  'subheading': $theme-margin-subheading
+);
+
+@function theme-margin($element) {
+  $margin: map-get($theme-margins, $element);
+  @if ($margin) {
+    @return $margin;
+  } @else {
+    @warn 'Element not found in $margins.';
   }
 }
