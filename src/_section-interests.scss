@@ -1,2 +1,13 @@
 /// I. Interests Section
 
+/// I.1. Containers & Blocks
+.section-interest {
+  color: $black;
+  background-color: theme-color($key-primary, $key-tint-500);
+}
+
+.heading-interest {
+  color: theme-color($key-primary, $key-tint-500);
+  background-color: theme-color($key-primary, $key-tint-900);
+  margin-bottom: theme-margin($key-margin-heading);
+}

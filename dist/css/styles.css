@@ -627,4 +627,15 @@ code, .code, pre, .pre {
         grid-template-areas: 'me' 'download';
   }
 }
+
+.section-interest {
+  color: #000;
+  background-color: #607d8b;
+}
+
+.heading-interest {
+  color: #607d8b;
+  background-color: #263238;
+  margin-bottom: -17px;
+}
 /*# sourceMappingURL=styles.css.map */
