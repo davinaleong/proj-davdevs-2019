@@ -37,23 +37,23 @@
 
 /// A.3. Content Grid
 .cell-about-me {
-  grid-area: me;
+  grid-area: about-me;
 }
 
 .cell-about-download {
-  grid-area: download;
+  grid-area: about-download;
 }
 
 .grid-about {
   display: grid;
   grid-template-areas:
-    'me download';
+    'about-me'
+    'about-download';
 }
 
 @media only screen and (max-width: breakpoint($key-bp-phone)) {
   .grid-about {
     grid-template-areas:
-      'me'
-      'download';
+      'about-me about-download';
   }
 }

@@ -44,36 +44,36 @@
 
 /// K.4. Content Grid
 .cell-skills-frontend {
-  grid-area: frontend;
+  grid-area: skills-frontend;
 }
 
 .cell-skills-backend {
-  grid-area: backend;
+  grid-area: skills-backend;
 }
 
 .cell-skills-devops {
-  grid-area: devops;
+  grid-area: skills-devops;
 }
 
 .cell-skills-tools {
-  grid-area: tools;
+  grid-area: skills-tools;
 }
 
 .grid-skills {
   display: grid;
   justify-content: stretch;
   grid-template-areas:
-    'frontend'
-    'backend'
-    'devops'
-    'tools';
+    'skills-frontend'
+    'skills-backend'
+    'skills-devops'
+    'skills-tools';
 }
 
 @media only screen and (min-width: breakpoint($key-bp-phone)) {
   .grid-skills {
     grid-template-areas:
-      'frontend backend'
-      'devops tools';
+      'skills-frontend skills-backend'
+      'skills-devops skills-tools';
   }
 }
 

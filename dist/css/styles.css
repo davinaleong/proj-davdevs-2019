@@ -474,25 +474,25 @@ code, .code, pre, .pre {
 .cell-skills-frontend {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: frontend;
+  grid-area: skills-frontend;
 }
 
 .cell-skills-backend {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: backend;
+  grid-area: skills-backend;
 }
 
 .cell-skills-devops {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: devops;
+  grid-area: skills-devops;
 }
 
 .cell-skills-tools {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
-  grid-area: tools;
+  grid-area: skills-tools;
 }
 
 .grid-skills {
@@ -501,12 +501,12 @@ code, .code, pre, .pre {
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
-      grid-template-areas: 'frontend' 'backend' 'devops' 'tools';
+      grid-template-areas: 'skills-frontend' 'skills-backend' 'skills-devops' 'skills-tools';
 }
 
 @media only screen and (min-width: 600px) {
   .grid-skills {
-        grid-template-areas: 'frontend backend' 'devops tools';
+        grid-template-areas: 'skills-frontend skills-backend' 'skills-devops skills-tools';
   }
 }
 
@@ -621,24 +621,24 @@ code, .code, pre, .pre {
 .cell-about-me {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: me;
+  grid-area: about-me;
 }
 
 .cell-about-download {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: download;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: about-download;
 }
 
 .grid-about {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'me download';
+      grid-template-areas: 'about-me' 'about-download';
 }
 
 @media only screen and (max-width: 600px) {
   .grid-about {
-        grid-template-areas: 'me' 'download';
+        grid-template-areas: 'about-me about-download';
   }
 }
 
