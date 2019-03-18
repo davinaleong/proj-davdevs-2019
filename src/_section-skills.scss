@@ -63,17 +63,17 @@
   display: grid;
   justify-content: stretch;
   grid-template-areas:
-    'frontend backend'
-    'devops tools';
+    'frontend'
+    'backend'
+    'devops'
+    'tools';
 }
 
-@media only screen and (max-width: breakpoint($key-bp-phone)) {
+@media only screen and (min-width: breakpoint($key-bp-phone)) {
   .grid-skills {
     grid-template-areas:
-      'frontend'
-      'backend'
-      'devops'
-      'tools';
+      'frontend backend'
+      'devops tools';
   }
 }
 

@@ -478,20 +478,20 @@ code, .code, pre, .pre {
 }
 
 .cell-skills-backend {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: backend;
 }
 
 .cell-skills-devops {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: devops;
 }
 
 .cell-skills-tools {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: tools;
 }
 
@@ -501,12 +501,12 @@ code, .code, pre, .pre {
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
-      grid-template-areas: 'frontend backend' 'devops tools';
+      grid-template-areas: 'frontend' 'backend' 'devops' 'tools';
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   .grid-skills {
-        grid-template-areas: 'frontend' 'backend' 'devops' 'tools';
+        grid-template-areas: 'frontend backend' 'devops tools';
   }
 }
 
