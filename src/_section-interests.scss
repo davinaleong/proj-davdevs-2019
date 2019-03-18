@@ -53,13 +53,13 @@
   display: grid;
   justify-content: stretch;
   grid-template-areas:
-    'interest-games interest-food';
+    'interest-games'
+    'interest-food';
 }
 
-@media only screen and (max-width: breakpoint($key-bp-tablet)) {
+@media only screen and (min-width: breakpoint($key-bp-phone)) {
   .grid-interest {
     grid-template-areas:
-      'interest-games'
-      'interest-food';
+    'interest-games interest-food';
   }
 }

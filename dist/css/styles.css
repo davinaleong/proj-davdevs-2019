@@ -636,7 +636,7 @@ code, .code, pre, .pre {
       grid-template-areas: 'about-me' 'about-download';
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   .grid-about {
         grid-template-areas: 'about-me about-download';
   }
@@ -686,8 +686,8 @@ code, .code, pre, .pre {
 }
 
 .cell-interest-food {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: interest-food;
 }
 
@@ -697,12 +697,12 @@ code, .code, pre, .pre {
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
-      grid-template-areas: 'interest-games interest-food';
+      grid-template-areas: 'interest-games' 'interest-food';
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 600px) {
   .grid-interest {
-        grid-template-areas: 'interest-games' 'interest-food';
+        grid-template-areas: 'interest-games interest-food';
   }
 }
 
