@@ -19,6 +19,7 @@
   color: theme-color($key-col-gray, $key-col-black);
   background-color: theme-color($key-col-gray, $key-tint-900);
   margin-bottom: theme-margin($key-margin-subheading);
+  padding-top: spacer($key-spacer-2);
 }
 
 

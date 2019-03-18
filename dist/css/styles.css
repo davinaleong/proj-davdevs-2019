@@ -1,4 +1,4 @@
-@import url(c:\developer\proj-personalwebsite-template\node_modules\normalize.css\normalize.css);
+@import url(/Users/davina/Developer/proj-personalwebsite-template/node_modules/normalize.css/normalize.css);
 * {
   padding: 0;
   margin: 0;
@@ -402,7 +402,7 @@ code, .code, pre, .pre {
 }
 
 .heading-landing {
-  font-size: 8rem;
+  font-size: 3.8rem;
   color: #ff9800;
   text-shadow: 2px 2px #212121;
   margin-top: auto;
@@ -410,9 +410,19 @@ code, .code, pre, .pre {
 
 .tagline-landing {
   color: #1de9b6;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-shadow: 2px 2px #263238;
   font-style: italic;
+  margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  .heading-landing {
+    font-size: 8rem;
+  }
+  .tagline-landing {
+    font-size: 2rem;
+  }
 }
 
 .seemore-landing {
@@ -438,6 +448,7 @@ code, .code, pre, .pre {
   color: #000;
   background-color: #212121;
   margin-bottom: -14px;
+  padding-top: 0.5rem;
 }
 
 .content-skills {
@@ -490,12 +501,12 @@ code, .code, pre, .pre {
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
-      grid-template-areas: 'frontend backend' 'devops tools';
+      grid-template-areas: 'frontend backend' 'devops tools';
 }
 
 @media only screen and (max-width: 600px) {
   .grid-skills {
-        grid-template-areas: 'frontend' 'backend' 'devops' 'tools';
+        grid-template-areas: 'frontend' 'backend' 'devops' 'tools';
   }
 }
 
@@ -627,7 +638,7 @@ code, .code, pre, .pre {
 
 @media only screen and (max-width: 600px) {
   .grid-about {
-        grid-template-areas: 'me' 'download';
+        grid-template-areas: 'me' 'download';
   }
 }
 
@@ -691,7 +702,7 @@ code, .code, pre, .pre {
 
 @media only screen and (max-width: 900px) {
   .grid-interest {
-        grid-template-areas: 'interest-games' 'interest-food';
+        grid-template-areas: 'interest-games' 'interest-food';
   }
 }
 
