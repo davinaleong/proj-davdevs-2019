@@ -726,6 +726,11 @@ code, .code, pre, .pre {
   margin-bottom: -17px;
 }
 
+.grid-contact {
+  color: #607d8b;
+  background-color: #37474f;
+}
+
 footer, .footer {
   color: #fff;
   background-color: #000;
