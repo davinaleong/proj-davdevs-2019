@@ -726,33 +726,52 @@ code, .code, pre, .pre {
   margin-bottom: -17px;
 }
 
-.grid-contact {
-  color: #607d8b;
-  background-color: #37474f;
-}
-
 .cell-contact-name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: contact-name;
 }
 
 .cell-contact-email {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: contact-email;
 }
 
 .cell-contact-mobile {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: contact-mobile;
 }
 
 .cell-contact-subject {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: contact-subject;
 }
 
 .cell-contact-message {
-  grid-area: message;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: contact-message;
 }
 
 .cell-contact-submit {
-  grid-area: submit;
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: contact-submit;
+}
+
+.grid-contact {
+  color: #607d8b;
+  background-color: #37474f;
+      grid-template-areas: 'contact-name' 'contact-email' 'contact-mobile' 'contact-subject' 'contact-message' 'contact-submit';
+}
+
+@media only screen and (min-width: theme-breakpoint("phone")) {
+  .grid-contact {
+        grid-template-areas: 'contact-name' 'contact-email contact-mobile' 'contact-subject' 'contact-message' 'contact-submit';
+  }
 }
 
 footer, .footer {

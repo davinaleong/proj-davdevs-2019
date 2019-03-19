@@ -13,10 +13,6 @@
   margin-bottom: theme-margin($key-margin-heading);
 }
 
-.grid-contact {
-  color: theme-color($key-primary, $key-tint-500);
-  background-color: theme-color($key-primary, $key-tint-800);
-}
 
 /// C.3. Contact Grid
 .cell-contact-name {
@@ -36,9 +32,32 @@
 }
 
 .cell-contact-message {
-  grid-area: message;
+  grid-area: contact-message;
 }
 
 .cell-contact-submit {
-  grid-area: submit;
+  grid-area: contact-submit;
+}
+
+.grid-contact {
+  color: theme-color($key-primary, $key-tint-500);
+  background-color: theme-color($key-primary, $key-tint-800);
+  grid-template-areas:
+    'contact-name'
+    'contact-email'
+    'contact-mobile'
+    'contact-subject'
+    'contact-message'
+    'contact-submit';
+}
+
+@media only screen and (min-width: theme-breakpoint($key-bp-phone)) {
+  .grid-contact {
+    grid-template-areas:
+      'contact-name'
+      'contact-email contact-mobile'
+      'contact-subject'
+      'contact-message'
+      'contact-submit';
+  }
 }
