@@ -18,6 +18,7 @@
   color: theme-color($key-primary, $key-tint-500);
   background-color: theme-color($key-primary, $key-tint-800);
   margin-bottom: theme-margin($key-margin-subheading);
+  padding-top: spacer($key-spacer-2);
 }
 
 

@@ -416,7 +416,7 @@ code, .code, pre, .pre {
   margin-top: 0.5rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
   .heading-landing {
     font-size: 8rem;
   }
@@ -663,6 +663,7 @@ code, .code, pre, .pre {
   color: #607d8b;
   background-color: #37474f;
   margin-bottom: -14px;
+  padding-top: 0.5rem;
 }
 
 .content-interest {
