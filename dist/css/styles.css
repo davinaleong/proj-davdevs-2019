@@ -718,6 +718,11 @@ code, .code, pre, .pre {
   background-color: #fff;
 }
 
+footer, .footer {
+  color: #fff;
+  background-color: #000;
+}
+
 .dd {
   font-style: normal;
   display: inline-block;
