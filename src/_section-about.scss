@@ -20,7 +20,7 @@
 /// A.2. Content
 .content-about {
   padding: spacer($key-spacer-2);
-  min-height: theme-fsize($key-fsize-x-large) * 8;
+  min-height: theme-fsize($key-fsize-x-large) * 6;
   color: theme-color($key-primary, $key-tint-500);
   background-color: theme-color($key-primary, $key-tint-900);
   font-size: theme-fsize($key-fsize-regular-l);
@@ -28,6 +28,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (min-width: breakpoint($key-bp-phone)) {
+  .content-about {
+    min-height: theme-fsize($key-fsize-x-large) * 8;
+  }
 }
 
 .btn-about {

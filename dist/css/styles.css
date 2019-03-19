@@ -595,7 +595,7 @@ code, .code, pre, .pre {
 
 .content-about {
   padding: 0.5rem;
-  min-height: 16rem;
+  min-height: 12rem;
   color: #607d8b;
   background-color: #263238;
   font-size: 1.25rem;
@@ -612,6 +612,12 @@ code, .code, pre, .pre {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .content-about {
+    min-height: 16rem;
+  }
 }
 
 .btn-about {
