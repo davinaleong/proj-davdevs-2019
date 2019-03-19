@@ -1,0 +1,44 @@
+/// C. Contact Section
+
+/// C.1. Containers & Blocks
+.section-contact {
+  color: $black;
+  background-color: $white;
+}
+
+/// C.2. Type
+.heading-contact {
+  color: theme-color($key-primary, $key-tint-800);
+  background-color: theme-color($key-primary, $key-tint-500);
+  margin-bottom: theme-margin($key-margin-heading);
+}
+
+.grid-contact {
+  color: theme-color($key-primary, $key-tint-500);
+  background-color: theme-color($key-primary, $key-tint-800);
+}
+
+/// C.3. Contact Grid
+.cell-contact-name {
+  grid-area: contact-name;
+}
+
+.cell-contact-email {
+  grid-area: contact-email;
+}
+
+.cell-contact-mobile {
+  grid-area: contact-mobile;
+}
+
+.cell-contact-subject {
+  grid-area: contact-subject;
+}
+
+.cell-contact-message {
+  grid-area: message;
+}
+
+.cell-contact-submit {
+  grid-area: submit;
+}
