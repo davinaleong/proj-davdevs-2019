@@ -713,6 +713,11 @@ code, .code, pre, .pre {
   }
 }
 
+.section-contact {
+  color: #000;
+  background-color: #fff;
+}
+
 .dd {
   font-style: normal;
   display: inline-block;
