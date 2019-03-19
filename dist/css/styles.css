@@ -720,6 +720,13 @@ code, .code, pre, .pre {
   background-color: #fff;
 }
 
+.content-contact {
+  padding: 0.5rem;
+  min-height: 12rem;
+  color: #607d8b;
+  background-color: #37474f;
+}
+
 .heading-contact {
   color: #37474f;
   background-color: #607d8b;
@@ -763,8 +770,8 @@ code, .code, pre, .pre {
 }
 
 .grid-contact {
-  color: #607d8b;
-  background-color: #37474f;
+  width: 80vw;
+  margin: 0 auto;
       grid-template-areas: 'contact-name' 'contact-email' 'contact-mobile' 'contact-subject' 'contact-message' 'contact-submit';
 }
 

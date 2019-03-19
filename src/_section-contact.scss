@@ -6,6 +6,14 @@
   background-color: $white;
 }
 
+.content-contact {
+  padding: spacer($key-spacer-2);
+  min-height: theme-fsize($key-fsize-x-large) * 6;
+  color: theme-color($key-primary, $key-tint-500);
+  background-color: theme-color($key-primary, $key-tint-800);
+}
+
+
 /// C.2. Type
 .heading-contact {
   color: theme-color($key-primary, $key-tint-800);
@@ -40,8 +48,8 @@
 }
 
 .grid-contact {
-  color: theme-color($key-primary, $key-tint-500);
-  background-color: theme-color($key-primary, $key-tint-800);
+  width: 80vw;
+  margin: 0 auto;
   grid-template-areas:
     'contact-name'
     'contact-email'
