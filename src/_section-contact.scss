@@ -69,3 +69,23 @@
       'contact-submit';
   }
 }
+
+
+/// C.4. Form elements
+.form-label {
+  display: inline-block;
+  padding: spacer($key-spacer-2);
+  color: theme-color($key-primary, $key-tint-500);
+  background-color: theme-color($key-primary, $key-tint-900);
+  font-size: theme-fsize($key-fsize-regular);
+}
+
+.form-control {
+  display: inline-block;
+  padding: spacer($key-spacer-2);
+  color: theme-color($key-primary, $key-tint-500);
+  background-color: theme-color($key-primary, $key-tint-900);
+  font-size: theme-fsize($key-fsize-regular);
+  border: none;
+  width: auto;
+}

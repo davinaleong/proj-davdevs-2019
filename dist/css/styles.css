@@ -781,6 +781,24 @@ code, .code, pre, .pre {
   }
 }
 
+.form-label {
+  display: inline-block;
+  padding: 0.5rem;
+  color: #607d8b;
+  background-color: #263238;
+  font-size: 1rem;
+}
+
+.form-control {
+  display: inline-block;
+  padding: 0.5rem;
+  color: #607d8b;
+  background-color: #263238;
+  font-size: 1rem;
+  border: none;
+  width: auto;
+}
+
 footer, .footer {
   color: #fff;
   background-color: #000;
