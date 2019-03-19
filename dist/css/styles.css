@@ -731,6 +731,30 @@ code, .code, pre, .pre {
   background-color: #37474f;
 }
 
+.cell-contact-name {
+  grid-area: contact-name;
+}
+
+.cell-contact-email {
+  grid-area: contact-email;
+}
+
+.cell-contact-mobile {
+  grid-area: contact-mobile;
+}
+
+.cell-contact-subject {
+  grid-area: contact-subject;
+}
+
+.cell-contact-message {
+  grid-area: message;
+}
+
+.cell-contact-submit {
+  grid-area: submit;
+}
+
 footer, .footer {
   color: #fff;
   background-color: #000;
