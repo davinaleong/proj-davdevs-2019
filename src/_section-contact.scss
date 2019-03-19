@@ -5,3 +5,10 @@
   color: $black;
   background-color: $white;
 }
+
+/// C.2. Type
+.heading-contact {
+  color: theme-color($key-primary, $key-tint-800);
+  background-color: theme-color($key-primary, $key-tint-500);
+  margin-bottom: theme-margin($key-margin-heading);
+}
