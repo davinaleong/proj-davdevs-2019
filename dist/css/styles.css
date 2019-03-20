@@ -2,6 +2,8 @@
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .style-normal {
@@ -720,44 +722,187 @@ code, .code, pre, .pre {
   background-color: #fff;
 }
 
+.content-contact {
+  padding: 2rem 0.5rem;
+  min-height: 12rem;
+  color: #607d8b;
+  background-color: #37474f;
+}
+
 .heading-contact {
   color: #37474f;
   background-color: #607d8b;
   margin-bottom: -17px;
 }
 
-.grid-contact {
-  color: #607d8b;
-  background-color: #37474f;
-}
-
 .cell-contact-name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: contact-name;
+      grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .cell-contact-email {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: contact-email;
+      grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .cell-contact-mobile {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: contact-mobile;
+      grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .cell-contact-subject {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: contact-subject;
+      grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .cell-contact-message {
-  grid-area: message;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: contact-message;
+      grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .cell-contact-submit {
-  grid-area: submit;
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: contact-submit;
+      grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.grid-contact {
+  width: 80vw;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'contact-name' 'contact-email' 'contact-mobile' 'contact-subject' 'contact-message' 'contact-submit';
+  grid-gap: 0.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .cell-contact-email {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: contact-email;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  .cell-contact-mobile {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: contact-mobile;
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+    grid-column-end: 4;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    grid-row-end: 2;
+  }
+}
+
+.form-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-field .form-label {
+  color: #607d8b;
+  background-color: #263238;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 2rem;
+  min-height: 2rem;
+  font-size: 1rem;
+}
+
+.form-field .form-control {
+  color: #607d8b;
+  background-color: #263238;
+  display: block;
+  width: 100%;
+  min-height: 2rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.form-field .form-label-textarea {
+  color: #607d8b;
+  background-color: #263238;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 2rem;
+  min-height: 2rem;
+  font-size: 1rem;
+}
+
+.form-field .form-control-textarea {
+  color: #607d8b;
+  background-color: #263238;
+  display: block;
+  width: 100%;
+  min-height: 2rem;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
 }
 
 footer, .footer {
   color: #fff;
   background-color: #000;
+}
+
+.heading-footer {
+  color: #000;
+  background-color: #37474f;
+  margin-bottom: -17px;
+}
+
+.content-footer {
+  color: #424242;
+  background-color: #000;
+}
+
+.grid-footer {
+  display: -ms-grid;
+  display: grid;
 }
 
 .dd {
