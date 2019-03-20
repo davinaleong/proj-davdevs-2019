@@ -7,7 +7,7 @@
 }
 
 .content-contact {
-  padding: spacer($key-spacer-2);
+  padding: spacer($key-spacer-5) spacer($key-spacer-2);
   min-height: theme-fsize($key-fsize-x-large) * 6;
   color: theme-color($key-primary, $key-tint-500);
   background-color: theme-color($key-primary, $key-tint-800);
@@ -25,31 +25,44 @@
 /// C.3. Contact Grid
 .cell-contact-name {
   grid-area: contact-name;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .cell-contact-email {
   grid-area: contact-email;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .cell-contact-mobile {
   grid-area: contact-mobile;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .cell-contact-subject {
   grid-area: contact-subject;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .cell-contact-message {
   grid-area: contact-message;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .cell-contact-submit {
   grid-area: contact-submit;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .grid-contact {
   width: 80vw;
   margin: 0 auto;
+  display: grid;
   grid-template-areas:
     'contact-name'
     'contact-email'
@@ -57,23 +70,38 @@
     'contact-subject'
     'contact-message'
     'contact-submit';
+  grid-gap: spacer($key-spacer-2);
 }
 
-@media only screen and (min-width: theme-breakpoint($key-bp-phone)) {
-  .grid-contact {
-    grid-template-areas:
-      'contact-name'
-      'contact-email contact-mobile'
-      'contact-subject'
-      'contact-message'
-      'contact-submit';
+@media only screen and (min-width: breakpoint($key-bp-phone)) {
+  // .grid-contact {
+  //   grid-template-areas:
+  //     'contact-name'
+  //     'contact-email contact-mobile'
+  //     'contact-subject'
+  //     'contact-message'
+  //     'contact-submit';
+  // }
+  .cell-contact-email {
+    grid-area: contact-email;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  
+  .cell-contact-mobile {
+    grid-area: contact-mobile;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
   }
 }
 
 
 /// C.4. Form elements
 .form-field {
-  margin-bottom: spacer($key-spacer-2);
   display: flex;
 
   .form-label {

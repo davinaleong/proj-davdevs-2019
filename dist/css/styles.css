@@ -723,7 +723,7 @@ code, .code, pre, .pre {
 }
 
 .content-contact {
-  padding: 0.5rem;
+  padding: 2rem 0.5rem;
   min-height: 12rem;
   color: #607d8b;
   background-color: #37474f;
@@ -739,52 +739,83 @@ code, .code, pre, .pre {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: contact-name;
+      grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .cell-contact-email {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: contact-email;
+      grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .cell-contact-mobile {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: contact-mobile;
+      grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .cell-contact-subject {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: contact-subject;
+      grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .cell-contact-message {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: contact-message;
+      grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .cell-contact-submit {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: contact-submit;
+      grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .grid-contact {
   width: 80vw;
   margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
       grid-template-areas: 'contact-name' 'contact-email' 'contact-mobile' 'contact-subject' 'contact-message' 'contact-submit';
+  grid-gap: 0.5rem;
 }
 
-@media only screen and (min-width: theme-breakpoint("phone")) {
-  .grid-contact {
-        grid-template-areas: 'contact-name' 'contact-email contact-mobile' 'contact-subject' 'contact-message' 'contact-submit';
+@media only screen and (min-width: 600px) {
+  .cell-contact-email {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: contact-email;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  .cell-contact-mobile {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: contact-mobile;
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+    grid-column-end: 4;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    grid-row-end: 2;
   }
 }
 
 .form-field {
-  margin-bottom: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
