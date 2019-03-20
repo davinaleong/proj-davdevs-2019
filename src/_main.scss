@@ -61,6 +61,14 @@ code, .code, pre, .pre {
   font-family: theme-family($key-family-monospace);
 }
 
+a, .a {
+  color: theme-color($key-secondary, $key-tint-500);
+  text-decoration: none;
+  &:hover {
+    color: theme-color($key-interactable, $key-tint-500);
+  }
+}
+
 @each $name, $weight in $font-weights {
   .text-weight-#{$name} {
     font-weight: $weight;

@@ -103,6 +103,15 @@ code, .code, pre, .pre {
   font-family: "Source Code Pro", monospace;
 }
 
+a, .a {
+  color: #009688;
+  text-decoration: none;
+}
+
+a:hover, .a:hover {
+  color: #ff9800;
+}
+
 .text-weight-thin {
   font-weight: 100;
 }
