@@ -6,6 +6,15 @@ footer, .footer {
   background-color: $black;
 }
 
+
+/// F.2. Type
+.heading-footer {
+  color: $black;
+  background-color: theme-color($key-primary, $key-tint-800);
+  margin-bottom: theme-margin($key-margin-heading);
+}
+
+
 /// F.99. Misc
 .dd {
   font-style: normal;
