@@ -899,6 +899,12 @@ footer, .footer {
   }
 }
 
+.copyright {
+  color: #424242;
+  font-size: 0.8em;
+  text-align: center;
+}
+
 .grid-footer {
   display: -ms-grid;
   display: grid;

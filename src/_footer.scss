@@ -36,6 +36,12 @@ footer, .footer {
   }
 }
 
+.copyright {
+  color: theme-color($key-col-gray, $key-tint-800);
+  font-size: 0.8em;
+  text-align: center;
+}
+
 
 /// F.3. Footer Grid
 .grid-footer {
