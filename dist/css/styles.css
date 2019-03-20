@@ -1,4 +1,4 @@
-@import url(/Users/davina/Developer/proj-personalwebsite-template/node_modules/normalize.css/normalize.css);
+@import url(c:\developer\proj-personalwebsite-template\node_modules\normalize.css\normalize.css);
 * {
   padding: 0;
   margin: 0;
@@ -503,12 +503,12 @@ code, .code, pre, .pre {
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
-      grid-template-areas: 'skills-frontend' 'skills-backend' 'skills-devops' 'skills-tools';
+      grid-template-areas: 'skills-frontend' 'skills-backend' 'skills-devops' 'skills-tools';
 }
 
 @media only screen and (min-width: 600px) {
   .grid-skills {
-        grid-template-areas: 'skills-frontend skills-backend' 'skills-devops skills-tools';
+        grid-template-areas: 'skills-frontend skills-backend' 'skills-devops skills-tools';
   }
 }
 
@@ -642,7 +642,7 @@ code, .code, pre, .pre {
 .grid-about {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'about-me' 'about-download';
+      grid-template-areas: 'about-me' 'about-download';
 }
 
 @media only screen and (min-width: 600px) {
@@ -708,7 +708,7 @@ code, .code, pre, .pre {
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
-      grid-template-areas: 'interest-games' 'interest-food';
+      grid-template-areas: 'interest-games' 'interest-food';
 }
 
 @media only screen and (min-width: 600px) {
@@ -739,48 +739,36 @@ code, .code, pre, .pre {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: contact-name;
-      grid-column-start: 1;
-  grid-column-end: 4;
 }
 
 .cell-contact-email {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: contact-email;
-      grid-column-start: 1;
-  grid-column-end: 4;
 }
 
 .cell-contact-mobile {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: contact-mobile;
-      grid-column-start: 1;
-  grid-column-end: 4;
 }
 
 .cell-contact-subject {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: contact-subject;
-      grid-column-start: 1;
-  grid-column-end: 4;
 }
 
 .cell-contact-message {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: contact-message;
-      grid-column-start: 1;
-  grid-column-end: 4;
 }
 
 .cell-contact-submit {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: contact-submit;
-      grid-column-start: 1;
-  grid-column-end: 4;
 }
 
 .grid-contact {
@@ -788,30 +776,13 @@ code, .code, pre, .pre {
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'contact-name' 'contact-email' 'contact-mobile' 'contact-subject' 'contact-message' 'contact-submit';
+      grid-template-areas: 'contact-name' 'contact-email' 'contact-mobile' 'contact-subject' 'contact-message' 'contact-submit';
   grid-gap: 0.5rem;
 }
 
 @media only screen and (min-width: 600px) {
-  .cell-contact-email {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: contact-email;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-  .cell-contact-mobile {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: contact-mobile;
-    -ms-grid-column: 3;
-        grid-column-start: 3;
-    grid-column-end: 4;
-    -ms-grid-row: 2;
-        grid-row-start: 2;
-    grid-row-end: 2;
+  .grid-contact {
+        grid-template-areas: 'contact-name contact-name' 'contact-email contact-mobile' 'contact-subject contact-subject' 'contact-message contact-message' 'contact-submit contact-submit';
   }
 }
 

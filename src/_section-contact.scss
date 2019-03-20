@@ -25,38 +25,26 @@
 /// C.3. Contact Grid
 .cell-contact-name {
   grid-area: contact-name;
-  grid-column-start: 1;
-  grid-column-end: 4;
 }
 
 .cell-contact-email {
   grid-area: contact-email;
-  grid-column-start: 1;
-  grid-column-end: 4;
 }
 
 .cell-contact-mobile {
   grid-area: contact-mobile;
-  grid-column-start: 1;
-  grid-column-end: 4;
 }
 
 .cell-contact-subject {
   grid-area: contact-subject;
-  grid-column-start: 1;
-  grid-column-end: 4;
 }
 
 .cell-contact-message {
   grid-area: contact-message;
-  grid-column-start: 1;
-  grid-column-end: 4;
 }
 
 .cell-contact-submit {
   grid-area: contact-submit;
-  grid-column-start: 1;
-  grid-column-end: 4;
 }
 
 .grid-contact {
@@ -74,29 +62,25 @@
 }
 
 @media only screen and (min-width: breakpoint($key-bp-phone)) {
-  // .grid-contact {
-  //   grid-template-areas:
-  //     'contact-name'
-  //     'contact-email contact-mobile'
-  //     'contact-subject'
-  //     'contact-message'
-  //     'contact-submit';
+  .grid-contact {
+    grid-template-areas:
+      'contact-name contact-name'
+      'contact-email contact-mobile'
+      'contact-subject contact-subject'
+      'contact-message contact-message'
+      'contact-submit contact-submit';
+  }
+  // .cell-contact-email {
+  //   grid-area: contact-email;
+  //   grid-column-start: 1;
+  //   grid-column-end: 2;
   // }
-  .cell-contact-email {
-    grid-area: contact-email;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
   
-  .cell-contact-mobile {
-    grid-area: contact-mobile;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
+  // .cell-contact-mobile {
+  //   grid-area: contact-mobile;
+  //   grid-column-start: 2;
+  //   grid-column-end: 3;
+  // }
 }
 
 
