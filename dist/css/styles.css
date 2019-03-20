@@ -802,7 +802,7 @@ a:hover, .a:hover {
 }
 
 .form-field .form-label {
-  color: #607d8b;
+  color: #78909c;
   background-color: #263238;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -823,17 +823,18 @@ a:hover, .a:hover {
 }
 
 .form-field .form-control {
-  color: #607d8b;
+  color: #78909c;
   background-color: #263238;
   display: block;
   width: 100%;
   min-height: 2rem;
   border: none;
   font-size: 1rem;
+  padding: 0 0.5rem;
 }
 
 .form-field .form-label-textarea {
-  color: #607d8b;
+  color: #78909c;
   background-color: #263238;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -854,7 +855,7 @@ a:hover, .a:hover {
 }
 
 .form-field .form-control-textarea {
-  color: #607d8b;
+  color: #78909c;
   background-color: #263238;
   display: block;
   width: 100%;
@@ -862,6 +863,7 @@ a:hover, .a:hover {
   border: none;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
+  padding: 0 0.5rem;
 }
 
 footer, .footer {
