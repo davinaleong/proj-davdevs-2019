@@ -4,25 +4,60 @@
 footer, .footer {
   color: $white;
   background-color: $black;
+  padding-bottom: spacer($key-spacer-3);
 }
 
 
 /// F.2. Type
 .heading-footer {
-  color: $black;
+  color: theme-color($key-col-gray, $key-tint-900);
   background-color: theme-color($key-primary, $key-tint-800);
   margin-bottom: theme-margin($key-margin-heading);
+}
+
+.subheading-footer {
+  color: $black;
+  background-color: theme-color($key-col-gray, $key-tint-900);
+  margin-bottom: theme-margin($key-margin-subheading);
+  padding-top: spacer($key-spacer-2);
 }
 
 .content-footer {
   color: theme-color($key-col-gray, $key-tint-800);
   background-color: $black;
+  padding: spacer($key-spacer-2);
+  list-style: none;
+  font-size: theme-fsize($key-fsize-regular);
+}
+
+@media only screen and (min-width: breakpoint($key-bp-phone)) {
+  .content-footer {
+    font-size: theme-fsize($key-fsize-large);
+  }
 }
 
 
 /// F.3. Footer Grid
 .grid-footer {
   display: grid;
+  grid-template-areas:
+    'footer-social'
+    'footer-locate';
+}
+
+.cell-grid-social {
+  grid-area: footer-social;
+}
+
+.cell-grid-locate {
+  grid-area: footer-locate;
+}
+
+@media only screen and (min-width: breakpoint($key-bp-phone)) {
+  .grid-footer {
+    grid-template-areas:
+      'footer-social footer-locate';
+  }
 }
 
 
