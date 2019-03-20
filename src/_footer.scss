@@ -14,6 +14,17 @@ footer, .footer {
   margin-bottom: theme-margin($key-margin-heading);
 }
 
+.content-footer {
+  color: theme-color($key-col-gray, $key-tint-800);
+  background-color: $black;
+}
+
+
+/// F.3. Footer Grid
+.grid-footer {
+  display: grid;
+}
+
 
 /// F.99. Misc
 .dd {

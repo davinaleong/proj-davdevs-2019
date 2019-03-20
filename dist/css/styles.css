@@ -895,6 +895,16 @@ footer, .footer {
   margin-bottom: -17px;
 }
 
+.content-footer {
+  color: #424242;
+  background-color: #000;
+}
+
+.grid-footer {
+  display: -ms-grid;
+  display: grid;
+}
+
 .dd {
   font-style: normal;
   display: inline-block;
