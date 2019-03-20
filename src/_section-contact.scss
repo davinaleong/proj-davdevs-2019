@@ -72,20 +72,18 @@
 
 
 /// C.4. Form elements
-.form-label {
-  display: inline-block;
+.form-field {
   padding: spacer($key-spacer-2);
-  color: theme-color($key-primary, $key-tint-500);
-  background-color: theme-color($key-primary, $key-tint-900);
-  font-size: theme-fsize($key-fsize-regular);
-}
+  margin-bottom: spacer($key-spacer-2);
+  display: block;
 
-.form-control {
-  display: inline-block;
-  padding: spacer($key-spacer-2);
-  color: theme-color($key-primary, $key-tint-500);
-  background-color: theme-color($key-primary, $key-tint-900);
-  font-size: theme-fsize($key-fsize-regular);
-  border: none;
-  width: auto;
+  .form-label {
+    color: theme-color($key-primary, $key-tint-500);
+    background-color: theme-color($key-primary, $key-tint-900);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: theme-fsize($key-fsize-regular) * 1.5;
+    height: theme-fsize($key-fsize-regular) * 1.5;
+  }
 }
