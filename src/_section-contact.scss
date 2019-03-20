@@ -73,17 +73,51 @@
 
 /// C.4. Form elements
 .form-field {
-  padding: spacer($key-spacer-2);
   margin-bottom: spacer($key-spacer-2);
-  display: block;
+  display: flex;
 
   .form-label {
     color: theme-color($key-primary, $key-tint-500);
     background-color: theme-color($key-primary, $key-tint-900);
     display: flex;
-    align-content: center;
+    flex-direction: column;
     justify-content: center;
-    width: theme-fsize($key-fsize-regular) * 1.5;
-    height: theme-fsize($key-fsize-regular) * 1.5;
+    align-items: center;
+    width: theme-fsize($key-fsize-regular) * 2;
+    min-height: theme-fsize($key-fsize-regular) * 2;
+    font-size: theme-fsize($key-fsize-regular);
+  }
+
+  .form-control {
+    color: theme-color($key-primary, $key-tint-500);
+    background-color: theme-color($key-primary, $key-tint-900);
+    display: block;
+    width: 100%;
+    min-height: theme-fsize($key-fsize-regular) * 2;
+    border: none;
+    font-size: theme-fsize($key-fsize-regular);
+  }
+
+  .form-label-textarea {
+    color: theme-color($key-primary, $key-tint-500);
+    background-color: theme-color($key-primary, $key-tint-900);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: theme-fsize($key-fsize-regular) * 2;
+    min-height: theme-fsize($key-fsize-regular) * 2;
+    font-size: theme-fsize($key-fsize-regular);
+  }
+
+  .form-control-textarea {
+    color: theme-color($key-primary, $key-tint-500);
+    background-color: theme-color($key-primary, $key-tint-900);
+    display: block;
+    width: 100%;
+    min-height: theme-fsize($key-fsize-regular) * 2;
+    border: none;
+    font-family: theme-family($key-family-body);
+    font-size: theme-fsize($key-fsize-regular);
   }
 }
