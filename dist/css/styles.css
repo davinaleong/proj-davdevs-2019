@@ -892,7 +892,7 @@ a:hover, .a:hover {
   display: flex;
 }
 
-.form-field .form-label {
+.form-label {
   color: #78909c;
   background-color: #263238;
   display: -webkit-box;
@@ -913,7 +913,7 @@ a:hover, .a:hover {
   font-size: 1rem;
 }
 
-.form-field .form-control {
+.form-control {
   color: #78909c;
   background-color: #263238;
   display: block;
@@ -924,37 +924,26 @@ a:hover, .a:hover {
   padding: 0 0.5rem;
 }
 
-.form-field .form-label-textarea {
-  color: #78909c;
-  background-color: #263238;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 2rem;
-  min-height: 2rem;
-  font-size: 1rem;
+.form-control:focus {
+  -webkit-box-shadow: inset 0 0 8px #000;
+          box-shadow: inset 0 0 8px #000;
 }
 
-.form-field .form-control-textarea {
+.form-control-textarea {
   color: #78909c;
   background-color: #263238;
   display: block;
   width: 100%;
-  min-height: 2rem;
   border: none;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
+  min-height: 2rem;
   padding: 0 0.5rem;
+}
+
+.form-control-textarea:focus {
+  -webkit-box-shadow: inset 0 0 8px #000;
+          box-shadow: inset 0 0 8px #000;
 }
 
 footer, .footer {
