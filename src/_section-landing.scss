@@ -28,6 +28,30 @@
   margin-top: spacer($key-spacer-2);
 }
 
+.seemore-landing {
+  font-size: theme-fsize($key-fsize-heading);
+  color: theme-color($key-primary, $key-tint-500);
+  text-shadow: 2px 2px theme-color($key-col-gray, $key-tint-900);
+  margin-top: auto;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+
 @media screen and (min-width: breakpoint($key-bp-tablet)) {
   .heading-landing {
     font-size: theme-fsize($key-fsize-display);
@@ -36,11 +60,8 @@
   .tagline-landing {
     font-size: theme-fsize($key-fsize-x-large);
   }
-}
 
-.seemore-landing {
-  font-size: theme-fsize($key-fsize-heading-l);
-  color: theme-color($key-primary, $key-tint-500);
-  text-shadow: 2px 2px theme-color($key-col-gray, $key-tint-900);
-  margin-top: auto;
+  .section-landing {
+    font-size: theme-fsize($key-fsize-heading-l);
+  }
 }
