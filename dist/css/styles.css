@@ -939,7 +939,7 @@ a:hover, .a:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   min-height: 2rem;
-  padding: 0 0.5rem;
+  padding: 0.5rem;
 }
 
 .form-control-textarea:focus {

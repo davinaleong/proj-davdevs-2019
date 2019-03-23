@@ -115,7 +115,7 @@
   font-family: theme-family($key-family-body);
   font-size: theme-fsize($key-fsize-regular);
   min-height: theme-fsize($key-fsize-regular) * 2;
-  padding: 0 spacer($key-spacer-2);
+  padding: spacer($key-spacer-2);
 
   &:focus {
     box-shadow: inset 0 0 8px $black;
