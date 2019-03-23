@@ -1,0 +1,37 @@
+/// O. Modal
+
+/// O.1. Containers & Blocks
+.wrapper-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba($black, 0.75);
+}
+
+.modal {
+  display: block;
+  position: relative;
+  width: breakpoint($key-bp-phone-l);
+  margin: spacer($key-spacer-4) auto;
+  color: $white;
+}
+
+.content-modal {
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: spacer($key-spacer-2);
+  color: theme-color($key-primary, $key-tint-200);
+  // background-color: theme-color($key-primary, $key-tint-900);
+  @include bg-pattern;
+  @include shadow($key-col-gray);
+}
+
+
+/// O.2. Type
+.heading-modal {
+  color: theme-color($key-primary, $key-tint-800);
+  background-color: transparent;
+  margin-bottom: -20px;
+}
