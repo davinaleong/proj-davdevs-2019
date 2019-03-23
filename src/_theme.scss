@@ -201,3 +201,9 @@ $theme-margins: (
     @warn 'Element not found in $margins.';
   }
 }
+
+
+/// T.99. Mixins
+@mixin margin-bottom {
+  margin-bottom: spacer($key-spacer-2);
+}

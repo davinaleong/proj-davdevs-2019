@@ -42,6 +42,24 @@ a, .a {
   }
 }
 
+p, .p {
+ @include margin-bottom;
+}
+
+.img-block {
+  display: block;
+  width: 100%;
+  @include margin-bottom;
+}
+
+.img-rounded {
+  border-radius: 1rem;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
 @each $name, $weight in $font-weights {
   .text-weight-#{$name} {
     font-weight: $weight;
@@ -78,6 +96,7 @@ a, .a {
   border: none;
 }
 
+
 /// M.4. Color
 @each $name, $color in $theme-colors {
   $tint: $key-tint-500;
@@ -99,11 +118,21 @@ a, .a {
     color: map-get($color, $key-tint-200);
     background-color: map-get($color, $tint);
     cursor: pointer;
-    box-shadow: 2px 2px theme-color($key-col-gray, $key-tint-900);
+    @extend .shadow;
 
     &:hover {
       color: map-get($color, $key-tint-300);
       background-color: map-get($color, $key-tint-700);
     }
   }
+}
+
+
+/// M.5. Shadows
+.shadow {
+  @include shadow($key-col-gray);
+}
+
+.shadow-text {
+  @include shadow-text($key-col-gray);
 }

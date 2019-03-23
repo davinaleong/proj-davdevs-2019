@@ -1,0 +1,17 @@
+/// X. Mixins
+
+
+/// M.1. Shadows
+@mixin shadow($color) {
+  box-shadow: 2px 2px theme-color($color, $key-tint-900);
+}
+
+@mixin shadow-text($color) {
+  text-shadow: 2px 2px theme-color($color, $key-tint-900);
+}
+
+
+/// M.2. Margins
+@mixin margin-bottom {
+  margin-bottom: spacer($key-spacer-2);
+}
