@@ -137,27 +137,27 @@
 
     <section id="contact" class="section-contact">
       <h2 class="heading-contact"><i class="fas fa-phone"></i> reach out&hellip;</h2>
-      <form class="content-contact">
+      <form class="content-contact" onsubmit="contactFormSubmit()">
         <div class="grid-contact">
           <div class="cell-contact-name form-field">
             <label for="name" class="form-label"><i class="fal fa-user"></i></label>
-            <input type="text" class="form-control" name="name" placeholder="Name" required>
+            <input type="text" class="form-control" name="name" placeholder="Name*" required>
           </div>
 
           <div class="cell-contact-email form-field">
             <label for="email" class="form-label"><i class="fal fa-envelope"></i></label>
-            <input type="text" class="form-control" name="email" placeholder="Email" required>
+            <input type="email" class="form-control" name="email" placeholder="Email*" required>
           </div>
 
           <div class="cell-contact-mobile form-field">
             <label for="mobile" class="form-label"><i class="fal fa-mobile"></i></label>
-            <input type="text" class="form-control" name="mobile" placeholder="Mobile (optional)">
+            <input type="tel" class="form-control" name="mobile" placeholder="Mobile (optional)">
           </div>
 
           <div class="cell-contact-subject form-field">
             <label for="subject" class="form-label"><i class="fal fa-hashtag"></i></label>
             <select class="form-control" name="subject" required>
-              <option>Subject</option>
+              <option>Subject*</option>
               <option value="project">Have a project?</option>
               <option value="hire">Hire me?</option>
               <option value="coffee">Hangout?</option>
@@ -168,7 +168,7 @@
           <div class="cell-contact-message form-field">
             <label for="message" class="form-label"><i class="fal fa-pen"></i></label>
             <textarea class="form-control-textarea" name="message" required
-              rows="6" placeholder="Message"></textarea>
+              rows="6" placeholder="Message*"></textarea>
           </div>
 
           <div class="cell-contact-submit text-align-right">
@@ -221,5 +221,7 @@
       </em>
     </div>
   </footer>
+
+  <script src="./js/contact.js"></script>
 </body>
 </html>
