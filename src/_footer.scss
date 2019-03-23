@@ -70,6 +70,7 @@ footer, .footer {
 
 .content-footer-locate {
   display: grid;
+  font-size: theme-fsize($key-fsize-small);
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
 }
@@ -83,7 +84,7 @@ footer, .footer {
 
 @media only screen and (min-width: breakpoint($key-bp-phone)) {
   .content-footer-locate {
-    font-size: theme-fsize($key-fsize-small);
+    font-size: theme-fsize($key-fsize-regular);
   }
 }
 

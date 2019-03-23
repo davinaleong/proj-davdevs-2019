@@ -1030,6 +1030,7 @@ footer, .footer {
 .content-footer-locate {
   display: -ms-grid;
   display: grid;
+  font-size: 0.8rem;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   -ms-grid-rows: 1fr 1fr;
@@ -1044,7 +1045,7 @@ footer, .footer {
 
 @media only screen and (min-width: 300px) {
   .content-footer-locate {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
