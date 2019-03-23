@@ -927,26 +927,13 @@ footer, .footer {
   grid-area: footer-locate;
 }
 
-.item-footer {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  grid-area: footer-item;
-  grid-column: 1;
-  grid-row: 1 / 4;
-}
-
-.content-footer-social {
-      grid-template-areas: 'footer-item' 'footer-item' 'footer-item' 'footer-item';
-}
-
-.content-footer-locate {
-      grid-template-areas: 'footer-item' 'footer-item';
-}
-
 @media only screen and (min-width: 600px) {
   .grid-footer {
         grid-template-areas: 'footer-social footer-locate';
+  }
+  .content-footer-social {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
 

@@ -62,30 +62,14 @@ footer, .footer {
   grid-area: footer-locate;
 }
 
-.item-footer {
-  grid-area: footer-item;
-  grid-column: 1;
-  grid-row: 1 / 4;
-}
-
-.content-footer-social {
-  grid-template-areas:
-    'footer-item'
-    'footer-item'
-    'footer-item'
-    'footer-item';
-}
-
-.content-footer-locate {
-  grid-template-areas:
-    'footer-item'
-    'footer-item';
-}
-
 @media only screen and (min-width: breakpoint($key-bp-phone)) {
   .grid-footer {
     grid-template-areas:
       'footer-social footer-locate';
+  }
+
+  .content-footer-social {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
