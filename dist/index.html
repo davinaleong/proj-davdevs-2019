@@ -102,12 +102,16 @@
       <h2 class="heading-about"><i class="fas fa-user"></i> profile&hellip;</h2>
       <div class="grid-about">
         <div class="content-about cell-about-me">
-          <button class="btn btn-interactable btn-about" type="button"><i class="fas fa-question"></i> About</button>
+          <button id="btn-about" class="btn btn-interactable btn-about" type="button">
+            <i class="fas fa-question"></i> About
+          </button>
           <p class="content-about-desc text-align-center">Brief history, background and education</p>
         </div>
 
         <div class="content-about cell-about-download">
-          <button class="btn btn-interactable btn-about" type="button"><i class="fas fa-download"></i> Resume</button>
+          <button id="btn-resume" class="btn btn-interactable btn-about" type="button">
+            <i class="fas fa-download"></i> Resume
+          </button>
           <p class="content-about-desc text-align-center">Resumes in word and pdf formats</p>
         </div>
       </div>
@@ -235,27 +239,35 @@
   <div id="modal" tabindex="-1" class="wrapper-modal">
     <div class="modal">
       <div class="header-modal">
-        <h1><i class="fas fa-question"></i> about</h1>
-        <button type="button" class="modal-close" data-close="modal">
+        <h1 id="heading-about"><i class="fas fa-question"></i> about</h1>
+        <h1 id="heading-resume"><i class="fas fa-download"></i> resume</h1>
+        <button id="btn-x" type="button" class="modal-close">
           <i class="fas fa-times fa-2x"></i>
         </button>
       </div>
       <div class="content-modal">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
+        <div id="content-about">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
   
-        <img class="img-block" src="./images/lorem-ipsum.png">
-  
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
+            <img class="img-block" src="./images/lorem-ipsum.png">
+      
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
+        </div>
+        <div id="content-resume">
+          <p class="h4"><i class="fas file-word"></i> Word format</p>
+          <p class="h4"><i class="fas file-pdf"></i> PDF format</p>
+        </div>
 
-        <button type="button" class="btn btn-interactable pull-right" data-close="modal"><i class="fas fa-times"></i> Close</button>
+        <button id="btn-close" type="button" class="btn btn-interactable pull-right"><i class="fas fa-times"></i> Close</button>
       </div>
     </div>
   </div>
 
   <!-- === Scripts === -->
+  <script src="./js/jquery.min.js"></script>
   <script src="./js/modal.js"></script>
 </body>
 </html>
