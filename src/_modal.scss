@@ -18,6 +18,29 @@
   color: $white;
 }
 
+.header-modal {
+  color: theme-color($key-primary, $key-tint-800);
+  background-color: transparent;
+  margin-bottom: -20px;
+}
+
+.modal-close {
+  margin-left: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: theme-color($key-secondary, $key-tint-500);
+  cursor: pointer;
+  @include shadow-text($key-col-gray);
+
+  &:hover {
+    color: theme-color($key-interactable, $key-tint-500);
+  }
+}
+
 .content-modal {
   max-height: 85vh;
   overflow-y: auto;
@@ -26,12 +49,4 @@
   // background-color: theme-color($key-primary, $key-tint-900);
   @include bg-pattern;
   @include shadow($key-col-gray);
-}
-
-
-/// O.2. Type
-.heading-modal {
-  color: theme-color($key-primary, $key-tint-800);
-  background-color: transparent;
-  margin-bottom: -20px;
 }

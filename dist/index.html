@@ -232,9 +232,14 @@
   </footer>
 
   <!--- === O. Modal === -->
-  <div id="modal" class="wrapper-modal">
+  <div id="modal" tabindex="-1" class="wrapper-modal">
     <div class="modal">
-      <h1 class="heading-modal"><i class="fas fa-question"></i> about</h1>
+      <div class="header-modal">
+        <h1><i class="fas fa-question"></i> about</h1>
+        <button type="button" class="modal-close" data-close="modal">
+          <i class="fas fa-times fa-2x"></i>
+        </button>
+      </div>
       <div class="content-modal">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
   
@@ -244,6 +249,8 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
+
+        <button type="button" class="btn btn-primary pull-right" data-close="modal"><i class="fas fa-times"></i> Close</button>
       </div>
     </div>
   </div>

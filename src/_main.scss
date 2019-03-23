@@ -128,11 +128,19 @@ p, .p {
 }
 
 
-/// M.5. Shadows
+/// M.5. Utilities
 .shadow {
   @include shadow($key-col-gray);
 }
 
 .shadow-text {
   @include shadow-text($key-col-gray);
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
 }
