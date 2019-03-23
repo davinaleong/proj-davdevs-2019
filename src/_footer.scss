@@ -62,14 +62,28 @@ footer, .footer {
   grid-area: footer-locate;
 }
 
-@media only screen and (min-width: breakpoint($key-bp-phone)) {
+.content-footer-social {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.content-footer-locate {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+@media only screen and (min-width: breakpoint($key-bp-phone-l)) {
   .grid-footer {
     grid-template-areas:
       'footer-social footer-locate';
   }
+}
 
-  .content-footer-social {
-    grid-template-columns: 1fr 1fr;
+@media only screen and (min-width: breakpoint($key-bp-phone)) {
+  .content-footer-locate {
+    font-size: theme-fsize($key-fsize-small);
   }
 }
 

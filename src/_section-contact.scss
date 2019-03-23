@@ -61,7 +61,7 @@
   grid-gap: spacer($key-spacer-2);
 }
 
-@media only screen and (min-width: breakpoint($key-bp-phone)) {
+@media only screen and (min-width: breakpoint($key-bp-phone-l)) {
   .grid-contact {
     grid-template-areas:
       'contact-name contact-name'

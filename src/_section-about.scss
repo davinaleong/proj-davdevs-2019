@@ -32,7 +32,7 @@
   align-items: center;
 }
 
-@media only screen and (min-width: breakpoint($key-bp-phone)) {
+@media only screen and (min-width: breakpoint($key-bp-phone-l)) {
   .content-about {
     min-height: theme-fsize($key-fsize-x-large) * 8;
   }
@@ -59,7 +59,7 @@
     'about-download';
 }
 
-@media only screen and (min-width: breakpoint($key-bp-phone)) {
+@media only screen and (min-width: breakpoint($key-bp-phone-l)) {
   .grid-about {
     grid-template-areas:
       'about-me about-download';

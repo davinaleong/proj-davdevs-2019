@@ -142,15 +142,17 @@ $theme-headings: (
 
 
 /// T.3. Breakpoints
+$breakpoint-xs: 300px;
 $breakpoint-sm: 600px;
 $breakpoint-md: 900px;
 $breakpoint-lg: 1200px;
 $breakpoint-xl: 1600px;
 $breakpoints: (
-  'phone':      $breakpoint-sm,
+  'phone':      $breakpoint-xs,
+  'phone-l':    $breakpoint-sm,
   'tablet':     $breakpoint-md,
   'desktop':    $breakpoint-lg,
-  'l-desktop':  $breakpoint-xl
+  'desktop-l':  $breakpoint-xl
 );
 
 @function breakpoint($bp) {
