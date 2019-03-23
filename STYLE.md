@@ -49,3 +49,8 @@ Default font size: **16px**
 | Heading 5 | 1.5 | 25 | 400 | italic |
 | Heading 6 | 1.25 | 20 | 700 | normal |
 | Large Heading | 4.8 | 76 | 300 | normal |
+
+
+## Template Inspiration
+
+https://onepagelove.com/paradigm-shift

@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "Anton";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/anton/anton-regular.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 100;
+  font-style: normal;
+  src: url("../fonts/montserrat/montserrat-thin.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 100;
+  font-style: italic;
+  src: url("../fonts/montserrat/montserrat-thinitalic.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 200;
+  font-style: normal;
+  src: url("../fonts/montserrat/montserrat-extralight.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 200;
+  font-style: italic;
+  src: url("../fonts/montserrat/montserrat-extralightitalic.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/montserrat/montserrat-light.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-style: italic;
+  src: url("../fonts/montserrat/montserrat-lightitalic.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/montserrat/montserrat-regular.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../fonts/montserrat/montserrat-italic.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/montserrat/montserrat-medium.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: italic;
+  src: url("../fonts/montserrat/montserrat-mediumitalic.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/montserrat/montserrat-semibold.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: italic;
+  src: url("../fonts/montserrat/montserrat-semibolditalic.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/montserrat/montserrat-bold.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: italic;
+  src: url("../fonts/montserrat/montserrat-bolditalic.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-style: normal;
+  src: url("../fonts/montserrat/montserrat-extrabold.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-style: italic;
+  src: url("../fonts/montserrat/montserrat-extrabolditalic.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-style: normal;
+  src: url("../fonts/montserrat/montserrat-black.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-style: italic;
+  src: url("../fonts/montserrat/montserrat-blackitalic.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-weight: 200;
+  font-style: normal;
+  src: url("../fonts/sourcecodepro/sourcecodepro-extralight.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/sourcecodepro/sourcecodepro-light.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/sourcecodepro/sourcecodepro-regular.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/sourcecodepro/sourcecodepro-medium.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/sourcecodepro/sourcecodepro-semibold.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/sourcecodepro/sourcecodepro-bold.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-weight: 900;
+  font-style: normal;
+  src: url("../fonts/sourcecodepro/sourcecodepro-black.ttf"), format("truetype");
+}

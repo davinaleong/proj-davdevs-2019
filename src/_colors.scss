@@ -1,60 +1,288 @@
-// Colors
+/// Colors
+/// C.1. Color Definition
 $black:     #000;
 $white:     #fff;
 $gray:      #9e9e9e;
 
 $blue-gray:   #607d8b;
 $deep-purple: #673ab7;
-$orange:    #ff9800;
-$blue:    #2196f3;
-$red:   #f44336;
-$green:   #4caf50;
+$teal:        #009688;
+$orange:      #ff9800;
+$blue:        #2196f3;
+$red:         #f44336;
+$green:       #4caf50;
 
-// TODO: include tints
-$colors: (
-  'black':     $black,
-  'white':     $white,
-  'gray':      $gray,
 
-  'blue-gray':   $blue-gray,
-  'deep-purple': $deep-purple,
-  'orange':     $orange,
-  'blue':       $blue,
-  'red':        $red,
-  'green':      $green,
+/// C.2. Tints
+/// C.2.a Gray tints
+$gray-50:   #fafafa;
+$gray-100:  #f5f5f5;
+$gray-200:  #eeeeee;
+$gray-300:  #e0e0e0;
+$gray-400:  #bdbdbd;
+$gray-500:  #9e9e9e;
+$gray-600:  #757575;
+$gray-700:  #616161;
+$gray-800:  #424242;
+$gray-900:  #212121;
+
+$grays: (
+  'white':  $white,
+  '50':     $gray-50,
+  '100':    $gray-100,
+  '200':    $gray-200,
+  '300':    $gray-300,
+  '400':    $gray-400,
+  '500':    $gray-500,
+  '600':    $gray-600,
+  '700':    $gray-700,
+  '800':    $gray-800,
+  '900':    $gray-900,
+  'black':  $black,
 );
 
-@function color($color-name) {
-  $color: map-get($colors, $color-name);
-  @if ($color) {
-    @return $color;
+
+/// C.2.b Blue-gray tints
+$blue-gray-50:  #eceff1;
+$blue-gray-100: #cfd8dc;
+$blue-gray-200: #b0bec5;
+$blue-gray-300: #90a4ae;
+$blue-gray-400: #78909c;
+$blue-gray-500: #607d8b;
+$blue-gray-600: #546e7a;
+$blue-gray-700: #455a64;
+$blue-gray-800: #37474f;
+$blue-gray-900: #263238;
+
+$blue-grays: (
+  '50':   $blue-gray-50,
+  '100':  $blue-gray-100,
+  '200':  $blue-gray-200,
+  '300':  $blue-gray-300,
+  '400':  $blue-gray-400,
+  '500':  $blue-gray-500,
+  '600':  $blue-gray-600,
+  '700':  $blue-gray-700,
+  '800':  $blue-gray-800,
+  '900':  $blue-gray-900
+);
+
+
+/// C.2.c Teal tints
+$teal-50: #e0f2f1;
+$teal-100: #b2dfdb;
+$teal-200: #80cbc4;
+$teal-300: #4db6ac;
+$teal-400: #26a69a;
+$teal-500: #009688;
+$teal-600: #00897b;
+$teal-700: #00796b;
+$teal-800: #00695c;
+$teal-900: #004d40;
+$teal-a100: #a7ffeb;
+$teal-a200: #64ffda;
+$teal-a400: #1de9b6;
+$teal-a700: #00bfa5;
+
+$teals: (
+  '50':   $teal-50,
+  '100':  $teal-100,
+  '200':  $teal-200,
+  '300':  $teal-300,
+  '400':  $teal-400,
+  '500':  $teal-500,
+  '600':  $teal-600,
+  '700':  $teal-700,
+  '800':  $teal-800,
+  '900':  $teal-900,
+  'a100': $teal-a100,
+  'a200': $teal-a200,
+  'a400': $teal-a400,
+  'a700': $teal-a700
+);
+
+
+/// C.2.d Orange tints
+$orange-50:   #fff3e0;
+$orange-100:  #ffe0b2;
+$orange-200:  #ffcc80;
+$orange-300:  #ffb74d;
+$orange-400:  #ffa726;
+$orange-500:  #ff9800;
+$orange-600:  #fb8c00;
+$orange-700:  #f57c00;
+$orange-800:  #ef6c00;
+$orange-900:  #e65100;
+$orange-a100: #ffd180;
+$orange-a200: #ffab40;
+$orange-a400: #ff9100;
+$orange-a700: #ff6d00;
+
+$oranges: (
+  '50':   $orange-50,
+  '100':  $orange-100,
+  '200':  $orange-200,
+  '300':  $orange-300,
+  '400':  $orange-400,
+  '500':  $orange-500,
+  '600':  $orange-600,
+  '700':  $orange-700,
+  '800':  $orange-800,
+  '900':  $orange-900,
+);
+
+
+/// C.2.e Blue tints
+$blue-50:   #e3f2fd;
+$blue-100:  #bbdefb;
+$blue-200:  #90caf9;
+$blue-300:  #64b5f6;
+$blue-400:  #42a5f5;
+$blue-500:  #2196f3;
+$blue-600:  #1e88e5;
+$blue-700:  #1976d2;
+$blue-800:  #1565c0;
+$blue-900:  #0d47a1;
+$blue-a100: #82b1ff;
+$blue-a200: #448aff;
+$blue-a400: #2979ff;
+$blue-a700: #2962ff;
+
+$blues: (
+  '50':   $blue-50,
+  '100':  $blue-100,
+  '200':  $blue-200,
+  '300':  $blue-300,
+  '400':  $blue-400,
+  '500':  $blue-500,
+  '600':  $blue-600,
+  '700':  $blue-700,
+  '800':  $blue-800,
+  '900':  $blue-900,
+  'a100': $blue-a100,
+  'a200': $blue-a200,
+  'a400': $blue-a400,
+  'a700': $blue-a700
+);
+
+
+/// C.2.f Red tints
+$red-50:  #ffebee;
+$red-100: #ffcdd2;
+$red-200: #ef9a9a;
+$red-300: #e57373;
+$red-400: #ef5350;
+$red-500: #f44336;
+$red-600: #e53935;
+$red-700: #d32f2f;
+$red-800: #c62828;
+$red-900: #b71c1c;
+$red-a100: #ff8a80;
+$red-a200: #ff5252;
+$red-a400: #ff1744;
+$red-a700: #d50000;
+
+$reds: (
+  '50':   $red-50,
+  '100':  $red-100,
+  '200':  $red-200,
+  '300':  $red-300,
+  '400':  $red-400,
+  '500':  $red-500,
+  '600':  $red-600,
+  '700':  $red-700,
+  '800':  $red-800,
+  '900':  $red-900,
+  'a100': $red-a100,
+  'a200': $red-a200,
+  'a400': $red-a400,
+  'a700': $red-a700
+);
+
+
+/// C.2.g Green tints
+$green-50:  #e8f5e9;
+$green-100:  #c8e6c9;
+$green-200:  #a5d6a7;
+$green-300:  #81c784;
+$green-400:  #66bb6a;
+$green-500:  #4caf50;
+$green-600:  #43a047;
+$green-700:  #388e3c;
+$green-800:  #2e7d32;
+$green-900:  #1b5e20;
+$green-a100: #b9f6ca;
+$green-a200: #69f0ae;
+$green-a400: #00e676;
+$green-a700: #00c853;
+
+$greens: (
+  '50':   $green-50,
+  '100':  $green-100,
+  '200':  $green-200,
+  '300':  $green-300,
+  '400':  $green-400,
+  '500':  $green-500,
+  '600':  $green-600,
+  '700':  $green-700,
+  '800':  $green-800,
+  '900':  $green-900,
+  'a100': $green-a100,
+  'a200': $green-a200,
+  'a400': $green-a400,
+  'a700': $green-a700
+);
+
+$color-maps: (
+  'gray':       $grays,
+  'blue-gray':  $blue-grays,
+  'teal':       $teals,
+  'orange':     $oranges,
+  'blue':       $blues,
+  'red':        $reds,
+  'green':      $greens
+);
+
+
+/// C.3. Brand Colors
+$color-skills: (
+  'js': #F7DF1E,
+  'bs': #563D7C,
+  'jq': #0865A6,
+  'sass': #CD6799,
+  'gulp': #DA4648,
+  'wp': #5299C8,
+  'rjs': #5ED3F3,
+  'php': #4F5B93,
+  'laravel': #F55247,
+  'mysql': #00758F,
+  'njs': #6CC24A,
+  'craft': #E5422B,
+  'gql': #E535AB,
+  'aws': #EF921E,
+  'sls': #F15953,
+  'dock': #3888AE,
+  'git': #F05033
+);
+
+
+/// C.4. Utilities
+@function color-map($map) {
+  $color-map: map-get($colors, $map);
+  @if ($color-map) {
+    @return $color-map;
   } @else {
-    @warn 'Color not found';
+    @warn 'Color Map not found in $color-maps';
   }
 }
 
-
-$primary:       color('blue-gray');
-$secondary:     color('deep-purple');
-$interactable:  color('orange');
-$action:        color('blue');
-$danger:        color('red');
-$success:       color('green');
-
-$theme-colours: (
-  'primary':       $primary,
-  'secondary':     $secondary,
-  'interactable':  $interactable,
-  'action':        $action,
-  'danger':        $danger,
-  'success':       $success,
-);
-
-@function theme-color($color-name) {
-  $color: map-get($theme-colours, $color-name);
-  @if ($color) {
-    @return $color;
-  } @else {
-    @warn 'Theme color not found';
+@function tint($tint-map, $tint) {
+  @if ($tint-map) {
+    $color: map-get($tint-map, $tint);
+    @if ($color) {
+      @return $color;
+    }
+    @warn 'Tint not found in $tint-map.';
   }
+  @warn 'Tints map not found.';
 }

@@ -1,0 +1,101 @@
+/// F. Footer
+
+/// F.1. Containers & Blocks
+footer, .footer {
+  color: $white;
+  background-color: $black;
+  padding-bottom: spacer($key-spacer-3);
+}
+
+
+/// F.2. Type
+.heading-footer {
+  color: theme-color($key-col-gray, $key-tint-900);
+  background-color: theme-color($key-primary, $key-tint-800);
+  margin-bottom: theme-margin($key-margin-heading);
+}
+
+.subheading-footer {
+  color: $black;
+  background-color: theme-color($key-col-gray, $key-tint-900);
+  margin-bottom: theme-margin($key-margin-subheading);
+  padding-top: spacer($key-spacer-2);
+}
+
+.content-footer-social,
+.content-footer-locate {
+  color: theme-color($key-col-gray, $key-tint-800);
+  background-color: $black;
+  padding: spacer($key-spacer-5);
+  list-style: none;
+  font-size: theme-fsize($key-fsize-regular);
+  display: grid;
+  grid-gap: spacer($key-spacer-3);
+}
+
+@media only screen and (min-width: breakpoint($key-bp-phone)) {
+  .content-footer {
+    font-size: theme-fsize($key-fsize-large);
+  }
+}
+
+.copyright {
+  color: theme-color($key-col-gray, $key-tint-800);
+  font-size: 0.8em;
+  text-align: center;
+}
+
+
+/// F.3. Footer Grid
+.grid-footer {
+  display: grid;
+  grid-template-areas:
+    'footer-social'
+    'footer-locate';
+}
+
+.cell-grid-social {
+  grid-area: footer-social;
+}
+
+.cell-grid-locate {
+  grid-area: footer-locate;
+}
+
+.content-footer-social {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.content-footer-locate {
+  display: grid;
+  font-size: theme-fsize($key-fsize-small);
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+@media only screen and (min-width: breakpoint($key-bp-phone-l)) {
+  .grid-footer {
+    grid-template-areas:
+      'footer-social footer-locate';
+  }
+}
+
+@media only screen and (min-width: breakpoint($key-bp-phone)) {
+  .content-footer-locate {
+    font-size: theme-fsize($key-fsize-regular);
+  }
+}
+
+
+/// F.99. Misc
+.dd {
+  font-style: normal;
+  display: inline-block;
+  cursor: default;
+}
+
+.dd-dr {
+  font-family: theme-family($key-family-heading);
+}

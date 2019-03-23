@@ -1,3 +1,109 @@
+/// M. Main
+
+/// M.1. Root
 html, body {
-  background: color('deep-purple');
+  font-family: theme-family($key-family-body);
+  font-weight: font-weight($key-weight-regular);
+}
+
+
+/// M.2. Type
+@for $h from 1 through 5 {
+  h#{$h}, .h#{$h} {
+    $heading: theme-heading('h#{$h}');
+    font-family: map-get($heading, 'font-family');
+    font-weight: map-get($heading, 'font-weight');
+    font-size: map-get($heading, 'font-size');
+    font-style: map-get($heading, 'font-style');
+  }
+}
+
+.display {
+  $heading: theme-heading($key-fsize-display);
+  font-family: map-get($heading, 'font-family');
+  font-weight: map-get($heading, 'font-weight');
+  font-size: map-get($heading, 'font-size');
+  font-style: map-get($heading, 'font-style');
+}
+
+small, .small, sub, .sub, sup, .sup {
+  font-size: 0.8em;
+}
+
+code, .code, pre, .pre {
+  font-family: theme-family($key-family-monospace);
+}
+
+a, .a {
+  color: theme-color($key-secondary, $key-tint-500);
+  text-decoration: none;
+  &:hover {
+    color: theme-color($key-interactable, $key-tint-500);
+  }
+}
+
+@each $name, $weight in $font-weights {
+  .text-weight-#{$name} {
+    font-weight: $weight;
+  }
+}
+
+@each $name, $style in $font-styles {
+  .text-style-#{$name} {
+    font-style: $style;
+  }
+}
+
+@each $name, $fsize in $theme-fsizes {
+  .text-size-#{$name} {
+    font-size: $fsize;
+  }
+}
+
+@each $name, $align in $text-aligns {
+  .text-align-#{$name} {
+    text-align: $align;
+  }
+}
+
+
+/// M.3. Form Elements
+.btn {
+  display: inline-block;
+  font-weight: font-weight($key-weight-regular);
+  text-align: center;
+  font-size: theme-fsize($key-fsize-regular-l);
+  font-family: theme-family($key-family-heading);
+  padding: theme-fsize($key-fsize-regular-l) * 0.25 theme-fsize($key-fsize-regular-l) * 0.5;
+  border: none;
+}
+
+/// M.4. Color
+@each $name, $color in $theme-colors {
+  $tint: $key-tint-500;
+
+  .text-#{$name} {
+    color: map-get($color, $tint);
+  }
+
+  .bg-#{$name} {
+    background-color: map-get($color, $tint);
+  }
+
+  .border-#{$name} {
+    border-color: map-get($color, $tint);
+  }
+
+
+  .btn-#{$name} {
+    color: map-get($color, $key-tint-200);
+    background-color: map-get($color, $tint);
+    cursor: pointer;
+    box-shadow: 2px 2px theme-color($key-col-gray, $key-tint-900);
+
+    &:hover {
+      color: map-get($color, $key-tint-300);
+      background-color: map-get($color, $key-tint-700);
+    }
+  }
 }
