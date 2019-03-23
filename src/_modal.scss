@@ -13,11 +13,23 @@
 .modal {
   display: block;
   position: relative;
-  width: breakpoint($key-bp-phone-l);
+  width: breakpoint($key-bp-phone);
   margin: spacer($key-spacer-4) auto;
   color: $white;
 }
 
+.content-modal {
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: spacer($key-spacer-2);
+  color: theme-color($key-primary, $key-tint-200);
+  // background-color: theme-color($key-primary, $key-tint-900);
+  @include bg-pattern;
+  @include shadow($key-col-gray);
+}
+
+
+/// O.2. Elements
 .header-modal {
   color: theme-color($key-primary, $key-tint-800);
   background-color: transparent;
@@ -41,12 +53,22 @@
   }
 }
 
-.content-modal {
-  max-height: 85vh;
-  overflow-y: auto;
-  padding: spacer($key-spacer-2);
-  color: theme-color($key-primary, $key-tint-200);
-  // background-color: theme-color($key-primary, $key-tint-900);
-  @include bg-pattern;
-  @include shadow($key-col-gray);
+
+/// O.3. Grid
+.grid-resume {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+.cell-resume {
+  @include margin-bottom;
+}
+
+@media only screen and (min-width: breakpoint($key-bp-phone-l)) {
+  .grid-resume {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: spacer($key-spacer-2);
+  }
 }
