@@ -94,6 +94,7 @@ p, .p {
   font-family: theme-family($key-family-heading);
   padding: theme-fsize($key-fsize-regular-l) * 0.25 theme-fsize($key-fsize-regular-l) * 0.5;
   border: none;
+  cursor: pointer;
 }
 
 
@@ -114,16 +115,28 @@ p, .p {
   }
 
 
-  .btn-#{$name} {
-    color: map-get($color, $key-tint-200);
-    background-color: map-get($color, $tint);
-    cursor: pointer;
-    @extend .shadow;
-
-    &:hover {
-      color: map-get($color, $key-tint-300);
-      background-color: map-get($color, $key-tint-700);
+  @if ($name != $key-interactable) {
+    .btn-#{$name} {
+      color: map-get($color, $key-tint-200);
+      background-color: map-get($color, $tint);
+      @extend .shadow;
+  
+      &:hover {
+        color: map-get($color, $key-tint-300);
+        background-color: map-get($color, $key-tint-700);
+      }
     }
+  }
+}
+
+.btn-interactable {
+  color: theme-color($key-secondary, $key-tint-200);
+  background-color: theme-color($key-secondary, $key-tint-500);
+  @extend .shadow;
+
+  &:hover {
+    color: theme-color($key-interactable, $key-tint-300);
+    background-color: theme-color($key-interactable, $key-tint-700);
   }
 }
 
