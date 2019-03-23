@@ -58,7 +58,7 @@
     'contact-subject'
     'contact-message'
     'contact-submit';
-  grid-gap: spacer($key-spacer-2);
+  grid-column-gap: spacer($key-spacer-2);
 }
 
 @media only screen and (min-width: breakpoint($key-bp-phone-l)) {
@@ -76,6 +76,7 @@
 /// C.4. Form elements
 .form-field {
   display: flex;
+  margin-bottom: spacer($key-spacer-2);
 }
 
 .form-label {
