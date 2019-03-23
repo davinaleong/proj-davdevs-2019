@@ -7,34 +7,7 @@ html, body {
 }
 
 
-/// M.2. Blocks
-.nav-side {
-  position: fixed;
-  background-color: theme-color($key-col-gray, $key-tint-300);
-  top: 30vh;
-}
-
-.side-link {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-}
-
-.side-link-item:nth-child(odd) {
-  background-color: theme-color($key-col-gray, $key-tint-200);
-}
-
-.side-link-item:nth-child(even) {
-  background-color: theme-color($key-col-gray, $key-tint-300);
-}
-
-.side-link-item {
-  text-align: center;
-  padding: spacer($key-spacer-2);
-}
-
-
-/// M.4. Type
+/// M.2. Type
 @for $h from 1 through 5 {
   h#{$h}, .h#{$h} {
     $heading: theme-heading('h#{$h}');
@@ -94,7 +67,7 @@ a, .a {
 }
 
 
-/// M.5. Form Elements
+/// M.3. Form Elements
 .btn {
   display: inline-block;
   font-weight: font-weight($key-weight-regular);
@@ -105,7 +78,7 @@ a, .a {
   border: none;
 }
 
-/// M.6. Color
+/// M.4. Color
 @each $name, $color in $theme-colors {
   $tint: $key-tint-500;
 

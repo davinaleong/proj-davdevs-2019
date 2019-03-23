@@ -23,36 +23,6 @@ html, body {
   font-weight: 400;
 }
 
-.nav-side {
-  position: fixed;
-  background-color: #e0e0e0;
-  top: 30vh;
-}
-
-.side-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  list-style-type: none;
-}
-
-.side-link-item:nth-child(odd) {
-  background-color: #eeeeee;
-}
-
-.side-link-item:nth-child(even) {
-  background-color: #e0e0e0;
-}
-
-.side-link-item {
-  text-align: center;
-  padding: 0.5rem;
-}
-
 h1, .h1 {
   font-family: "Anton", sans-serif;
   font-weight: 200;
@@ -391,6 +361,89 @@ a:hover, .a:hover {
 .btn-gray:hover {
   color: #e0e0e0;
   background-color: #616161;
+}
+
+.side-nav {
+  position: fixed;
+  top: 30vh;
+  background-color: #e0e0e0;
+  -webkit-box-shadow: 2px 2px #212121;
+          box-shadow: 2px 2px #212121;
+}
+
+.links-nav {
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+}
+
+.item-link-nav {
+  text-align: center;
+  font-size: 1.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.item-link-nav a {
+  color: inherit;
+}
+
+.item-link-nav a:hover {
+  color: #ff9800;
+  cursor: pointer;
+}
+
+.item-link-nav img,
+.item-link-nav i {
+  display: inline-block;
+}
+
+.item-link-nav img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.item-link-nav-dd {
+  color: #009688;
+  background-color: #263238;
+}
+
+.item-link-nav-contact {
+  color: #009688;
+  background-color: #37474f;
+}
+
+.item-link-nav-gh {
+  color: #f5f5f5;
+  background-color: #333;
+}
+
+.item-link-nav-li {
+  color: #fff;
+  background-color: #0077b5;
+}
+
+.item-link-nav-dev {
+  color: #000;
+  background-color: #fdf9f3;
+}
+
+.item-link-nav-dr {
+  color: #F99A66;
+  background-color: #40415A;
 }
 
 .section-landing {
