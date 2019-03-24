@@ -16,7 +16,7 @@
   font-size: theme-fsize($key-fsize-heading-l);
   color: theme-color($key-interactable, $key-tint-500);
   margin-top: auto;
-  @include shadow-text($key-col-gray);
+  @extend .shadow-text-br;
 }
 
 .tagline-landing {
@@ -24,14 +24,16 @@
   font-size: theme-fsize($key-fsize-large);
   font-style: font-style($key-style-italic);
   margin-top: spacer($key-spacer-2);
-  @include shadow-text($key-primary);
+
+  $shadow-color: theme-color($key-primary, $key-tint-900);
+  @include shadow-text($shadow-color);
 }
 
 .seemore-landing {
   font-size: theme-fsize($key-fsize-heading);
   color: theme-color($key-primary, $key-tint-500);
   margin-top: auto;
-  @include shadow-text($key-col-gray);
+  @extend .shadow-text-br;
 }
 
 .bounce {

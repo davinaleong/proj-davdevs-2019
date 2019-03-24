@@ -5,7 +5,7 @@
   position: fixed;
   top: 30vh;
   background-color: theme-color($key-col-gray, $key-tint-300);
-  @include shadow($key-col-gray);
+  @extend .shadow-br;
 }
 
 .links-nav {
@@ -28,6 +28,7 @@
 /// N.2. Links
 .item-link-nav a {
   color: inherit;
+  
   &:hover {
     color: theme-color($key-interactable, $key-tint-500);
     cursor: pointer;

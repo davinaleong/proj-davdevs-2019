@@ -203,7 +203,38 @@ $theme-margins: (
 }
 
 
-/// T.99. Mixins
-@mixin margin-bottom {
-  margin-bottom: spacer($key-spacer-2);
+/// T.6. Shadows
+// \ | /
+// - o -
+// / | \
+$theme-shadow-amount: 2px;
+$theme-shadow-color:  theme-color($key-col-gray, $key-tint-900);
+
+$shadow-top-left:   -$theme-shadow-amount -$theme-shadow-amount;
+$shadow-top:          0 -$theme-shadow-amount;
+$shadow-top-right:    $theme-shadow-amount -$theme-shadow-amount;
+$shadow-left:         $theme-shadow-amount 0;
+$shadow-right:        $theme-shadow-amount 0;
+$shadow-bottom-left:  -$theme-shadow-amount $theme-shadow-amount;
+$shadow-bottom:       0 $theme-shadow-amount;
+$shadow-bottom-right: $theme-shadow-amount $theme-shadow-amount;
+
+$shadow-directions: (
+  'tl': $shadow-top-left,
+  't':  $shadow-top,
+  'tr': $shadow-top-right,
+  'l':  $shadow-left,
+  'r':  $shadow-right,
+  'bl': $shadow-bottom-left,
+  'b':  $shadow-bottom,
+  'br': $shadow-bottom-right
+);
+
+@function shadow-direction($direction) {
+  $shadow-dir: map-get($shadow-directions, $direction);
+  @if ($shadow-dir) {
+    @return $shadow-dir;
+  } @else {
+    @warn 'Shadow Direction not found in $shadow-directions';
+  }
 }

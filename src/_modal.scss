@@ -71,3 +71,9 @@
     grid-column-gap: spacer($key-spacer-2);
   }
 }
+
+
+/// O.4. Transitions
+.fade {
+  transition: opacity 1s linear;
+}

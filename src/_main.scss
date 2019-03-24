@@ -37,6 +37,8 @@ code, .code, pre, .pre {
 a, .a {
   color: theme-color($key-secondary, $key-tint-500);
   text-decoration: none;
+  @extend .transition-all;
+  
   &:hover {
     color: theme-color($key-interactable, $key-tint-500);
   }
@@ -119,7 +121,8 @@ p, .p {
     .btn-#{$name} {
       color: map-get($color, $key-tint-200);
       background-color: map-get($color, $tint);
-      @extend .shadow;
+      @extend .transition-all;
+      @extend .shadow-br;
   
       &:hover {
         color: map-get($color, $key-tint-300);
@@ -132,7 +135,8 @@ p, .p {
 .btn-interactable {
   color: theme-color($key-secondary, $key-tint-200);
   background-color: theme-color($key-secondary, $key-tint-500);
-  @extend .shadow;
+  @extend .transition-all;
+  @extend .shadow-br;
 
   &:hover {
     color: theme-color($key-interactable, $key-tint-300);
@@ -142,12 +146,22 @@ p, .p {
 
 
 /// M.5. Utilities
-.shadow {
-  @include shadow($key-col-gray);
+@each $name, $direction in $shadow-directions {
+  .shadow-#{$name} {
+    @include shadow($theme-shadow-color, $name);
+  }
+
+  .shadow-text-#{$name} {
+    @include shadow-text($theme-shadow-color, $name);
+  }
 }
 
-.shadow-text {
-  @include shadow-text($key-col-gray);
+.shadow-none {
+  box-shadow: none;
+}
+
+.shadow-text-none {
+  text-shadow: none;
 }
 
 .pull-left {
@@ -156,4 +170,8 @@ p, .p {
 
 .pull-right {
   float: right;
+}
+
+.transition-all {
+  transition: all 0.15s ease-in;
 }
