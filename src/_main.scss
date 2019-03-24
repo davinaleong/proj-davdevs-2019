@@ -104,15 +104,15 @@ p, .p {
 @each $name, $color in $theme-colors {
   $tint: $key-tint-500;
 
-  .text-#{$name} {
+  .col-#{$name} {
     color: map-get($color, $tint);
   }
 
-  .bg-#{$name} {
+  .bg-col-#{$name} {
     background-color: map-get($color, $tint);
   }
 
-  .border-#{$name} {
+  .border-col-#{$name} {
     border-color: map-get($color, $tint);
   }
 

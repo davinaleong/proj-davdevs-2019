@@ -121,3 +121,15 @@
     box-shadow: inset 0 0 8px $black;
   }
 }
+
+.form-error {
+  $color: theme-color($key-danger, $key-tint-500);
+  border: thin solid $color;
+  color: $color;
+}
+
+.form-success {
+  $color: theme-color($key-success, $key-tint-500);
+  border: thin solid $color;
+  color: $color;
+}

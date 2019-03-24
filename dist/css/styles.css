@@ -207,15 +207,15 @@ p, .p {
   cursor: pointer;
 }
 
-.text-primary {
+.col-primary {
   color: #607d8b;
 }
 
-.bg-primary {
+.bg-col-primary {
   background-color: #607d8b;
 }
 
-.border-primary {
+.border-col-primary {
   border-color: #607d8b;
 }
 
@@ -234,15 +234,15 @@ p, .p {
   background-color: #78909c;
 }
 
-.text-secondary {
+.col-secondary {
   color: #009688;
 }
 
-.bg-secondary {
+.bg-col-secondary {
   background-color: #009688;
 }
 
-.border-secondary {
+.border-col-secondary {
   border-color: #009688;
 }
 
@@ -261,27 +261,27 @@ p, .p {
   background-color: #26a69a;
 }
 
-.text-interactable {
+.col-interactable {
   color: #ff9800;
 }
 
-.bg-interactable {
+.bg-col-interactable {
   background-color: #ff9800;
 }
 
-.border-interactable {
+.border-col-interactable {
   border-color: #ff9800;
 }
 
-.text-action {
+.col-action {
   color: #2196f3;
 }
 
-.bg-action {
+.bg-col-action {
   background-color: #2196f3;
 }
 
-.border-action {
+.border-col-action {
   border-color: #2196f3;
 }
 
@@ -300,15 +300,15 @@ p, .p {
   background-color: #42a5f5;
 }
 
-.text-danger {
+.col-danger {
   color: #f44336;
 }
 
-.bg-danger {
+.bg-col-danger {
   background-color: #f44336;
 }
 
-.border-danger {
+.border-col-danger {
   border-color: #f44336;
 }
 
@@ -327,15 +327,15 @@ p, .p {
   background-color: #ef5350;
 }
 
-.text-success {
+.col-success {
   color: #4caf50;
 }
 
-.bg-success {
+.bg-col-success {
   background-color: #4caf50;
 }
 
-.border-success {
+.border-col-success {
   border-color: #4caf50;
 }
 
@@ -354,15 +354,15 @@ p, .p {
   background-color: #66bb6a;
 }
 
-.text-gray {
+.col-gray {
   color: #9e9e9e;
 }
 
-.bg-gray {
+.bg-col-gray {
   background-color: #9e9e9e;
 }
 
-.border-gray {
+.border-col-gray {
   border-color: #9e9e9e;
 }
 
@@ -1108,6 +1108,16 @@ p, .p {
 .form-control-textarea:focus {
   -webkit-box-shadow: inset 0 0 8px #000;
           box-shadow: inset 0 0 8px #000;
+}
+
+.form-error {
+  border: thin solid #f44336;
+  color: #f44336;
+}
+
+.form-success {
+  border: thin solid #4caf50;
+  color: #4caf50;
 }
 
 footer, .footer {
