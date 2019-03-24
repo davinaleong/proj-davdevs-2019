@@ -1,4 +1,5 @@
 /// M. Modal
+console.log('modal.js loaded')
 
 
 /// M.1. elements
