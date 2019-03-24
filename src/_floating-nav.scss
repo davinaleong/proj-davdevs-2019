@@ -1,0 +1,76 @@
+/// N. Floating Nav
+
+/// N.1. Containers & Blocks
+.side-nav {
+  position: fixed;
+  top: 30vh;
+  background-color: theme-color($key-col-gray, $key-tint-300);
+  @extend .shadow-br;
+}
+
+.links-nav {
+  list-style-type: none;
+  display: grid;
+}
+
+.item-link-nav {
+  text-align: center;
+  font-size: theme-fsize($key-fsize-regular-l);
+  width: theme-fsize($key-fsize-regular-l) * 1.8;
+  height: theme-fsize($key-fsize-regular-l) * 1.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/// N.2. Links
+.item-link-nav a {
+  color: inherit;
+  
+  &:hover {
+    color: theme-color($key-interactable, $key-tint-500);
+    cursor: pointer;
+  }
+}
+
+.item-link-nav img,
+.item-link-nav i {
+  display: inline-block;
+}
+
+.item-link-nav img {
+  width: theme-fsize($key-fsize-regular-l);
+  height: theme-fsize($key-fsize-regular-l);
+}
+
+.item-link-nav-dd {
+  color: theme-color($key-secondary, $key-tint-500);
+  background-color: theme-color($key-primary, $key-tint-900);
+}
+
+.item-link-nav-contact {
+  color: theme-color($key-secondary, $key-tint-500);
+  background-color: theme-color($key-primary, $key-tint-800);
+}
+
+.item-link-nav-gh {
+  color: #f5f5f5;
+  background-color: #333;
+}
+
+.item-link-nav-li {
+  color: $white;
+  background-color: #0077b5;
+}
+
+.item-link-nav-dev {
+  color: $black;
+  background-color: #fdf9f3;
+}
+
+.item-link-nav-dr {
+  color: #F99A66;
+  background-color: #40415A;
+}

@@ -1,0 +1,79 @@
+/// O. Modal
+
+/// O.1. Containers & Blocks
+.wrapper-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba($black, 0.8);
+}
+
+.modal {
+  display: block;
+  position: relative;
+  width: breakpoint($key-bp-phone-l) - 100px;
+  margin: spacer($key-spacer-4) auto;
+  color: $white;
+}
+
+.content-modal {
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: spacer($key-spacer-2);
+  color: theme-color($key-primary, $key-tint-200);
+  @include bg-pattern;
+  @include shadow($key-col-gray);
+}
+
+
+/// O.2. Elements
+.header-modal {
+  color: theme-color($key-primary, $key-tint-800);
+  background-color: transparent;
+  margin-bottom: -20px;
+}
+
+.modal-close {
+  margin-left: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: theme-color($key-secondary, $key-tint-500);
+  cursor: pointer;
+  @include shadow-text($key-col-gray);
+
+  &:hover {
+    color: theme-color($key-interactable, $key-tint-500);
+  }
+}
+
+
+/// O.3. Grid
+.grid-resume {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+.cell-resume {
+  @include margin-bottom;
+}
+
+@media only screen and (min-width: breakpoint($key-bp-phone-l)) {
+  .grid-resume {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: spacer($key-spacer-2);
+  }
+}
+
+
+/// O.4. Transitions
+.fade {
+  transition: opacity 1s linear;
+}

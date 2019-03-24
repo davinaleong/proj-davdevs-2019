@@ -36,7 +36,7 @@
   flex-wrap: wrap;
 }
 
-.content-interest-item {
+.item-interest {
   display: block;
   text-align: center;
   padding: spacer($key-spacer-3);
@@ -60,9 +60,9 @@
     'interest-food';
 }
 
-@media only screen and (min-width: breakpoint($key-bp-phone)) {
+@media only screen and (min-width: breakpoint($key-bp-phone-l)) {
   .grid-interest {
     grid-template-areas:
-    'interest-games interest-food';
+      'interest-games interest-food';
   }
 }

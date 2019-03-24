@@ -1,14 +1,16 @@
 @import './../node_modules/normalize.css/normalize.css';
 @import './reset';
 @import './utilities';
-@import './fonts';
 @import './colors';
 
 @import './theme';
+@import './mixins';
 @import './main';
+@import './floating-nav';
 @import './section-landing';
 @import './section-skills';
 @import './section-about';
 @import './section-interests';
 @import './section-contact';
 @import './footer';
+@import './modal';

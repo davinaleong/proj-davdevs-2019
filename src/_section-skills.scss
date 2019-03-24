@@ -16,7 +16,7 @@
 }
 
 .subheading-skills {
-  color: theme-color($key-col-gray, $key-col-black);
+  color: $black;
   background-color: theme-color($key-col-gray, $key-tint-900);
   margin-bottom: theme-margin($key-margin-subheading);
   padding-top: spacer($key-spacer-2);
@@ -35,7 +35,7 @@
   flex-wrap: wrap;
 }
 
-.content-skills-item {
+.item-skills {
   display: block;
   text-align: center;
   padding: spacer($key-spacer-3);
@@ -69,7 +69,7 @@
     'skills-tools';
 }
 
-@media only screen and (min-width: breakpoint($key-bp-phone)) {
+@media only screen and (min-width: breakpoint($key-bp-phone-l)) {
   .grid-skills {
     grid-template-areas:
       'skills-frontend skills-backend'

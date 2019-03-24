@@ -63,7 +63,7 @@ $theme-fsizes: (
   'regular-l': 1.25rem,
   'large': 1.5rem,
   'x-large': 2rem,
-  'xx-large': 2.5rem,
+  'xx-large': 2.2rem,
   'heading': 3rem,
   'heading-l': 3.8rem,
   'display': 8rem
@@ -142,15 +142,17 @@ $theme-headings: (
 
 
 /// T.3. Breakpoints
+$breakpoint-xs: 300px;
 $breakpoint-sm: 600px;
 $breakpoint-md: 900px;
 $breakpoint-lg: 1200px;
 $breakpoint-xl: 1600px;
 $breakpoints: (
-  'phone':      $breakpoint-sm,
+  'phone':      $breakpoint-xs,
+  'phone-l':    $breakpoint-sm,
   'tablet':     $breakpoint-md,
   'desktop':    $breakpoint-lg,
-  'l-desktop':  $breakpoint-xl
+  'desktop-l':  $breakpoint-xl
 );
 
 @function breakpoint($bp) {
@@ -197,5 +199,67 @@ $theme-margins: (
     @return $margin;
   } @else {
     @warn 'Element not found in $margins.';
+  }
+}
+
+
+/// T.6. Shadows
+// \ | /
+// - o -
+// / | \
+$theme-shadow-amount: 2px;
+$theme-shadow-color:  theme-color($key-col-gray, $key-tint-900);
+
+// h v color
+$shadow-top-left: (
+  'h': -$theme-shadow-amount,
+  'v': -$theme-shadow-amount
+);
+$shadow-top: (
+  'h': 0,
+  'v': -$theme-shadow-amount
+);
+$shadow-top-right: (
+  'h': $theme-shadow-amount,
+  'v': -$theme-shadow-amount
+);
+$shadow-left: (
+  'h': -$theme-shadow-amount,
+  'v': 0
+);
+$shadow-right: (
+  'h': $theme-shadow-amount,
+  'v': 0
+);
+$shadow-bottom-left: (
+  'h': -$theme-shadow-amount,
+  'v': $theme-shadow-amount
+);
+$shadow-bottom: (
+  'h': 0,
+  'v': $theme-shadow-amount
+);
+$shadow-bottom-right: (
+  'h': $theme-shadow-amount,
+  'v': $theme-shadow-amount
+);
+
+$shadow-directions: (
+  'tl': $shadow-top-left,
+  't':  $shadow-top,
+  'tr': $shadow-top-right,
+  'l':  $shadow-left,
+  'r':  $shadow-right,
+  'bl': $shadow-bottom-left,
+  'b':  $shadow-bottom,
+  'br': $shadow-bottom-right
+);
+
+@function shadow-direction($direction) {
+  $shadow-dir: map-get($shadow-directions, $direction);
+  @if ($shadow-dir) {
+    @return $shadow-dir;
+  } @else {
+    @warn 'Shadow Direction not found in $shadow-directions';
   }
 }

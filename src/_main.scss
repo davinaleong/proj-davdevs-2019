@@ -7,34 +7,7 @@ html, body {
 }
 
 
-/// M.2. Blocks
-.nav-side {
-  position: fixed;
-  background-color: theme-color($key-col-gray, $key-tint-300);
-  top: 30vh;
-}
-
-.side-link {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-}
-
-.side-link-item:nth-child(odd) {
-  background-color: theme-color($key-col-gray, $key-tint-200);
-}
-
-.side-link-item:nth-child(even) {
-  background-color: theme-color($key-col-gray, $key-tint-300);
-}
-
-.side-link-item {
-  text-align: center;
-  padding: spacer($key-spacer-2);
-}
-
-
-/// M.4. Type
+/// M.2. Type
 @for $h from 1 through 5 {
   h#{$h}, .h#{$h} {
     $heading: theme-heading('h#{$h}');
@@ -59,6 +32,34 @@ small, .small, sub, .sub, sup, .sup {
 
 code, .code, pre, .pre {
   font-family: theme-family($key-family-monospace);
+}
+
+a, .a {
+  color: theme-color($key-secondary, $key-tint-500);
+  text-decoration: none;
+  @extend .transition-all;
+  
+  &:hover {
+    color: theme-color($key-interactable, $key-tint-500);
+  }
+}
+
+p, .p {
+ @include margin-bottom;
+}
+
+.img-block {
+  display: block;
+  width: 100%;
+  @include margin-bottom;
+}
+
+.img-rounded {
+  border-radius: 1rem;
+}
+
+.img-circle {
+  border-radius: 50%;
 }
 
 @each $name, $weight in $font-weights {
@@ -86,7 +87,7 @@ code, .code, pre, .pre {
 }
 
 
-/// M.5. Form Elements
+/// M.3. Buttons
 .btn {
   display: inline-block;
   font-weight: font-weight($key-weight-regular);
@@ -95,34 +96,116 @@ code, .code, pre, .pre {
   font-family: theme-family($key-family-heading);
   padding: theme-fsize($key-fsize-regular-l) * 0.25 theme-fsize($key-fsize-regular-l) * 0.5;
   border: none;
+  cursor: pointer;
 }
 
-/// M.6. Color
+
+/// M.4. Color
 @each $name, $color in $theme-colors {
   $tint: $key-tint-500;
 
-  .text-#{$name} {
+  .col-#{$name} {
     color: map-get($color, $tint);
   }
 
-  .bg-#{$name} {
+  .bg-col-#{$name} {
     background-color: map-get($color, $tint);
   }
 
-  .border-#{$name} {
+  .border-col-#{$name} {
     border-color: map-get($color, $tint);
   }
 
+  .alert-col-#{$name} {
+    background-color: map-get($color, $key-tint-200);
+    border: thin solid map-get($color, $key-tint-500);
 
-  .btn-#{$name} {
-    color: map-get($color, $key-tint-200);
-    background-color: map-get($color, $tint);
-    cursor: pointer;
-    box-shadow: 2px 2px theme-color($key-col-gray, $key-tint-900);
-
-    &:hover {
-      color: map-get($color, $key-tint-300);
-      background-color: map-get($color, $key-tint-700);
+    .alert-title {
+      color: map-get($color, $key-tint-900);
+      @include margin-bottom;
     }
   }
+
+
+  @if ($name != $key-interactable) {
+    .btn-#{$name} {
+      color: map-get($color, $key-tint-200);
+      background-color: map-get($color, $tint);
+      @extend .transition-all;
+      @extend .shadow-br;
+  
+      &:hover {
+        color: map-get($color, $key-tint-300);
+        background-color: map-get($color, $key-tint-700);
+      }
+
+      &:disabled {
+        color: map-get($color, $key-tint-200);
+        background-color: map-get($color, $key-tint-400);
+      }
+    }
+  }
+}
+
+.btn-interactable {
+  color: theme-color($key-secondary, $key-tint-200);
+  background-color: theme-color($key-secondary, $key-tint-500);
+  @extend .transition-all;
+  @extend .shadow-br;
+
+  &:hover {
+    color: theme-color($key-interactable, $key-tint-300);
+    background-color: theme-color($key-interactable, $key-tint-700);
+  }
+
+  &:disabled {
+    color: theme-color($key-interactable, $key-tint-200);
+    background-color: theme-color($key-interactable, $key-tint-400);
+  }
+}
+
+
+/// M.5. Blocks
+.alert {
+  display: block;
+  padding: spacer($key-spacer-2);
+  width: 100%;
+  color: $black;
+  @include margin-bottom;
+}
+
+
+/// M.6. Utilities
+@each $name, $direction in $shadow-directions {
+  .shadow-#{$name} {
+    @include shadow($theme-shadow-color, $name);
+  }
+
+  .shadow-#{$name}-inset {
+    @include shadow($theme-shadow-color, $name, inset);
+  }
+
+  .shadow-text-#{$name} {
+    @include shadow-text($theme-shadow-color, $name);
+  }
+}
+
+.shadow-none {
+  box-shadow: none;
+}
+
+.shadow-text-none {
+  text-shadow: none;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.transition-all {
+  transition: all 0.15s ease-in;
 }

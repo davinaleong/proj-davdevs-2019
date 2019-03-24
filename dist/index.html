@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- <link rel="stylesheet" href="./css/fonts.css"> -->
+  <!-- === Styles === -->
   <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat:400,400i,700,700i" rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev"
@@ -12,138 +12,176 @@
   
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+
+  <!-- === Scripts === -->
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/modal.js"></script>
   <title>Dav Devs</title>
 </head>
 <body>
-  <nav class="nav-side">
-    <!-- <ul class="side-link">
-      <li class="side-link-item">Dd</li>
-      <li class="side-link-item">C</li>
-      <li class="side-link-item">Li</li>
-      <li class="side-link-item">GH</li>
-      <li class="side-link-item">dR</li>
-      <li class="side-link-item">DEV</li>
-      <li class="side-link-item">^</li>
-    </ul> -->
+  <!-- === N. Floating Nav === -->
+  <nav class="side-nav">
+    <ul class="links-nav">
+      <li class="item-link-nav item-link-nav-dd">
+        <a href="./" title="Dav.devs"><i class="dd dd-dr fa-fw">D</i></a>
+      </li>
+      <li class="item-link-nav item-link-nav-contact">
+        <a href="#contact" title="contact"><i class="fas fa-envelope"></i></a>
+      </li>
+      <li class="item-link-nav item-link-nav-gh">
+        <a href="https://github.com/davinaleong" target="_blank" title="external"><i class="fab fa-github"></i></a>
+      </li>
+      <li class="item-link-nav item-link-nav-li">
+        <a href="https://www.linkedin.com/in/davina-leong-s9115675g/" target="_blank" title="external"><i class="fab fa-linkedin-in"></i></a>
+      </li>
+      <li class="item-link-nav item-link-nav-dev">
+        <a href="https://dev.to/davinaleong" target="_blank" title="external"><i class="fab fa-dev"></i></a>
+      </li>
+      <li class="item-link-nav item-link-nav-dr">
+        <a class="shadow-text-none" href="https://devrant.com/users/DavinaLeong" target="_blank" title="external"><i class="dd dd-dr fa-fw">DR</i></a>
+      </li>
+      <li class="item-link-nav item-link-nav-dd">
+        <a href="#landing"><i class="fas fa-angle-up fa-lg"></i></a>
+      </li>
+    </ul>
   </nav>
+
+  <!-- === M. Main === -->
   <main>
+    <!-- === L. Landing === -->
     <section id="landing" class="section-landing">
       <h1 class="heading-landing text-align-center">Dav.devs</h1>
       <p class="tagline-landing text-align-center">web developer<br><small>&hearts;&nbsp;food and games</small></p>
-      <div class="seemore-landing"><i class="fas fa-angle-down"></i></div>
+      <div class="seemore-landing"><a href="#about"><i class="fas fa-angle-down bounce"></i></a></div>
     </section>
 
+    <!-- === S. Skills === -->
     <section id="skills" class="section-skills">
       <h2 class="heading-skills text-align-right"><i class="fas fa-pencil-ruler"></i> work&hellip;</h2>
       <div class="grid-skills">
         <div class="cell-skills-frontend">
           <h3 class="subheading-skills"><i class="fas fa-browser"></i> Frontend</h3>
           <ul class="content-skills">
-            <li class="content-skills-item skill-js">Javascript</li>
-            <li class="content-skills-item skill-bs">Bootstrap</li>
-            <li class="content-skills-item skill-jq">jQuery</li>
-            <li class="content-skills-item skill-sass">SASS</li>
-            <li class="content-skills-item skill-gulp">Gulp</li>
-            <li class="content-skills-item skill-wp">Webpack</li>
-            <li class="content-skills-item skill-rjs">ReactJS</li>
+            <li class="item-skills skill-js">Javascript</li>
+            <li class="item-skills skill-bs">Bootstrap</li>
+            <li class="item-skills skill-jq">jQuery</li>
+            <li class="item-skills skill-sass">SASS</li>
+            <li class="item-skills skill-gulp">Gulp</li>
+            <li class="item-skills skill-wp">Webpack</li>
+            <li class="item-skills skill-rjs">ReactJS</li>
           </ul>
         </div>
 
         <div class="cell-skills-backend">
           <h3 class="subheading-skills"><i class="fas fa-cogs"></i> Backend</h3>
           <ul class="content-skills">
-            <li class="content-skills-item skill-php">PHP</li>
-            <li class="content-skills-item skill-laravel">Laravel</li>
-            <li class="content-skills-item skill-mysql">MySQL</li>
-            <li class="content-skills-item skill-njs">NodeJS</li>
-            <li class="content-skills-item skill-craft">CraftCMS</li>
-            <li class="content-skills-item skill-gql">GraphQL</li>
+            <li class="item-skills skill-php">PHP</li>
+            <li class="item-skills skill-laravel">Laravel</li>
+            <li class="item-skills skill-mysql">MySQL</li>
+            <li class="item-skills skill-njs">NodeJS</li>
+            <li class="item-skills skill-craft">CraftCMS</li>
+            <li class="item-skills skill-gql">GraphQL</li>
           </ul>
         </div>
 
         <div class="cell-skills-devops">
           <h3 class="subheading-skills"><i class="fas fa-server"></i> DevOps</h3>
           <ul class="content-skills">
-            <li class="content-skills-item skill-aws">AWS</li>
-            <li class="content-skills-item skill-sls">Serverless</li>
-            <li class="content-skills-item skill-dock">Docker</li>
+            <li class="item-skills skill-aws">AWS</li>
+            <li class="item-skills skill-sls">Serverless</li>
+            <li class="item-skills skill-dock">Docker</li>
           </ul>
         </div>
 
         <div class='cell-skills-tools'>
           <h3 class="subheading-skills"><i class="fas fa-gavel"></i> Tools</h3>
           <ul class="content-skills">
-            <li class="content-skills-item skill-git">GIT</li>
+            <li class="item-skills skill-git">GIT</li>
           </ul>
         </div>
       </div>
     </section>
 
+    <!-- === A. About === -->
     <section id="about" class="section-about">
       <h2 class="heading-about"><i class="fas fa-user"></i> profile&hellip;</h2>
       <div class="grid-about">
         <div class="content-about cell-about-me">
-          <button class="btn btn-secondary btn-about" type="button"><i class="fas fa-question"></i> About</button>
+          <button id="btn-about" class="btn btn-interactable btn-about" type="button">
+            <i class="fas fa-question"></i> About
+          </button>
           <p class="content-about-desc text-align-center">Brief history, background and education</p>
         </div>
 
         <div class="content-about cell-about-download">
-          <button class="btn btn-secondary btn-about" type="button"><i class="fas fa-download"></i> Resume</button>
+          <button id="btn-resume" class="btn btn-interactable btn-about" type="button">
+            <i class="fas fa-download"></i> Resume
+          </button>
           <p class="content-about-desc text-align-center">Resumes in word and pdf formats</p>
         </div>
       </div>
     </section>
 
+    <!-- === I. Interest === -->
     <section id="interest" class="section-interest">
       <h2 class="heading-interest text-align-right"><i class="fas fa-heart"></i> hobbies&hellip;</h2>
       <div class="grid-interest">
         <div class="cell-interest-games">
           <h3 class="subheading-interest"><i class="fas fa-dice"></i> Games</h3>
           <ul class="content-interest">
-            <li class="content-interest-item"><i class="fal fa-car"></i> Racing</li>
-            <li class="content-interest-item"><i class="fal fa-map"></i> Strategy</li>
-            <li class="content-interest-item"><i class="fal fa-globe"></i> Open-world</li>
-            <li class="content-interest-item"><i class="fal fa-swords"></i> Action</li>
-            <li class="content-interest-item"><i class="fal fa-dice-d12"></i> Tabletop</li>
+            <li class="item-interest"><i class="fal fa-car"></i> Racing</li>
+            <li class="item-interest"><i class="fal fa-map"></i> Strategy</li>
+            <li class="item-interest"><i class="fal fa-globe"></i> Open-world</li>
+            <li class="item-interest"><i class="fal fa-swords"></i> Action</li>
+            <li class="item-interest"><i class="fal fa-dice-d12"></i> Tabletop</li>
           </ul>
         </div>
 
         <div class="cell-interest-food">
           <h3 class="subheading-interest"><i class="fas fa-bread-loaf"></i> Food</h3>
           <ul class="content-interest">
-            <li class="content-interest-item"><i class="fal fa-pepper-hot"></i> Peranakan</li>
-            <li class="content-interest-item"><i class="fal fa-pizza-slice"></i> Italian</li>
-            <li class="content-interest-item"><i class="fal fa-turkey"></i> French</li>
-            <li class="content-interest-item"><i class="fal fa-soup"></i> Cantonese</li>
-            <li class="content-interest-item"><i class="fal fa-bacon"></i> American</li>
+            <li class="item-interest"><i class="fal fa-pepper-hot"></i> Peranakan</li>
+            <li class="item-interest"><i class="fal fa-pizza-slice"></i> Italian</li>
+            <li class="item-interest"><i class="fal fa-turkey"></i> French</li>
+            <li class="item-interest"><i class="fal fa-soup"></i> Cantonese</li>
+            <li class="item-interest"><i class="fal fa-bacon"></i> American</li>
           </ul>
         </div>
       </div>
     </section>
 
+    <!-- === C. Contact === -->
     <section id="contact" class="section-contact">
       <h2 class="heading-contact"><i class="fas fa-phone"></i> reach out&hellip;</h2>
-      <form class="content-contact">
+
+      <form class="content-contact" method="post" action="https://formspree.io/leong.shi.yun@gmail.com">
         <div class="grid-contact">
+          <div class="cell-contact-alert">
+            <div id="alert-form" class="alert alert-col-danger">
+              <h5 class="alert-title"><i class="fas fa fa-times"></i> Error</h5>
+              <p>Alert message</p>
+            </div>
+          </div>
+
           <div class="cell-contact-name form-field">
-            <label for="name" class="form-label"><i class="fal fa-user"></i> N</label>
-            <input type="text" class="form-control" name="name" placeholder="Name" required>
+            <label for="name" class="form-label"><i class="fal fa-user"></i></label>
+            <input type="text" class="form-control" name="name" placeholder="Name*" required>
           </div>
 
           <div class="cell-contact-email form-field">
-            <label for="email" class="form-label"><i class="fal fa-envelope"></i> E</label>
-            <input type="text" class="form-control" name="email" placeholder="Email" required>
+            <label for="email" class="form-label"><i class="fal fa-envelope"></i></label>
+            <input type="email" class="form-control" name="email" placeholder="Email*" required>
           </div>
 
           <div class="cell-contact-mobile form-field">
-            <label for="mobile" class="form-label"><i class="fal fa-mobile"></i> P</label>
-            <input type="text" class="form-control" name="mobile" placeholder="Mobile (optional)">
+            <label for="mobile" class="form-label"><i class="fal fa-mobile"></i></label>
+            <input type="tel" class="form-control" name="mobile" placeholder="Mobile (optional)">
           </div>
 
           <div class="cell-contact-subject form-field">
-            <label for="subject" class="form-label"><i class="fal fa-hashtag"></i> S</label>
+            <label for="subject" class="form-label"><i class="fal fa-hashtag"></i></label>
             <select class="form-control" name="subject" required>
-              <option>Subject</option>
+              <option>Subject*</option>
               <option value="project">Have a project?</option>
               <option value="hire">Hire me?</option>
               <option value="coffee">Hangout?</option>
@@ -152,46 +190,103 @@
           </div>
 
           <div class="cell-contact-message form-field">
-            <label for="message" class="form-label-textarea"><i class="fal fa-pen"></i> M</label>
+            <label for="message" class="form-label"><i class="fal fa-pen"></i></label>
             <textarea class="form-control-textarea" name="message" required
-              rows="6" placeholder="Message"></textarea>
+              rows="6" placeholder="Message*"></textarea>
           </div>
 
-          <div class="cell-contact-submit text-align-right">
+          <div class="cell-contact-submit">
             <button class="btn btn-action" type="submit"><i class="fas fa-paper-plane"></i> Send</button>
           </div>
         </div>
       </form>
     </section>
   </main>
+
+  <!-- === F. Footer === -->
   <footer>
     <h2 class="heading-footer text-align-right"><i class="fas fa-sad-tear"></i> end&hellip;</h2>
-    <div class="content-footer">
-      <div class="grid-footer">
-        <h3><i class="fas fa-users"></i> Social</h3>
-        <ul>
-          <li><a href="https://github.com/DavinaLeong" target="_blank"><i class="fab fa-github fa-fw"></i> GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/davina-leong-s9115675g/" target="_blank fa-fw"><i class="fab fa-linkedin fa-fw"></i> LinkedIn</a></li>
-          <li><a href="https://dev.to/davinaleong" target="_blank"><i class="fab fa-dev fa-fw"></i> DEV</a></li>
-          <li><a href="https://devrant.com/users/DavinaLeong" target="_blank"><i class="dd dd-dr fa-fw">DR</i> DevRant</a></li>
+    <div class="grid-footer">
+      <div class="cell-footer-social">
+        <h3 class="subheading-footer"><i class="fas fa-users"></i> Social</h3>
+        <ul class="content-footer-social">
+          <li class="cell-footer-item">
+            <a href="https://github.com/DavinaLeong" target="_blank"><i class="fab fa-github fa-fw"></i> GitHub</a>
+          </li>
+          <li class="cell-footer-item">
+            <a href="https://www.linkedin.com/in/davina-leong-s9115675g/" target="_blank fa-fw"><i class="fab fa-linkedin fa-fw"></i> LinkedIn</a>
+          </li>
+          <li class="cell-footer-item">
+            <a href="https://dev.to/davinaleong" target="_blank"><i class="fab fa-dev fa-fw"></i> DEV</a>
+          </li>
+          <li class="cell-footer-item">
+            <a href="https://devrant.com/users/DavinaLeong" target="_blank"><i class="dd dd-dr fa-fw">DR</i> DevRant</a>
+          </li>
         </ul>
       </div>
 
-      <div>
-        <h3><i class="fas fa-map-marker-alt"></i> Locate</h3>
-        <ul>
-          <li><a href="#contact"><i class="fal fa-envelope fa-fw"></i> davina.leong@outlook.com</a></li>
-          <li><a href="https://www.google.com.sg/maps/place/Bukit+Batok/@1.3560767,103.7359319,14z/data=!3m1!4b1!4m5!3m4!1s0x31da1049969ce5c9:0xae12582d45657edb!8m2!3d1.3590288!4d103.7636796"
-            target="_blank"><i class="fal fa-globe-asia fa-fw"></i> West, Singapore</a></li>
+      <div class="cell-footer-locate">
+        <h3 class="subheading-footer"><i class="fas fa-map-marker-alt"></i> Locate</h3>
+        <ul class="content-footer-locate">
+          <li class="cell-footer-item">
+            <a href="#contact"><i class="fal fa-envelope fa-fw"></i> davina.leong@outlook.com</a>
+          </li>
+          <li class="cell-footer-item">
+            <a href="https://www.google.com.sg/maps/place/Bukit+Batok/@1.3560767,103.7359319,14z/data=!3m1!4b1!4m5!3m4!1s0x31da1049969ce5c9:0xae12582d45657edb!8m2!3d1.3590288!4d103.7636796"
+            target="_blank"><i class="fal fa-globe-asia fa-fw"></i> West, Singapore</a>
+          </li>
         </ul>
       </div>
     </div>
-    <div class="text-align-center text-style-italic small">
-      <script>
-        var now = new Date();
-        document.write('dav-devs, Copyright &copy; ' + now.getFullYear() + ' Davina Leong');
-      </script>
+    <div class="copyright">
+      <em>
+        <script>
+          var now = new Date();
+          document.write('dav-devs.me, Copyright &copy; ' + now.getFullYear() + ' Davina Leong');
+        </script>
+      </em>
     </div>
   </footer>
+
+  <!--- === O. Modal === -->
+  <div id="modal" tabindex="-1" class="wrapper-modal">
+    <div class="modal">
+      <div class="header-modal">
+        <h1 id="heading-about" class="shadow-text-br"><i class="fas fa-question"></i> about</h1>
+        <h1 id="heading-resume" class="shadow-text-br"><i class="fas fa-download"></i> resume</h1>
+        <button id="btn-x" type="button" class="modal-close">
+          <i class="fas fa-times fa-2x"></i>
+        </button>
+      </div>
+      <div class="content-modal">
+        <!-- === O.1. About Content === -->
+        <div id="content-about">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
+  
+            <img class="img-block" src="./images/lorem-ipsum.png">
+      
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, harum odio. Quam obcaecati distinctio repudiandae molestias nostrum veritatis. Molestiae est et expedita soluta quae, ex in! Dignissimos, ipsam. Fuga, tempore.</p>
+        </div>
+
+        <!-- === O.2. Resume Content === -->
+        <div id="content-resume">
+          <p>Pick a preferred format:</p>
+          <div class="grid-resume">
+            <a href="" type="button" class="btn btn-primary cell-resume">
+              <i class="fas fa-file-word"></i> Word
+            </a>
+            <a href="" type="button" class="btn btn-primary cell-resume">
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+          </div>
+        </div>
+
+        <button id="btn-close" type="button" class="btn btn-interactable pull-right"><i class="fas fa-times"></i> Close</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
