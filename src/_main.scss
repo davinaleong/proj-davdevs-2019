@@ -151,6 +151,10 @@ p, .p {
     @include shadow($theme-shadow-color, $name);
   }
 
+  .shadow-#{$name}-inset {
+    @include shadow($theme-shadow-color, $name, inset);
+  }
+
   .shadow-text-#{$name} {
     @include shadow-text($theme-shadow-color, $name);
   }

@@ -366,6 +366,11 @@ p, .p {
           box-shadow: -2px -2px 0 0 #212121;
 }
 
+.shadow-tl-inset {
+  -webkit-box-shadow: -2px -2px 0 0 #212121 inset;
+          box-shadow: -2px -2px 0 0 #212121 inset;
+}
+
 .shadow-text-tl {
   text-shadow: -2px -2px 0 #212121;
 }
@@ -373,6 +378,11 @@ p, .p {
 .shadow-t {
   -webkit-box-shadow: 0 -2px 0 0 #212121;
           box-shadow: 0 -2px 0 0 #212121;
+}
+
+.shadow-t-inset {
+  -webkit-box-shadow: 0 -2px 0 0 #212121 inset;
+          box-shadow: 0 -2px 0 0 #212121 inset;
 }
 
 .shadow-text-t {
@@ -384,6 +394,11 @@ p, .p {
           box-shadow: 2px -2px 0 0 #212121;
 }
 
+.shadow-tr-inset {
+  -webkit-box-shadow: 2px -2px 0 0 #212121 inset;
+          box-shadow: 2px -2px 0 0 #212121 inset;
+}
+
 .shadow-text-tr {
   text-shadow: 2px -2px 0 #212121;
 }
@@ -391,6 +406,11 @@ p, .p {
 .shadow-l {
   -webkit-box-shadow: -2px 0 0 0 #212121;
           box-shadow: -2px 0 0 0 #212121;
+}
+
+.shadow-l-inset {
+  -webkit-box-shadow: -2px 0 0 0 #212121 inset;
+          box-shadow: -2px 0 0 0 #212121 inset;
 }
 
 .shadow-text-l {
@@ -402,6 +422,11 @@ p, .p {
           box-shadow: 2px 0 0 0 #212121;
 }
 
+.shadow-r-inset {
+  -webkit-box-shadow: 2px 0 0 0 #212121 inset;
+          box-shadow: 2px 0 0 0 #212121 inset;
+}
+
 .shadow-text-r {
   text-shadow: 2px 0 0 #212121;
 }
@@ -409,6 +434,11 @@ p, .p {
 .shadow-bl {
   -webkit-box-shadow: -2px 2px 0 0 #212121;
           box-shadow: -2px 2px 0 0 #212121;
+}
+
+.shadow-bl-inset {
+  -webkit-box-shadow: -2px 2px 0 0 #212121 inset;
+          box-shadow: -2px 2px 0 0 #212121 inset;
 }
 
 .shadow-text-bl {
@@ -420,6 +450,11 @@ p, .p {
           box-shadow: 0 2px 0 0 #212121;
 }
 
+.shadow-b-inset {
+  -webkit-box-shadow: 0 2px 0 0 #212121 inset;
+          box-shadow: 0 2px 0 0 #212121 inset;
+}
+
 .shadow-text-b {
   text-shadow: 0 2px 0 #212121;
 }
@@ -427,6 +462,11 @@ p, .p {
 .shadow-br, .btn-primary, .btn-secondary, .btn-action, .btn-danger, .btn-success, .btn-gray, .btn-interactable, .side-nav {
   -webkit-box-shadow: 2px 2px 0 0 #212121;
           box-shadow: 2px 2px 0 0 #212121;
+}
+
+.shadow-br-inset {
+  -webkit-box-shadow: 2px 2px 0 0 #212121 inset;
+          box-shadow: 2px 2px 0 0 #212121 inset;
 }
 
 .shadow-text-br, .heading-landing, .seemore-landing {

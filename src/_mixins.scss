@@ -2,9 +2,13 @@
 
 
 /// M.1. Shadows
-@mixin shadow($color: $theme-shadow-color, $direction: $key-shadow-dir-br) {
+@mixin shadow($color: $theme-shadow-color, $direction: $key-shadow-dir-br, $inset: false) {
   $direction: shadow-direction($direction);
-  box-shadow: map-get($direction, $key-shadow-h) map-get($direction, $key-shadow-v) 0 0 $color;
+  @if $inset {
+    box-shadow: map-get($direction, $key-shadow-h) map-get($direction, $key-shadow-v) 0 0 $color inset;
+  } @else {
+    box-shadow: map-get($direction, $key-shadow-h) map-get($direction, $key-shadow-v) 0 0 $color;
+  }
 }
 
 @mixin shadow-text($color: $theme-shadow-color, $direction: $key-shadow-dir-br) {
