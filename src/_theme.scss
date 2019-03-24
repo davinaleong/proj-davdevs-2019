@@ -210,14 +210,14 @@ $theme-margins: (
 $theme-shadow-amount: 2px;
 $theme-shadow-color:  theme-color($key-col-gray, $key-tint-900);
 
-$shadow-top-left:   -$theme-shadow-amount -$theme-shadow-amount;
-$shadow-top:          0 -$theme-shadow-amount;
-$shadow-top-right:    $theme-shadow-amount -$theme-shadow-amount;
-$shadow-left:         $theme-shadow-amount 0;
-$shadow-right:        $theme-shadow-amount 0;
-$shadow-bottom-left:  -$theme-shadow-amount $theme-shadow-amount;
-$shadow-bottom:       0 $theme-shadow-amount;
-$shadow-bottom-right: $theme-shadow-amount $theme-shadow-amount;
+$shadow-top-left:     -$theme-shadow-amount -$theme-shadow-amount 0 0;
+$shadow-top:          0 -$theme-shadow-amount 0 0;
+$shadow-top-right:    $theme-shadow-amount -$theme-shadow-amount 0 0;
+$shadow-left:         $theme-shadow-amount 0 0 0;
+$shadow-right:        $theme-shadow-amount 0 0 0;
+$shadow-bottom-left:  -$theme-shadow-amount $theme-shadow-amount 0 0;
+$shadow-bottom:       0 $theme-shadow-amount 0 0;
+$shadow-bottom-right: $theme-shadow-amount $theme-shadow-amount 0 0;
 
 $shadow-directions: (
   'tl': $shadow-top-left,
