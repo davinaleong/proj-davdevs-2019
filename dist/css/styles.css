@@ -229,6 +229,11 @@ p, .p {
   background-color: #455a64;
 }
 
+.btn-primary:disabled {
+  color: #b0bec5;
+  background-color: #78909c;
+}
+
 .text-secondary {
   color: #009688;
 }
@@ -249,6 +254,11 @@ p, .p {
 .btn-secondary:hover {
   color: #4db6ac;
   background-color: #00796b;
+}
+
+.btn-secondary:disabled {
+  color: #80cbc4;
+  background-color: #26a69a;
 }
 
 .text-interactable {
@@ -285,6 +295,11 @@ p, .p {
   background-color: #1976d2;
 }
 
+.btn-action:disabled {
+  color: #90caf9;
+  background-color: #42a5f5;
+}
+
 .text-danger {
   color: #f44336;
 }
@@ -305,6 +320,11 @@ p, .p {
 .btn-danger:hover {
   color: #e57373;
   background-color: #d32f2f;
+}
+
+.btn-danger:disabled {
+  color: #ef9a9a;
+  background-color: #ef5350;
 }
 
 .text-success {
@@ -329,6 +349,11 @@ p, .p {
   background-color: #388e3c;
 }
 
+.btn-success:disabled {
+  color: #a5d6a7;
+  background-color: #66bb6a;
+}
+
 .text-gray {
   color: #9e9e9e;
 }
@@ -351,6 +376,11 @@ p, .p {
   background-color: #616161;
 }
 
+.btn-gray:disabled {
+  color: #eeeeee;
+  background-color: #bdbdbd;
+}
+
 .btn-interactable {
   color: #80cbc4;
   background-color: #009688;
@@ -359,6 +389,11 @@ p, .p {
 .btn-interactable:hover {
   color: #ffb74d;
   background-color: #f57c00;
+}
+
+.btn-interactable:disabled {
+  color: #ffcc80;
+  background-color: #ffa726;
 }
 
 .shadow-tl {
