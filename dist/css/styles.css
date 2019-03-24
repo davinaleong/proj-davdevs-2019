@@ -1076,7 +1076,7 @@ footer, .footer {
 .modal {
   display: block;
   position: relative;
-  width: 300px;
+  width: 500px;
   margin: 1.25rem auto;
   color: #fff;
 }

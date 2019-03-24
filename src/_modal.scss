@@ -13,7 +13,7 @@
 .modal {
   display: block;
   position: relative;
-  width: breakpoint($key-bp-phone);
+  width: breakpoint($key-bp-phone-l) - 100px;
   margin: spacer($key-spacer-4) auto;
   color: $white;
 }
@@ -23,7 +23,6 @@
   overflow-y: auto;
   padding: spacer($key-spacer-2);
   color: theme-color($key-primary, $key-tint-200);
-  // background-color: theme-color($key-primary, $key-tint-900);
   @include bg-pattern;
   @include shadow($key-col-gray);
 }
