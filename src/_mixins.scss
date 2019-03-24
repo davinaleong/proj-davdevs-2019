@@ -4,12 +4,12 @@
 /// M.1. Shadows
 @mixin shadow($color: $theme-shadow-color, $direction: $key-shadow-dir-br) {
   $direction: shadow-direction($direction);
-  box-shadow: $direction $color;
+  box-shadow: map-get($direction, $key-shadow-h) map-get($direction, $key-shadow-v) 0 0 $color;
 }
 
 @mixin shadow-text($color: $theme-shadow-color, $direction: $key-shadow-dir-br) {
   $direction: shadow-direction($direction);
-  text-shadow: $direction $color;
+  text-shadow: map-get($direction, $key-shadow-h) map-get($direction, $key-shadow-v) 0 $color;
 }
 
 

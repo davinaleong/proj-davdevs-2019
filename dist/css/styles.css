@@ -362,39 +362,39 @@ p, .p {
 }
 
 .shadow-tl {
-  -webkit-box-shadow: -4px 0 0 #212121;
-          box-shadow: -4px 0 0 #212121;
+  -webkit-box-shadow: -2px -2px 0 0 #212121;
+          box-shadow: -2px -2px 0 0 #212121;
 }
 
 .shadow-text-tl {
-  text-shadow: -4px 0 0 #212121;
+  text-shadow: -2px -2px 0 #212121;
 }
 
 .shadow-t {
-  -webkit-box-shadow: -2px 0 0 #212121;
-          box-shadow: -2px 0 0 #212121;
+  -webkit-box-shadow: 0 -2px 0 0 #212121;
+          box-shadow: 0 -2px 0 0 #212121;
 }
 
 .shadow-text-t {
-  text-shadow: -2px 0 0 #212121;
+  text-shadow: 0 -2px 0 #212121;
 }
 
 .shadow-tr {
-  -webkit-box-shadow: 0px 0 0 #212121;
-          box-shadow: 0px 0 0 #212121;
+  -webkit-box-shadow: 2px -2px 0 0 #212121;
+          box-shadow: 2px -2px 0 0 #212121;
 }
 
 .shadow-text-tr {
-  text-shadow: 0px 0 0 #212121;
+  text-shadow: 2px -2px 0 #212121;
 }
 
 .shadow-l {
-  -webkit-box-shadow: 2px 0 0 0 #212121;
-          box-shadow: 2px 0 0 0 #212121;
+  -webkit-box-shadow: -2px 0 0 0 #212121;
+          box-shadow: -2px 0 0 0 #212121;
 }
 
 .shadow-text-l {
-  text-shadow: 2px 0 0 0 #212121;
+  text-shadow: -2px 0 0 #212121;
 }
 
 .shadow-r {
@@ -403,7 +403,7 @@ p, .p {
 }
 
 .shadow-text-r {
-  text-shadow: 2px 0 0 0 #212121;
+  text-shadow: 2px 0 0 #212121;
 }
 
 .shadow-bl {
@@ -412,7 +412,7 @@ p, .p {
 }
 
 .shadow-text-bl {
-  text-shadow: -2px 2px 0 0 #212121;
+  text-shadow: -2px 2px 0 #212121;
 }
 
 .shadow-b {
@@ -421,7 +421,7 @@ p, .p {
 }
 
 .shadow-text-b {
-  text-shadow: 0 2px 0 0 #212121;
+  text-shadow: 0 2px 0 #212121;
 }
 
 .shadow-br, .btn-primary, .btn-secondary, .btn-action, .btn-danger, .btn-success, .btn-gray, .btn-interactable, .side-nav {
@@ -430,7 +430,7 @@ p, .p {
 }
 
 .shadow-text-br, .heading-landing, .seemore-landing {
-  text-shadow: 2px 2px 0 0 #212121;
+  text-shadow: 2px 2px 0 #212121;
 }
 
 .shadow-none {
@@ -566,7 +566,7 @@ p, .p {
   font-size: 1.5rem;
   font-style: italic;
   margin-top: 0.5rem;
-  text-shadow: 2px 2px 0 0 #263238;
+  text-shadow: 2px 2px 0 #263238;
 }
 
 .seemore-landing {
@@ -1181,7 +1181,7 @@ footer, .footer {
   border: none;
   color: #009688;
   cursor: pointer;
-  text-shadow: 2px 2px 0 0 "gray";
+  text-shadow: 2px 2px 0 "gray";
 }
 
 .modal-close:hover {

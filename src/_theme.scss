@@ -210,14 +210,39 @@ $theme-margins: (
 $theme-shadow-amount: 2px;
 $theme-shadow-color:  theme-color($key-col-gray, $key-tint-900);
 
-$shadow-top-left:     -$theme-shadow-amount -$theme-shadow-amount 0 0;
-$shadow-top:          0 -$theme-shadow-amount 0 0;
-$shadow-top-right:    $theme-shadow-amount -$theme-shadow-amount 0 0;
-$shadow-left:         $theme-shadow-amount 0 0 0;
-$shadow-right:        $theme-shadow-amount 0 0 0;
-$shadow-bottom-left:  -$theme-shadow-amount $theme-shadow-amount 0 0;
-$shadow-bottom:       0 $theme-shadow-amount 0 0;
-$shadow-bottom-right: $theme-shadow-amount $theme-shadow-amount 0 0;
+// h v color
+$shadow-top-left: (
+  'h': -$theme-shadow-amount,
+  'v': -$theme-shadow-amount
+);
+$shadow-top: (
+  'h': 0,
+  'v': -$theme-shadow-amount
+);
+$shadow-top-right: (
+  'h': $theme-shadow-amount,
+  'v': -$theme-shadow-amount
+);
+$shadow-left: (
+  'h': -$theme-shadow-amount,
+  'v': 0
+);
+$shadow-right: (
+  'h': $theme-shadow-amount,
+  'v': 0
+);
+$shadow-bottom-left: (
+  'h': -$theme-shadow-amount,
+  'v': $theme-shadow-amount
+);
+$shadow-bottom: (
+  'h': 0,
+  'v': $theme-shadow-amount
+);
+$shadow-bottom-right: (
+  'h': $theme-shadow-amount,
+  'v': $theme-shadow-amount
+);
 
 $shadow-directions: (
   'tl': $shadow-top-left,
