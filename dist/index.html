@@ -153,8 +153,16 @@
     <!-- === C. Contact === -->
     <section id="contact" class="section-contact">
       <h2 class="heading-contact"><i class="fas fa-phone"></i> reach out&hellip;</h2>
+
       <form class="content-contact" method="post" action="https://formspree.io/leong.shi.yun@gmail.com">
         <div class="grid-contact">
+          <div class="cell-contact-alert">
+            <div id="alert-form" class="alert alert-col-danger">
+              <h5 class="alert-title"><i class="fas fa fa-times"></i> Error</h5>
+              <p>Alert message</p>
+            </div>
+          </div>
+
           <div class="cell-contact-name form-field">
             <label for="name" class="form-label"><i class="fal fa-user"></i></label>
             <input type="text" class="form-control" name="name" placeholder="Name*" required>

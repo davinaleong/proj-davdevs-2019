@@ -219,6 +219,16 @@ p, .p {
   border-color: #607d8b;
 }
 
+.alert-col-primary {
+  background-color: #b0bec5;
+  border: thin solid #607d8b;
+}
+
+.alert-col-primary .alert-title {
+  color: #263238;
+  margin-bottom: 0.5rem;
+}
+
 .btn-primary {
   color: #b0bec5;
   background-color: #607d8b;
@@ -244,6 +254,16 @@ p, .p {
 
 .border-col-secondary {
   border-color: #009688;
+}
+
+.alert-col-secondary {
+  background-color: #80cbc4;
+  border: thin solid #009688;
+}
+
+.alert-col-secondary .alert-title {
+  color: #004d40;
+  margin-bottom: 0.5rem;
 }
 
 .btn-secondary {
@@ -273,6 +293,16 @@ p, .p {
   border-color: #ff9800;
 }
 
+.alert-col-interactable {
+  background-color: #ffcc80;
+  border: thin solid #ff9800;
+}
+
+.alert-col-interactable .alert-title {
+  color: #e65100;
+  margin-bottom: 0.5rem;
+}
+
 .col-action {
   color: #2196f3;
 }
@@ -283,6 +313,16 @@ p, .p {
 
 .border-col-action {
   border-color: #2196f3;
+}
+
+.alert-col-action {
+  background-color: #90caf9;
+  border: thin solid #2196f3;
+}
+
+.alert-col-action .alert-title {
+  color: #0d47a1;
+  margin-bottom: 0.5rem;
 }
 
 .btn-action {
@@ -312,6 +352,16 @@ p, .p {
   border-color: #f44336;
 }
 
+.alert-col-danger {
+  background-color: #ef9a9a;
+  border: thin solid #f44336;
+}
+
+.alert-col-danger .alert-title {
+  color: #b71c1c;
+  margin-bottom: 0.5rem;
+}
+
 .btn-danger {
   color: #ef9a9a;
   background-color: #f44336;
@@ -339,6 +389,16 @@ p, .p {
   border-color: #4caf50;
 }
 
+.alert-col-success {
+  background-color: #a5d6a7;
+  border: thin solid #4caf50;
+}
+
+.alert-col-success .alert-title {
+  color: #1b5e20;
+  margin-bottom: 0.5rem;
+}
+
 .btn-success {
   color: #a5d6a7;
   background-color: #4caf50;
@@ -364,6 +424,16 @@ p, .p {
 
 .border-col-gray {
   border-color: #9e9e9e;
+}
+
+.alert-col-gray {
+  background-color: #eeeeee;
+  border: thin solid #9e9e9e;
+}
+
+.alert-col-gray .alert-title {
+  color: #212121;
+  margin-bottom: 0.5rem;
 }
 
 .btn-gray {
@@ -394,6 +464,14 @@ p, .p {
 .btn-interactable:disabled {
   color: #ffcc80;
   background-color: #ffa726;
+}
+
+.alert {
+  display: block;
+  padding: 0.5rem;
+  width: 100%;
+  color: #000;
+  margin-bottom: 0.5rem;
 }
 
 .shadow-tl {
@@ -998,55 +1076,61 @@ p, .p {
   margin-bottom: -17px;
 }
 
-.cell-contact-name {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: contact-name;
-}
-
-.cell-contact-email {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: contact-email;
-}
-
-.cell-contact-mobile {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: contact-mobile;
-}
-
-.cell-contact-subject {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: contact-subject;
-}
-
-.cell-contact-message {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  grid-area: contact-message;
-}
-
-.cell-contact-submit {
-  -ms-grid-row: 6;
-  -ms-grid-column: 1;
-  grid-area: contact-submit;
-}
-
 .grid-contact {
   width: 80vw;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'contact-name' 'contact-email' 'contact-mobile' 'contact-subject' 'contact-message' 'contact-submit';
+      grid-template-areas: 'contact-alert' 'contact-name' 'contact-email' 'contact-mobile' 'contact-subject' 'contact-message' 'contact-submit';
   grid-column-gap: 0.5rem;
 }
 
 @media only screen and (min-width: 600px) {
   .grid-contact {
-        grid-template-areas: 'contact-name contact-name' 'contact-email contact-mobile' 'contact-subject contact-subject' 'contact-message contact-message' 'contact-submit contact-submit';
+        grid-template-areas: 'contact-alert contact-alert' 'contact-name contact-name' 'contact-email contact-mobile' 'contact-subject contact-subject' 'contact-message contact-message' 'contact-submit contact-submit';
   }
+}
+
+.cell-contact-alert {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: contact-alert;
+}
+
+.cell-contact-name {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: contact-name;
+}
+
+.cell-contact-email {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: contact-email;
+}
+
+.cell-contact-mobile {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: contact-mobile;
+}
+
+.cell-contact-subject {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: contact-subject;
+}
+
+.cell-contact-message {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: contact-message;
+}
+
+.cell-contact-submit {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: contact-submit;
 }
 
 .form-field {

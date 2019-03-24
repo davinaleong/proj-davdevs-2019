@@ -23,6 +23,37 @@
 
 
 /// C.3. Contact Grid
+.grid-contact {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    'contact-alert'
+    'contact-name'
+    'contact-email'
+    'contact-mobile'
+    'contact-subject'
+    'contact-message'
+    'contact-submit';
+  grid-column-gap: spacer($key-spacer-2);
+}
+
+@media only screen and (min-width: breakpoint($key-bp-phone-l)) {
+  .grid-contact {
+    grid-template-areas:
+      'contact-alert contact-alert'
+      'contact-name contact-name'
+      'contact-email contact-mobile'
+      'contact-subject contact-subject'
+      'contact-message contact-message'
+      'contact-submit contact-submit';
+  }
+}
+
+.cell-contact-alert {
+  grid-area: contact-alert;
+}
+
 .cell-contact-name {
   grid-area: contact-name;
 }
@@ -45,31 +76,6 @@
 
 .cell-contact-submit {
   grid-area: contact-submit;
-}
-
-.grid-contact {
-  width: 80vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas:
-    'contact-name'
-    'contact-email'
-    'contact-mobile'
-    'contact-subject'
-    'contact-message'
-    'contact-submit';
-  grid-column-gap: spacer($key-spacer-2);
-}
-
-@media only screen and (min-width: breakpoint($key-bp-phone-l)) {
-  .grid-contact {
-    grid-template-areas:
-      'contact-name contact-name'
-      'contact-email contact-mobile'
-      'contact-subject contact-subject'
-      'contact-message contact-message'
-      'contact-submit contact-submit';
-  }
 }
 
 

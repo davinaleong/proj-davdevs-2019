@@ -87,7 +87,7 @@ p, .p {
 }
 
 
-/// M.3. Form Elements
+/// M.3. Buttons
 .btn {
   display: inline-block;
   font-weight: font-weight($key-weight-regular);
@@ -114,6 +114,16 @@ p, .p {
 
   .border-col-#{$name} {
     border-color: map-get($color, $tint);
+  }
+
+  .alert-col-#{$name} {
+    background-color: map-get($color, $key-tint-200);
+    border: thin solid map-get($color, $key-tint-500);
+
+    .alert-title {
+      color: map-get($color, $key-tint-900);
+      @include margin-bottom;
+    }
   }
 
 
@@ -155,7 +165,17 @@ p, .p {
 }
 
 
-/// M.5. Utilities
+/// M.5. Blocks
+.alert {
+  display: block;
+  padding: spacer($key-spacer-2);
+  width: 100%;
+  color: $black;
+  @include margin-bottom;
+}
+
+
+/// M.6. Utilities
 @each $name, $direction in $shadow-directions {
   .shadow-#{$name} {
     @include shadow($theme-shadow-color, $name);
