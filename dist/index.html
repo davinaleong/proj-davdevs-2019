@@ -151,7 +151,8 @@
     <section id="contact" class="section-contact">
       <h2 class="heading-contact"><i class="fas fa-phone"></i> reach out&hellip;</h2>
 
-      <form class="content-contact" method="post" action="https://formspree.io/leong.shi.yun@gmail.com">
+      <!-- <form id="form-contact" class="content-contact" method="post" action="https://formspree.io/leong.shi.yun@gmail.com"> -->
+      <form id="form-contact" class="content-contact" method="post" action="./">
         <div class="grid-contact">
           <div class="cell-contact-alert">
             <div id="alert-form" class="alert alert-col-danger">
@@ -162,12 +163,12 @@
 
           <div class="cell-contact-name form-field">
             <label for="name" class="form-label"><i class="fal fa-user"></i></label>
-            <input type="text" class="form-control" name="name" placeholder="Name*" required>
+            <input type="text" class="form-control" name="name" placeholder="Name*">
           </div>
 
           <div class="cell-contact-email form-field">
             <label for="email" class="form-label"><i class="fal fa-envelope"></i></label>
-            <input type="email" class="form-control" name="email" placeholder="Email*" required>
+            <input type="email" class="form-control" name="email" placeholder="Email*">
           </div>
 
           <div class="cell-contact-mobile form-field">
@@ -177,7 +178,7 @@
 
           <div class="cell-contact-subject form-field">
             <label for="subject" class="form-label"><i class="fal fa-hashtag"></i></label>
-            <select class="form-control" name="subject" required>
+            <select class="form-control" name="subject">
               <option>Subject*</option>
               <option value="project">Have a project?</option>
               <option value="hire">Hire me?</option>
@@ -188,7 +189,7 @@
 
           <div class="cell-contact-message form-field">
             <label for="message" class="form-label"><i class="fal fa-pen"></i></label>
-            <textarea class="form-control-textarea" name="message" required
+            <textarea class="form-control-textarea" name="message"
               rows="6" placeholder="Message*"></textarea>
           </div>
 
