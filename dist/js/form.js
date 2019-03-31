@@ -8,7 +8,15 @@ $(document).ready(function() {
   const alertForm = {
 
     selector: '#alert-form',
-    element: null
+    element: null,
+    heading: {
+      selector: '#alert-form > .alert-title',
+      element: null
+    },
+    content: {
+      selector: '#alert-form > .alert-message',
+      element: null
+    }
 
   }
 
@@ -57,6 +65,9 @@ $(document).ready(function() {
 
 
   alertForm.element = $(alertForm.selector)
+  alertForm.heading.element = $(alertForm.heading.selector)
+  alertForm.content.element = $(alertForm.content.selector)
+
   formContact.element = $(formContact.selector)
   Object.keys(formFields).map(key => {
     formFields[key].element = $(formFields[key].selector)
@@ -64,7 +75,7 @@ $(document).ready(function() {
 
   hide(alertForm.element)
 
-  submitForm(formContact.element, formFields, formField)
+  submitForm(formContact.element, formFields, alertForm)
 
 })
 
@@ -126,7 +137,7 @@ function error(elementTypes, elementType, element) {
 
 
 /// F.3. Form functions
-function submitForm(form, fields, fieldParent) {
+function submitForm(form, fields, alert) {
 
   const elementTypes = {
     formField: 'formField',
@@ -143,7 +154,7 @@ function submitForm(form, fields, fieldParent) {
       success(elementTypes, elementTypes.formField, fields[key].element)
     })
 
-    if (errors) {
+    if (errors && Object.keys(errors).length > 0) {
       
       // Assign error classes to fields with errors
       Object.keys(errors).map(errKey => {
@@ -152,6 +163,11 @@ function submitForm(form, fields, fieldParent) {
           error(elementTypes, elementTypes.formField, field.element)
         }
       })
+
+      //TODO: Construct error message
+      //TODO: Change alert heading
+      //TODO: Change alert content
+      //TODO: Show alert
 
     } else {
       sendEmail()
