@@ -138,15 +138,19 @@ function submitForm(form, fields, fieldParent) {
 
     const errors = validateForm(form, fields)
 
-    // Give all fields success classes
+    // Assign success classes to all fields
     Object.keys(fields).map(key => {
       success(elementTypes, elementTypes.formField, fields[key].element)
     })
 
     if (errors) {
       
+      // Assign error classes to fields with errors
       Object.keys(errors).map(errKey => {
-        error(elementTypes, elementTypes.formField, fields[errKey].element)
+        const field = fields[errKey]
+        if (field) {
+          error(elementTypes, elementTypes.formField, field.element)
+        }
       })
 
     } else {
