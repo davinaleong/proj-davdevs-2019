@@ -125,7 +125,7 @@ function error(elementTypes, elementType, element) {
 
     case elementTypes.alert:
       element
-        .addClass('alert-col-error')
+        .addClass('alert-col-danger')
         .removeClass('alert-col-success')
       break
 
@@ -155,19 +155,23 @@ function submitForm(form, fields, alert) {
     })
 
     if (errors && Object.keys(errors).length > 0) {
+
+      console.log(errors)
+      let errorItems = ''
       
       // Assign error classes to fields with errors
       Object.keys(errors).map(errKey => {
         const field = fields[errKey]
         if (field) {
           error(elementTypes, elementTypes.formField, field.element)
+          errorItems += `<p class="small">${errors[errKey][0]}</p>`
         }
       })
 
-      //TODO: Construct error message
-      //TODO: Change alert heading
-      //TODO: Change alert content
-      //TODO: Show alert
+      error(elementTypes, elementTypes.alert, alert.element)
+      alert.heading.element.text('Error')
+      alert.content.element.html(errorItems)
+      show(alert.element)
 
     } else {
       sendEmail()
