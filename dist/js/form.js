@@ -169,11 +169,16 @@ function submitForm(form, fields, alert) {
       })
 
       error(elementTypes, elementTypes.alert, alert.element)
-      alert.heading.element.text('Error')
+      alert.heading.element.html('<i class="fas fa-exclamation"></i> Error')
       alert.content.element.html(errorItems)
       show(alert.element)
 
     } else {
+      success(elementTypes, elementTypes.alert, alert.element)
+      alert.heading.element.html('<i class="fas fa-check"></i> Success')
+      alert.content.element.html('<p>Thank you for reaching out!<br>I will get back to you soon!</p>')
+      show(alert.element)
+
       sendEmail()
     }
   })
@@ -192,11 +197,6 @@ function validateForm(form) {
         allowEmpty: false
       },
       email: true
-    },
-    tel: {
-      presence: {
-        allowEmpty: false
-      }
     },
     subject: {
       presence: {
