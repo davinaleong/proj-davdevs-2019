@@ -63,6 +63,12 @@ $(document).ready(function() {
 
   }
 
+  const btnSubmit = {
+    name: 'btnSubmit',
+    selector: '#submit-form-btn',
+    element: null
+  }
+
 
   alertForm.element = $(alertForm.selector)
   alertForm.heading.element = $(alertForm.heading.selector)
@@ -72,10 +78,11 @@ $(document).ready(function() {
   Object.keys(formFields).map(key => {
     formFields[key].element = $(formFields[key].selector)
   })
+  btnSubmit.element = $(btnSubmit.selector)
 
   hide(alertForm.element)
 
-  submitForm(formContact.element, formFields, alertForm)
+  submitForm(formContact, formFields, alertForm, btnSubmit)
 
 })
 
@@ -135,19 +142,36 @@ function error(elementTypes, elementType, element) {
 
 }
 
+function enable(obj) {
+
+  obj.element.prop('disabled', false)
+  obj.element.html('<i class="fas fa-paper-plane"></i> Send')
+
+}
+
+function disable(obj) {
+
+  obj.element.prop('disabled', true)
+  obj.element.html('<i class="fas fa-spinner fa-spin"></i> &hellip;')
+  
+}
+
 
 /// F.3. Form functions
-function submitForm(form, fields, alert) {
+function submitForm(form, fields, alert, btnSubmit) {
 
   const elementTypes = {
     formField: 'formField',
     alert: 'alert'
   }
 
-  $(form).submit(function(event) {
+  form.element.submit(function(event) {
     event.preventDefault()
 
-    const errors = validateForm(form, fields)
+    const errors = validateForm(form.element, fields)
+
+    // Disable submit btn
+    disable(btnSubmit)
 
     // Assign success classes to all fields
     Object.keys(fields).map(key => {
@@ -156,7 +180,6 @@ function submitForm(form, fields, alert) {
 
     if (errors && Object.keys(errors).length > 0) {
 
-      console.log(errors)
       let errorItems = ''
       
       // Assign error classes to fields with errors
@@ -173,13 +196,11 @@ function submitForm(form, fields, alert) {
       alert.content.element.html(errorItems)
       show(alert.element)
 
-    } else {
-      success(elementTypes, elementTypes.alert, alert.element)
-      alert.heading.element.html('<i class="fas fa-check"></i> Success')
-      alert.content.element.html('<p>Thank you for reaching out!<br>I will get back to you soon!</p>')
-      show(alert.element)
+      // Re-enable submit btn
+      enable(btnSubmit)
 
-      sendEmail()
+    } else {
+      sendEmail(fields, alert, elementTypes, btnSubmit)
     }
   })
 
@@ -217,6 +238,43 @@ function validateForm(form) {
   return validate(validate.collectFormValues(form), formValidateConstraints)
 }
 
-function sendEmail() {
-  console.log('TODO: Send Email')
+function sendEmail(fields, alert, elementTypes, btnSubmit) {
+  const formData = {
+    _replyto: fields.email.element.val(),
+    _subject: 'dav.davs: ' + fields.subject.element.val()
+  }
+
+  Object.keys(fields).map(key => {
+    if (key != 'email' || key != 'subject') {
+      formData[key] = fields[key].element.val()
+    }
+  })
+
+
+  $.ajax({
+    url: 'https://formspree.io/leong.shi.yun@gmail.com',
+    method: 'POST',
+    data: formData,
+    processData: false,
+    contentType: false,
+    dataType: 'json',
+    success: function() {
+      success(elementTypes, elementTypes.alert, alert.element)
+      alert.heading.element.html('<i class="fas fa-check"></i> Success')
+      alert.content.element.html('<p>Thank you for reaching out!<br>I will get back to you soon!</p>')
+      show(alert.element)
+
+      // Re-enable submit btn
+      enable(btnSubmit)
+    },
+    error: function(err) {
+      error(elementTypes, elementTypes.alert, alert.element)
+      alert.heading.element.html('<i class="fas fa-check"></i> Success')
+      alert.content.element.html('<p>' + err + '</p>')
+      show(alert.element)
+
+      // Re-enable submit btn
+      enable(btnSubmit)
+    }
+  })
 }
