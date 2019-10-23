@@ -2,5 +2,5 @@
 
 Template for my personal website
 
-## Tech
+## Tech Stack
 - SASS
