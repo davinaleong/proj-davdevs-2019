@@ -6,4 +6,4 @@ Template for my personal website
 - SASS
 
 ## View
-[dav.devs](https://davinaleong.github.io/proj-davdevs/)
+[dav.devs](https://davinaleong.github.io/proj-davdevs-2019/)
